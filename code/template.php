@@ -18,8 +18,9 @@ defined('_JEXEC') or die('Restricted access');
 <doctype>
 <html>
 <head>
-
 <w:head />
+<link href='http://fonts.googleapis.com/css?family=Karma:400,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="<?php echo $wrightBodyClass ?>">
 	<?php

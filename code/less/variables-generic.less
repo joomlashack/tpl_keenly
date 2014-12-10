@@ -2,6 +2,31 @@
 // Variables
 // --------------------------------------------------
 
+// Options dropdown-submenu , this is a element parent with arrow for submenu
+// You can use true/false for show arrow
+// -------------------------
+@dropdownSubmenuLinkArrow : true;
+@navbarInverseDropdownSubmenuLinkArrow : true;
+
+
+// Gradient options of dropdown links
+// You can use true/false for add gradient
+// -------------------------
+
+@dropdownLinkGradient : false;
+@navbarInverseDropdownLinkGradient : false;
+
+
+// Dropdown For navbar-inverse
+// -------------------------
+@navbarInverseDropdownBackground : @dropdownBackground;
+@navbarInverseDropdownBorderFallback : #ccc;
+@navbarInverseDropdownBorder : @dropdownBorder;
+@navbarInverseDropdownLinkColor : @dropdownLinkColor;
+@navbarInverseDropdownLinkColorHover : @dropdownLinkColorHover;
+@navbarInverseDropdownLinkColorActive : @dropdownLinkColorActive;
+@navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
+@navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;	
 
 // Global values
 // --------------------------------------------------
@@ -32,20 +57,20 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @grayDark;
+@bodyBackground:        #FAFAF5;
+@textColor:             #333333;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #D26A6A;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@sansFontFamily:        'Karma', serif;
+@serifFontFamily:       'Montserrat', sans-serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
@@ -53,8 +78,8 @@
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontFamily:    @serifFontFamily; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -119,7 +144,7 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:           	#D26A6A;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
@@ -182,8 +207,8 @@
 
 @navbarHeight:                    40px;
 @navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBackground:                transparent;
+@navbarBorder:                    transparent;
 
 @navbarText:                      #777;
 @navbarLinkColor:                 #777;
