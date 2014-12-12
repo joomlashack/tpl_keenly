@@ -13,7 +13,6 @@
     .nav {
         > li {
             > .dropdown-menu {
-                margin-top: 6px;
                 box-shadow: none;
                 &:before {
                     display: none;
@@ -145,6 +144,15 @@
             }
         }
     }
+    &.sub-menu {
+        box-shadow: none;
+        &:after {
+            display: none;
+        }
+        &:before {
+            display: none;
+        }
+    }
 }
 //Buttons
 a {
@@ -170,6 +178,21 @@ a {
     text-shadow: none;
     font-family: @serifFontFamily;
     text-transform: uppercase;
+    .caret {
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 9px;
+        padding: 0;
+        margin: 0;
+        &:after {
+            font-family: FontAwesome;
+            content: '\f107';
+            position: absolute;
+        }
+    }
     &.btn-primary {
         &.disabled {
             color: black;
@@ -184,6 +207,16 @@ a {
         border-color: @btnInfoBackground;
         &:hover, &:focus {
             color: white;
+            .caret {
+                &:after {
+                    color: white;
+                }
+            }
+        }
+        .caret {
+            &:after {
+                color: @btnInfoBackground;
+            }
         }
     }
     &.btn-success {
@@ -191,6 +224,16 @@ a {
         border-color: @btnSuccessBackground;
         &:hover, &:focus {
             color: white;
+            .caret {
+                &:after {
+                    color: white;
+                }
+            }
+        }
+        .caret {
+            &:after {
+                color: @btnSuccessBackground;
+            }
         }
     }
     &.btn-warning {
@@ -198,6 +241,16 @@ a {
         border-color: @btnWarningBackground;
         &:hover, &:focus {
             color: white;
+            .caret {
+                &:after {
+                    color: white;
+                }
+            }
+        }
+        .caret {
+            &:after {
+                color: @btnWarningBackground;
+            }
         }
     }
     &.btn-danger {
@@ -205,6 +258,16 @@ a {
         border-color: @btnDangerBackground;
         &:hover, &:focus {
             color: white;
+            .caret {
+                &:after {
+                    color: white;
+                }
+            }
+        }
+        .caret {
+            &:after {
+                color: @btnDangerBackground;
+            }
         }
     }
     &.btn-inverse {
@@ -212,6 +275,16 @@ a {
         border-color: @btnInverseBackgroundHighlight;
         &:hover, &:focus {
             color: white;
+            .caret {
+                &:after {
+                    color: white;
+                }
+            }
+        }
+        .caret {
+            &:after {
+                color: @btnInverseBackgroundHighlight;
+            }
         }
     }
     &.btn-link {
@@ -248,6 +321,12 @@ a {
         .dropdown-toggle {
             box-shadow: none;
         }
+    }
+    > .dropdown-toggle {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        -webkit-border-top-right-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px;
     }
 }
 // Page structure styles
