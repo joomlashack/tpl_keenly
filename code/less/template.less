@@ -17,6 +17,7 @@
             font-family: @serifFontFamily;
             text-transform: uppercase;
             text-decoration: none;
+            text-shadow: none;
             margin: 0;
             li {
                 &.deeper {
@@ -33,6 +34,7 @@
                     }
                     &:hover, &:focus {
                         > a {
+                            color: @color-two;
                             &:after {
                                 font-family: FontAwesome;
                                 padding-left: 5px;
@@ -51,12 +53,28 @@
         .navbar-inner {
             border-bottom: none;
             border-top: none;
+            .nav {
+                li {
+                    &.deeper {
+                        &:hover, &:focus {
+                            > a {
+                                color: @btnColorHighlight;
+                                &:after {
+                                    color: @btnColorHighlight;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
 .dropdown-menu {
     border-radius: 0px;
     font-family: @serifFontFamily;
+    padding-left: 5px;
+    padding-right: 5px;
     > li {
         a {
             border-bottom: 1px solid @color-one;
@@ -70,13 +88,16 @@
         }
     }
 }
-
 //Buttons
-
+a {
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
 .btn {
     background-color: transparent;
     background-image: none;
-    border-color: #C02942;
+    border-color: @color-one;
     border-radius: 0px;
     border-style: solid;
     border-width: 3px;
@@ -85,14 +106,63 @@
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
-    padding: 10px 35px;
+    padding-left: 35px;
+    padding-right: 35px;
     text-align: center;
     text-shadow: none;
     font-family: @serifFontFamily;
     text-transform: uppercase;
+    &.btn-primary {
+    	&.disabled {
+    		color: black;
+    	}
+    }
+    &:hover, &:focus {
+        color: @btnColorHighlight;
+        border-color: @btnColorHighlight;
+    }
+    &.btn-info {
+        color: @btnInfoBackground;
+        border-color: @btnInfoBackground;
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+    &.btn-success {
+        color: @btnSuccessBackground;
+        border-color: @btnSuccessBackground;
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+    &.btn-warning {
+        color: @btnWarningBackground;
+        border-color: @btnWarningBackground;
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+    &.btn-danger {
+        color: @btnDangerBackground;
+        border-color: @btnDangerBackground;
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+    &.btn-inverse {
+        color: @btnInverseBackgroundHighlight;
+        border-color: @btnInverseBackgroundHighlight;
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+    &.btn-link {
+        border: none;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
 }
-
-
 // Page structure styles
 #header {
     padding-top: 30px;

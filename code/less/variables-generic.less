@@ -7,6 +7,10 @@
 @color-four: #A9A998;
 @color-five: #FAFAF5;
 
+// Btn colors
+
+@btnColorHighlight: #771830;
+
 // Options dropdown-submenu , this is a element parent with arrow for submenu
 // You can use true/false for show arrow
 // -------------------------
@@ -115,11 +119,11 @@
 // Buttons
 // -------------------------
 @btnBackground:                     transparent;
-@btnBackgroundHighlight:            @color-two;
+@btnBackgroundHighlight:            transparent;
 @btnBorder:                         @color-two;
 
-@btnPrimaryBackground:              @color-two;
-@btnPrimaryBackgroundHighlight:     @color-two;
+@btnPrimaryBackground:              transparent;
+@btnPrimaryBackgroundHighlight:     transparent;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #5bc0de;
@@ -127,7 +131,7 @@
 @btnSuccessBackground:              #62c462;
 @btnSuccessBackgroundHighlight:     #62c462;
 
-@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackground:              @orange;
 @btnWarningBackgroundHighlight:     @orange;
 
 @btnDangerBackground:               #ee5f5b;
@@ -231,7 +235,7 @@
 
 @navbarInverseText:                      @color-three;
 @navbarInverseLinkColor:                 #F3F2E9;
-@navbarInverseLinkColorHover:            #F3F2E9;
+@navbarInverseLinkColorHover:            @btnColorHighlight;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       #C33C3C;
 @navbarInverseLinkBackgroundActive:      #C33C3C;
