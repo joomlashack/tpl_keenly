@@ -1,6 +1,11 @@
 //
 // Variables
 // --------------------------------------------------
+@color-one: #C33C3C;
+@color-two: #D26A6A;
+@color-three: #363636;
+@color-four: #A9A998;
+@color-five: #FAFAF5;
 
 // Options dropdown-submenu , this is a element parent with arrow for submenu
 // You can use true/false for show arrow
@@ -57,13 +62,13 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        #FAFAF5;
-@textColor:             @grayDark;
+@bodyBackground:        @color-five;
+@textColor:             @color-three;
 
 
 // Links
 // -------------------------
-@linkColor:             #D26A6A;
+@linkColor:             @color-two;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -110,26 +115,26 @@
 // Buttons
 // -------------------------
 @btnBackground:                     transparent;
-@btnBackgroundHighlight:            #D26A6A;
-@btnBorder:                         #D26A6A;
+@btnBackgroundHighlight:            @color-two;
+@btnBorder:                         @color-two;
 
-@btnPrimaryBackground:              #D26A6A;
-@btnPrimaryBackgroundHighlight:     #D26A6A;
+@btnPrimaryBackground:              @color-two;
+@btnPrimaryBackgroundHighlight:     @color-two;
 
 @btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackgroundHighlight:        #5bc0de;
 
 @btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackgroundHighlight:     #62c462;
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
 
 @btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackgroundHighlight:      #ee5f5b;
 
 @btnInverseBackground:              #444;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackgroundHighlight:     #444;
 
 
 // Forms
@@ -144,7 +149,7 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:           	#D26A6A;
+@dropdownBackground:           	@color-two;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
@@ -153,8 +158,8 @@
 @dropdownLinkColorHover:        #F9F9F4;
 @dropdownLinkColorActive:       #F9F9F4;
 
-@dropdownLinkBackgroundActive:  #C33C3C;
-@dropdownLinkBackgroundHover:   #C33C3C;
+@dropdownLinkBackgroundActive:  @color-one;
+@dropdownLinkBackgroundHover:   @color-one;
 
 
 
@@ -210,21 +215,21 @@
 @navbarBackground:                transparent;
 @navbarBorder:                    transparent;
 
-@navbarText:                      @grayDark;
-@navbarLinkColor:                 @grayDark;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @grayDark;
+@navbarText:                      @color-three;
+@navbarLinkColor:                 @color-three;
+@navbarLinkColorHover:            @color-three;
+@navbarLinkColorActive:           @color-three;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      transparet;
 
-@navbarBrandColor:                @grayDark;
+@navbarBrandColor:                @color-three;
 
 // Inverted navbar
-@navbarInverseBackground:                #D26A6A;
-@navbarInverseBackgroundHighlight:       #D26A6A;
+@navbarInverseBackground:                @color-two;
+@navbarInverseBackgroundHighlight:       @color-two;
 @navbarInverseBorder:                    transparent;
 
-@navbarInverseText:                      @grayLight;
+@navbarInverseText:                      @color-three;
 @navbarInverseLinkColor:                 #F3F2E9;
 @navbarInverseLinkColorHover:            #F3F2E9;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
