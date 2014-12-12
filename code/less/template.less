@@ -334,12 +334,32 @@ a {
         -webkit-border-bottom-right-radius: 0px;
     }
     &.btn-group-vertical {
-    	 > .btn {
-    	 	+ .btn {
-    	 		 margin-left: 0px;
-    	 	}
-    	 }
-
+        > .btn {
+            + .btn {
+                margin-left: 0px;
+            }
+        }
+    }
+}
+// Table 
+.table {
+    thead {
+        font-family: @serifFontFamily;
+        text-transform: uppercase;
+        background-color: #ECECE9;
+        border-bottom: 6px solid @color-four;
+        tr {
+            th {
+                border-right: 1px solid #D3D3CA;
+                text-align: center;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+    tbody {
+        border-bottom: 2px solid @color-four;
     }
 }
 // Page structure styles
