@@ -76,6 +76,16 @@
                         display: none;
                     }
                 }
+                &:last-child {
+                    > a {
+                        padding-right: 0px;
+                    }
+                }
+                &:first-child {
+                    > a {
+                        padding-left: 0px;
+                    }
+                }
             }
         }
     }
@@ -159,45 +169,10 @@
 //Navs 
 .nav-tabs {
     border-bottom: 1px solid @color-four;
-    > li {
-        > a {
-            color: white;
-            &:hover, &:focus {
-                color: black;
-            }
-        }
-        > .dropdown-toggle {
-            .caret {
-                border-top-color: white;
-            }
-            &:hover, &:focus {
-                .caret {
-                    border-top-color: black;
-                }
-            }
-        }
-        &.active {
-            > a {
-                color: black;
-                &:hover, &:focus {
-                    color: black;
-                }
-            }
-            > .dropdown-toggle {
-                .caret {
-                    border-top-color: black;
-                }
-                &:hover, &:focus {
-                    .caret {
-                        border-top-color: black;
-                    }
-                }
-            }
-        }
-    }
     dt {
         h3 {
             margin-right: 1px !important;
+            margin-bottom: -1px !important;
         }
         a {
             font-size: @baseFontSize;
@@ -211,7 +186,7 @@
             border-top-color: @color-four !important;
             border-left-color: @color-four !important;
             border-right-color: @color-four !important;
-            border-bottom-width: 0px !important;
+            border-bottom-color: @color-four !important;
             .caret {
                 border-top-color: @white;
             }
@@ -428,7 +403,7 @@ a {
     }
 }
 // Documentation styles
-div, form {
+div, form, p {
     &.bs-docs-example {
         border-radius: 0;
         -webkit-border-radius: 0;
