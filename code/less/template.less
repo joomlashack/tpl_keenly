@@ -156,6 +156,87 @@
         }
     }
 }
+//Navs 
+.nav-tabs {
+    border-bottom: 1px solid @color-four;
+    > li {
+        > a {
+            color: white;
+            &:hover, &:focus {
+                color: black;
+            }
+        }
+        > .dropdown-toggle {
+            .caret {
+                border-top-color: white;
+            }
+            &:hover, &:focus {
+                .caret {
+                    border-top-color: black;
+                }
+            }
+        }
+        &.active {
+            > a {
+                color: black;
+                &:hover, &:focus {
+                    color: black;
+                }
+            }
+            > .dropdown-toggle {
+                .caret {
+                    border-top-color: black;
+                }
+                &:hover, &:focus {
+                    .caret {
+                        border-top-color: black;
+                    }
+                }
+            }
+        }
+    }
+    dt {
+        a {
+            font-size: @baseFontSize;
+            color: @linkColor;
+            text-transform: uppercase;
+            border-radius: 0px;
+            font-family: @serifFontFamily;
+            display: table;
+            font-weight: normal;
+            padding: 5px 15px;
+            border-top-color: @color-four !important;
+            border-left-color: @color-four !important;
+            border-right-color: @color-four !important;
+            border-bottom-width: 0px !important;
+            .caret {
+                border-top-color: @white;
+            }
+            &:hover, &:focus {
+                color: @btnColorHighlight;
+                .caret {
+                    border-top-color: black;
+                }
+            }
+        }
+        &.open {
+            a {
+                color: @color-five !important;
+                background-color: @heroUnitBackground;
+                border-color: @heroUnitBackground !important;
+                .caret {
+                    border-top-color: black;
+                }
+                &:hover, &:focus {
+                    color: black;
+                    .caret {
+                        border-top-color: black;
+                    }
+                }
+            }
+        }
+    }
+}
 //Buttons
 a {
     &:hover, &:focus {
@@ -338,7 +419,7 @@ a {
     &.btn-group-vertical {
         > .btn {
             + .btn {
-                margin-left: 0px;
+                margin-left: 0;
             }
         }
     }
@@ -346,8 +427,8 @@ a {
 // Documentation styles
 div, form {
     &.bs-docs-example {
-        border-radius: 0px;
-        -webkit-border-radius: 0px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
         background: transparent;
         border-color: @color-four;
         padding-top: 60px;
@@ -356,7 +437,7 @@ div, form {
             margin-left: 10px;
             padding: 5px;
             font-weight: normal;
-            border-radius: 0px;
+            border-radius: 0;
             font-size: @baseFontSize;
             background-color: transparent;
             border-color: @color-four;
@@ -378,22 +459,28 @@ code {
     font-size: @baseFontSize + 2;
 }
 pre {
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
     &.prettyprint {
-        border-radius: 0px;
-        -web-kit-border-radius: 0px;
+        border-radius: 0;
+        -web-kit-border-radius: 0;
         background-color: white;
         border-top: 4px solid black;
         border-bottom: 1px solid @color-four;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         &.linenums {
+            border-left-width: 0;
+            border-right-width: 0;
             li {
                 text-shadow: none;
             }
             box-shadow: none;
             -webkit-box-shadow: none;
+        }
+        &.prettyprinted {
+            border-left-width: 0;
+            border-right-width: 0;
         }
     }
 }
@@ -422,12 +509,12 @@ pre {
 #header {
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 // Module styles
 .hero-unit {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
