@@ -60,6 +60,7 @@
                 }
                 &.active {
                     > a {
+                        color: @color-one;
                         -webkit-box-shadow: none;
                         box-shadow: none;
                         text-shadow: none;
@@ -105,8 +106,9 @@
                     }
                     &.active {
                         > a {
+                            color: @color-one;
                             &:after {
-                                color: @btnColorHighlight;
+                                color: @color-one;
                             }
                         }
                     }
@@ -338,6 +340,60 @@ a {
             + .btn {
                 margin-left: 0px;
             }
+        }
+    }
+}
+// Documentation styles
+div, form {
+    &.bs-docs-example {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        background: transparent;
+        border-color: @color-four;
+        padding-top: 60px;
+        padding-bottom: 25px;
+        &:after {
+            margin-left: 10px;
+            padding: 5px;
+            font-weight: normal;
+            border-radius: 0px;
+            font-size: @baseFontSize;
+            background-color: transparent;
+            border-color: @color-four;
+            font-family: @serifFontFamily;
+            color: @color-three;
+            text-transform: uppercase;
+            padding: 15px 10px 5px;
+        }
+        + .prettyprint {
+            margin-top: -15px;
+        }
+    }
+}
+code {
+    font-weight: normal;
+    border-radius: 0px;
+    border: none;
+    padding: 5px;
+    font-size: @baseFontSize + 2;
+}
+pre {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    &.prettyprint {
+        border-radius: 0px;
+        -web-kit-border-radius: 0px;
+        background-color: white;
+        border-top: 4px solid black;
+        border-bottom: 1px solid @color-four;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        &.linenums {
+            li {
+                text-shadow: none;
+            }
+            box-shadow: none;
+            -webkit-box-shadow: none;
         }
     }
 }
