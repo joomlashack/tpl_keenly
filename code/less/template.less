@@ -95,6 +95,8 @@
         .navbar-inner {
             border-bottom: none;
             border-top: none;
+    		padding-left: 20px;
+    		padding-right: 20px;
             .nav, &.nav {
                 li {
                     &.deeper {
@@ -107,9 +109,9 @@
                         &:hover, &:focus {
                             text-shadow: none;
                             > a {
-                                color: @btnColorHighlight;
+                                color: @color-one;
                                 &:after {
-                                    color: @btnColorHighlight;
+                                    color: @color-one;
                                 }
                             }
                         }
@@ -172,10 +174,42 @@
     }
     > .active {
         > a {
-            background-color: @btnColorHighlight;
+            background-color: @color-one;
             background-image: none;
         }
     }
+}
+// Module Navs
+.module {
+	.nav {
+		li {
+			> a {
+				font-size: @baseFontSize + 2;
+				.caret {
+					border-bottom-color: transparent;
+					border-top-color: transparent;
+					height: 0;
+					width: 0;
+					border-bottom-width: 0;
+					border-top-width: 0;
+					margin: 0;
+					padding: 0;
+					&:after {
+						font-family: FontAwesome;
+						content: '\f107';
+						position: absolute;
+						right: 0px;
+
+					}
+				}
+			}
+			&.dropdown {
+				.dropdown-menu {
+					background-color: @color-two;
+				}
+			} 
+		}
+	}
 }
 //Navs 
 .nav-tabs {
@@ -202,7 +236,7 @@
                 border-top-color: @white;
             }
             &:hover, &:focus {
-                color: @btnColorHighlight;
+                color: @color-one;
                 .caret {
                     border-top-color: black;
                 }
@@ -275,8 +309,8 @@ a {
         }
     }
     &:hover, &:focus {
-        color: @btnColorHighlight;
-        border-color: @btnColorHighlight;
+        color: @color-one;
+        border-color: @color-one;
     }
     &.btn-info {
         color: @btnInfoBackground;
@@ -504,12 +538,12 @@ pre {
     font-family: @serifFontFamily;
     font-weight: normal;
     padding: 5px 10px;
-    text-shadow: 0px;
+    text-shadow: none;
     text-transform: uppercase;
 }
 .badge {
     font-family: @serifFontFamily;
-    text-shadow: 0px;
+    text-shadow: none;
     text-transform: uppercase;
 }
 // Module styles
@@ -586,6 +620,13 @@ pre {
                 font-size: @baseFontSize - 2;
             }
         }
+    }
+    .footer-content {
+    	a {
+    		&:hover, &:focus {
+    			color: @color-one;
+    		}
+    	}
     }
 }
 // Joomla content style
