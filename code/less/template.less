@@ -403,6 +403,9 @@ a {
             text-decoration: none;
         }
     }
+    &.active {
+    	box-shadow: none;
+    }
 }
 .btn-group {
     > .btn {
@@ -447,6 +450,11 @@ a {
                 margin-left: 0;
             }
         }
+    }
+}
+.readmore {
+    .btn {
+        border: none;
     }
 }
 // Documentation styles
@@ -630,6 +638,6 @@ pre {
 }
 // Joomla content style
 .page-header {
-	text-transform: uppercase;
-        border-bottom-color: @color-four;
+    text-transform: uppercase;
+    border-bottom-color: @color-four;
 }
