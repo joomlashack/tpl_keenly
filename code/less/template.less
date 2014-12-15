@@ -95,8 +95,8 @@
         .navbar-inner {
             border-bottom: none;
             border-top: none;
-    		padding-left: 20px;
-    		padding-right: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
             .nav, &.nav {
                 li {
                     &.deeper {
@@ -181,35 +181,35 @@
 }
 // Module Navs
 .module {
-	.nav {
-		li {
-			> a {
-				font-size: @baseFontSize + 2;
-				.caret {
-					border-bottom-color: transparent;
-					border-top-color: transparent;
-					height: 0;
-					width: 0;
-					border-bottom-width: 0;
-					border-top-width: 0;
-					margin: 0;
-					padding: 0;
-					&:after {
-						font-family: FontAwesome;
-						content: '\f107';
-						position: absolute;
-						right: 0px;
-
-					}
-				}
-			}
-			&.dropdown {
-				.dropdown-menu {
-					background-color: @color-two;
-				}
-			} 
-		}
-	}
+    .nav {
+        li {
+            > a {
+                font-size: @baseFontSize + 2;
+                .caret {
+                    border-bottom-color: transparent;
+                    border-top-color: transparent;
+                    height: 0;
+                    width: 0;
+                    border-bottom-width: 0;
+                    border-top-width: 0;
+                    margin: 0;
+                    padding: 0;
+                    &:after {
+                        font-family: FontAwesome;
+                        content: '\f107';
+                        position: absolute;
+                        right: 0px;
+                        font-size: @baseFontSize;
+                    }
+                }
+            }
+            &.dropdown {
+                .dropdown-menu {
+                    background-color: @color-two;
+                }
+            }
+        }
+    }
 }
 //Navs 
 .nav-tabs {
@@ -594,7 +594,7 @@ pre {
         }
         li {
             a, span {
-            	font-size: @baseFontSize - 4;
+                font-size: @baseFontSize - 4;
                 border-right: 1px solid @color-four;
                 padding-right: 5px;
                 padding-left: 5px;
@@ -602,8 +602,7 @@ pre {
                     border-right: none;
                     padding-left: 5px;
                 }
-                 &:first-child {
-                }
+                &:first-child {}
             }
         }
     }
@@ -622,18 +621,15 @@ pre {
         }
     }
     .footer-content {
-    	a {
-    		&:hover, &:focus {
-    			color: @color-one;
-    		}
-    	}
+        a {
+            &:hover, &:focus {
+                color: @color-one;
+            }
+        }
     }
 }
 // Joomla content style
-.item-page {
-	.page-header {
-		text-transform: uppercase;
-		border-bottom-color: @color-four;
-	}
+.page-header {
+	text-transform: uppercase;
+        border-bottom-color: @color-four;
 }
-
