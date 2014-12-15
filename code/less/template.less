@@ -217,7 +217,9 @@
 }
 //Buttons
 a {
+    outline: 0px;
     &:hover, &:focus {
+        outline: 0px;
         text-decoration: none;
     }
 }
@@ -483,11 +485,21 @@ pre {
         border-bottom: 2px solid @color-four;
     }
 }
-// Page structure styles
-#header {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 0;
+//Label
+.label {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    font-size: @baseFontSize + 2;
+    font-family: @serifFontFamily;
+    font-weight: normal;
+    padding: 5px 10px;
+    text-shadow: 0px;
+    text-transform: uppercase;
+}
+.badge {
+    font-family: @serifFontFamily;
+    text-shadow: 0px;
+    text-transform: uppercase;
 }
 // Module styles
 .hero-unit {
@@ -495,4 +507,15 @@ pre {
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    text-align: center;
+}
+// Page structure styles
+#header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
 }
