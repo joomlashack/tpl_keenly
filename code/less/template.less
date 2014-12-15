@@ -542,11 +542,11 @@ pre {
     margin-bottom: 20px;
     border-bottom: 1px solid @color-four;
 }
-#grid-bottom2{
-	 border-top: 1px solid @color-four;
+#grid-bottom2 {
+    border-top: 1px solid @color-four;
 }
-#grid-bottom{
-	 border-top: 1px solid @color-four;
+#grid-bottom {
+    border-top: 1px solid @color-four;
 }
 .breadcrumbs {
     .breadcrumb {
@@ -555,6 +555,23 @@ pre {
         text-transform: uppercase;
         font-family: @serifFontFamily;
         background-color: transparent;
+        .divider {
+            display: none;
+        }
+        li {
+            a, span {
+            	font-size: @baseFontSize - 4;
+                border-right: 1px solid @color-four;
+                padding-right: 5px;
+                padding-left: 5px;
+                &:last-child {
+                    border-right: none;
+                    padding-left: 5px;
+                }
+                 &:first-child {
+                }
+            }
+        }
     }
 }
 #footer {
