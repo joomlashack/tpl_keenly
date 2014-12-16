@@ -271,7 +271,7 @@ a {
 .btn {
     background-color: transparent;
     background-image: none;
-    border-color: @color-one;
+    border-color: @color-two;
     border-radius: 0px;
     border-style: solid;
     border-width: 3px;
@@ -280,14 +280,11 @@ a {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 2px 25px;
     text-align: center;
     text-shadow: none;
     font-family: @serifFontFamily;
     text-transform: uppercase;
-    padding-top: 2px;
-    padding-bottom: 2px;
     .caret {
         border-bottom-color: transparent;
         border-top-color: transparent;
@@ -404,7 +401,16 @@ a {
         }
     }
     &.active {
-    	box-shadow: none;
+        box-shadow: none;
+    }
+    &.btn-small {
+        padding: 2px 25px
+    }
+    &.btn-mini {
+        padding: 2px 15px
+    }
+    &.btn-large {
+        padding: 2px 35px
     }
 }
 .btn-group {
@@ -448,6 +454,47 @@ a {
         > .btn {
             + .btn {
                 margin-left: 0;
+            }
+        }
+    }
+    &:last-child {
+        > .dropdown-toggle {
+            border-radius: 0;
+        }
+    }
+}
+.form-search {
+    .input-prepend {
+        .btn {
+            border-radius: 0;
+        }
+    }
+}
+.input-append, .input-prepend {
+    &.input-append {
+        .add-on {
+            &:first-child {
+                border-radius: 0;
+            }
+            .btn {
+                &:first-child {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .btn {
+        border-radius: 0;
+        margin-right: 0;
+        margin-left: 0;
+        &:last-child {
+            border-radius: 0;
+        }
+    }
+    .btn-group {
+        &:last-child {
+            .dropdown-toggle {
+                border-radius: 0;
             }
         }
     }
@@ -545,9 +592,13 @@ pre {
     font-size: @baseFontSize + 2;
     font-family: @serifFontFamily;
     font-weight: normal;
-    padding: 5px 10px;
+    padding: 6px 10px;
     text-shadow: none;
     text-transform: uppercase;
+    dt, dd {
+        font-weight: normal;
+        padding: 6px 10px;
+    }
 }
 .badge {
     font-family: @serifFontFamily;
