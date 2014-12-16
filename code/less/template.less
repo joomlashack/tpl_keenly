@@ -180,6 +180,9 @@
     }
 }
 // Module Navs
+.well {
+    box-shadow: none;
+}
 .module {
     .nav {
         li {
@@ -589,8 +592,8 @@ pre {
 .label {
     border-radius: 0;
     -webkit-border-radius: 0;
-    font-size: @baseFontSize + 2;
     font-family: @serifFontFamily;
+    font-size: @baseFontSize;
     font-weight: normal;
     padding: 6px 10px;
     text-shadow: none;
@@ -599,11 +602,17 @@ pre {
         font-weight: normal;
         padding: 6px 10px;
     }
+    &.label-info {
+        background-color: @color-four;
+    }
 }
 .badge {
     font-family: @serifFontFamily;
     text-shadow: none;
     text-transform: uppercase;
+     &.badge-info {
+        background-color: @color-four;
+     }
 }
 // Module styles
 .hero-unit {
@@ -616,6 +625,14 @@ pre {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     text-align: center;
+    .btn {
+        border-color: @color-five;
+        color: @color-five;
+        &:hover, &:focus {
+            background-color: @color-one;
+            border-color: @color-one;
+        }
+    }
 }
 // Page structure styles
 #header {
