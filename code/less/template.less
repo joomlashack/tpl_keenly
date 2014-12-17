@@ -473,16 +473,53 @@ a {
         }
     }
 }
-.input-append, .input-prepend {
+.input-prepend {
     &.input-append {
         .add-on {
             &:first-child {
                 border-radius: 0;
             }
-            .btn {
-                &:first-child {
+        }
+        .btn {
+            &:first-child {
+                border-radius: 0;
+            }
+        }
+         input {
+            + .btn-group {
+                .btn {
                     border-radius: 0;
                 }
+            }
+         }
+    }
+    .btn {
+        border-radius: 0;
+        margin-right: 0;
+        margin-left: 0;
+        &:last-child {
+            border-radius: 0;
+        }
+    }
+    .btn-group {
+        &:last-child {
+            .dropdown-toggle {
+                border-radius: 0;
+            }
+        }
+    }
+}
+.input-append {
+    &.input-append {
+        .add-on {
+            &:first-child {
+                border-radius: 0;
+            }
+        }
+        .btn {
+            &:first-child {
+                border-radius: 0;
+                margin-right: 0;
             }
         }
     }
@@ -600,7 +637,7 @@ pre {
     text-transform: uppercase;
     dt, dd {
         font-weight: normal;
-        padding: 6px 10px;
+        padding: 5px 10px;
     }
     &.label-info {
         background-color: @color-four;
@@ -610,9 +647,9 @@ pre {
     font-family: @serifFontFamily;
     text-shadow: none;
     text-transform: uppercase;
-     &.badge-info {
+    &.badge-info {
         background-color: @color-four;
-     }
+    }
 }
 // Module styles
 .hero-unit {
@@ -634,6 +671,23 @@ pre {
         }
     }
 }
+.form-validate {
+    fieldset {
+        dd {
+            margin-left: 0;
+        }
+    }
+}
+.form-horizontal {
+    .form-actions {
+        padding-left: 0;
+    }
+}  
+.form-actions {
+    background-color: transparent;
+    padding: 20px 0px;
+    border-top-color: @color-four;
+}
 // Page structure styles
 #header {
     padding-top: 30px;
@@ -643,6 +697,9 @@ pre {
 #featured {
     margin-bottom: 20px;
     border-bottom: 6px solid @color-four;
+}
+#main-content {
+    margin-bottom: 20px;
 }
 #grid-top {
     margin-bottom: 20px;
