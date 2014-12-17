@@ -485,13 +485,13 @@ a {
                 border-radius: 0;
             }
         }
-         input {
+        input {
             + .btn-group {
                 .btn {
                     border-radius: 0;
                 }
             }
-         }
+        }
     }
     .btn {
         border-radius: 0;
@@ -682,7 +682,21 @@ pre {
     .form-actions {
         padding-left: 0;
     }
-}  
+    .nav-tabs {
+        &.nav-stacked {
+            > li {
+                &:first-child, &:last-child {
+                    > a {
+                        -webkit-border-radius: 0;
+                        border-radius: 0;
+                        border-width: 0px;
+                        -webkit-border-width: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
 .form-actions {
     background-color: transparent;
     padding: 20px 0px;
