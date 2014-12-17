@@ -564,9 +564,9 @@ a {
             font-family: @serifFontFamily;
             text-transform: uppercase;
             &:hover, &:focus {
-            	color: @color-one;
-            	border-color: @color-one;
-            	background-color: transparent;
+                color: @color-one;
+                border-color: @color-one;
+                background-color: transparent;
             }
         }
     }
@@ -828,6 +828,89 @@ pre {
     padding: 20px 0px;
     border-top-color: @color-four;
 }
+// Keenly module styles
+.module {
+    h3 {
+        font-size: @baseFontSize;
+        text-transform: uppercase;
+    }
+}
+.module_ms1, .moduletable_ms1, .moduletext_ms1 {
+    h3 {
+        font-size: @baseFontSize;
+        text-transform: uppercase;
+    }
+    h1, h2, h3, h4, h5 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    img {
+        margin: 10px 0px;
+    }
+    text-align: center;
+    margin-bottom: 20px;
+}
+.module_ms2, .moduletable_ms2, .moduletext_ms2 {
+    color: @color-five;
+    background-color: @color-four;
+    padding-bottom: 20px;
+    h3 {
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: @baseFontSize;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        &:after {
+            content: ' ';
+            height: 2px;
+            width: 15%;
+            display: table;
+            margin-top: 10px;
+            background-color: @color-five;
+        }
+    }
+    p {
+        padding: 0px 20px;
+    }
+}
+.module_ms3, .moduletable_ms3, .moduletext_ms3 {
+    h3 {
+        font-size: @baseFontSize;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        &:after {
+            content: ' ';
+            height: 2px;
+            width: 15%;
+            display: table;
+            margin-top: 10px;
+            background-color: @color-three;
+        }
+    }
+}
+.module_ms4, .moduletable_ms4, .moduletext_ms4 {
+    color: @color-five;
+    background-color: @color-three;
+    padding-bottom: 20px;
+    h3 {
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: @baseFontSize;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        &:after {
+            content: ' ';
+            height: 2px;
+            width: 15%;
+            display: table;
+            margin-top: 10px;
+            background-color: @color-five;
+        }
+    }
+    p {
+        padding: 0px 20px;
+    }
+}
 // Page structure styles
 #header {
     padding-top: 30px;
@@ -842,17 +925,21 @@ pre {
     margin-bottom: 20px;
 }
 #grid-top {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-bottom: 1px solid @color-four;
 }
 #grid-top2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-bottom: 1px solid @color-four;
-}
-#grid-bottom2 {
-    border-top: 1px solid @color-four;
+    padding-bottom: 30px;
 }
 #grid-bottom {
+	padding-top: 20px;
+    border-top: 1px solid @color-four;
+}
+#grid-bottom2 {
+	padding-top: 20px;
+	margin-bottom: 20px;
     border-top: 1px solid @color-four;
 }
 .breadcrumbs {
