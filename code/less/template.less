@@ -64,6 +64,9 @@
                         -webkit-box-shadow: none;
                         box-shadow: none;
                         text-shadow: none;
+                        &:hover, &:focus {
+                            background-image: none;
+                        }
                     }
                 }
             }
@@ -121,6 +124,9 @@
                             color: @color-one;
                             &:after {
                                 color: @color-one;
+                                &:hover, &:focus {
+                                    background-image: none;
+                                }
                             }
                         }
                     }
@@ -912,16 +918,14 @@ pre {
     }
 }
 .module_ms5, .moduletable_ms5, .moduletext_ms5 {
-	h3 {
-		font-size: @baseFontSize;
-		border-bottom: 2px solid @color-three;
-		text-transform: uppercase;
-		padding-bottom: 5px;
-		margin-bottom: 20px;
-	}
+    h3 {
+        font-size: @baseFontSize;
+        border-bottom: 2px solid @color-three;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+    }
 }
-
-
 // Page structure styles
 #header {
     padding-top: 30px;
@@ -945,12 +949,12 @@ pre {
     padding-bottom: 30px;
 }
 #grid-bottom {
-	padding-top: 20px;
+    padding-top: 20px;
     border-top: 1px solid @color-four;
 }
 #grid-bottom2 {
-	padding-top: 20px;
-	margin-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
     border-top: 1px solid @color-four;
 }
 .breadcrumbs {
