@@ -1,4 +1,60 @@
 @media (min-width: 1200px) {
+    #menu {
+        .navbar {
+            .btn-navbar {
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
+                box-shadow: none;
+                width: 100%;
+                float: left;
+                text-shadow: none;
+                color: @color-one;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                .icon-bar {
+                    background-color: transparent;
+                    height: 0px;
+                    width: 0px;
+                    box-shadow: none;
+                }
+                &.collapsed {
+                    color: @color-two;
+                    &:after {
+                        font-family: FontAwesome;
+                        content: '\f107';
+                        float: right;
+                        font-size: @baseFontSize + 2;
+                        margin-top: -2px;
+                    }
+                    &:before {
+                        content: 'Menu';
+                        text-transform: uppercase;
+                        float: left;
+                    }
+                }
+                &:after {
+                    font-family: FontAwesome;
+                    content: '\f106';
+                    float: right;
+                    font-size: @baseFontSize + 2;
+                    margin-top: -2px;
+                }
+                &:before {
+                    content: 'Menu';
+                    text-transform: uppercase;
+                    float: left;
+                }
+                &:hover, &:focus {
+                    color: @color-one;
+                }
+            }
+        }
+    }
     .navbar {
         .btn-navbar {
             background-image: none;
@@ -37,22 +93,22 @@
     .navbar {
         &.navbar-inverse {
             .btn-navbar {
-            background-image: none;
-            background-color: transparent;
-            border-width: 0px;
-            box-shadow: none;
-            .icon-bar {
-                background-color: @color-five;
-                height: 3px;
-                width: 24px;
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
                 box-shadow: none;
-            }
-            &:hover, &:focus {
                 .icon-bar {
-                    background-color: @color-one;
+                    background-color: @color-five;
+                    height: 3px;
+                    width: 24px;
+                    box-shadow: none;
+                }
+                &:hover, &:focus {
+                    .icon-bar {
+                        background-color: @color-one;
+                    }
                 }
             }
-        }
             .navbar-inner {
                 .nav-collapse {
                     .dropdown-menu {
@@ -72,6 +128,62 @@
     }
 }
 @media (max-width: 979px) and (min-width: 768px) {
+    #menu {
+        .navbar {
+            .btn-navbar {
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
+                box-shadow: none;
+                width: 100%;
+                float: left;
+                text-shadow: none;
+                color: @color-one;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                .icon-bar {
+                    background-color: transparent;
+                    height: 0px;
+                    width: 0px;
+                    box-shadow: none;
+                }
+                &.collapsed {
+                    color: @color-two;
+                    &:after {
+                        font-family: FontAwesome;
+                        content: '\f107';
+                        float: right;
+                        font-size: @baseFontSize + 2;
+                        margin-top: -2px;
+                    }
+                    &:before {
+                        content: 'Menu';
+                        text-transform: uppercase;
+                        float: left;
+                    }
+                }
+                &:after {
+                    font-family: FontAwesome;
+                    content: '\f106';
+                    float: right;
+                    font-size: @baseFontSize + 2;
+                    margin-top: -2px;
+                }
+                &:before {
+                    content: 'Menu';
+                    text-transform: uppercase;
+                    float: left;
+                }
+                &:hover, &:focus {
+                    color: @color-one;
+                }
+            }
+        }
+    }
     .navbar {
         .btn-navbar {
             background-image: none;
@@ -110,22 +222,22 @@
     .navbar {
         &.navbar-inverse {
             .btn-navbar {
-            background-image: none;
-            background-color: transparent;
-            border-width: 0px;
-            box-shadow: none;
-            .icon-bar {
-                background-color: @color-five;
-                height: 3px;
-                width: 24px;
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
                 box-shadow: none;
-            }
-            &:hover, &:focus {
                 .icon-bar {
-                    background-color: @color-one;
+                    background-color: @color-five;
+                    height: 3px;
+                    width: 24px;
+                    box-shadow: none;
+                }
+                &:hover, &:focus {
+                    .icon-bar {
+                        background-color: @color-one;
+                    }
                 }
             }
-        }
             .navbar-inner {
                 .nav-collapse {
                     .dropdown-menu {
@@ -145,7 +257,63 @@
     }
 }
 @media (max-width: 979px) {
-       .navbar {
+    #menu {
+        .navbar {
+            .btn-navbar {
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
+                box-shadow: none;
+                width: 100%;
+                float: left;
+                text-shadow: none;
+                color: @color-one;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                .icon-bar {
+                    background-color: transparent;
+                    height: 0px;
+                    width: 0px;
+                    box-shadow: none;
+                }
+                &.collapsed {
+                    color: @color-two;
+                    &:after {
+                        font-family: FontAwesome;
+                        content: '\f107';
+                        float: right;
+                        font-size: @baseFontSize + 2;
+                        margin-top: -2px;
+                    }
+                    &:before {
+                        content: 'Menu';
+                        text-transform: uppercase;
+                        float: left;
+                    }
+                }
+                &:after {
+                    font-family: FontAwesome;
+                    content: '\f106';
+                    float: right;
+                    font-size: @baseFontSize + 2;
+                    margin-top: -2px;
+                }
+                &:before {
+                    content: 'Menu';
+                    text-transform: uppercase;
+                    float: left;
+                }
+                &:hover, &:focus {
+                    color: @color-one;
+                }
+            }
+        }
+    }
+    .navbar {
         .btn-navbar {
             background-image: none;
             background-color: transparent;
@@ -183,22 +351,22 @@
     .navbar {
         &.navbar-inverse {
             .btn-navbar {
-            background-image: none;
-            background-color: transparent;
-            border-width: 0px;
-            box-shadow: none;
-            .icon-bar {
-                background-color: @color-five;
-                height: 3px;
-                width: 24px;
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
                 box-shadow: none;
-            }
-            &:hover, &:focus {
                 .icon-bar {
-                    background-color: @color-one;
+                    background-color: @color-five;
+                    height: 3px;
+                    width: 24px;
+                    box-shadow: none;
+                }
+                &:hover, &:focus {
+                    .icon-bar {
+                        background-color: @color-one;
+                    }
                 }
             }
-        }
             .navbar-inner {
                 .nav-collapse {
                     .dropdown-menu {
@@ -218,7 +386,63 @@
     }
 }
 @media (max-width: 767px) {
-       .navbar {
+    #menu {
+        .navbar {
+            .btn-navbar {
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
+                box-shadow: none;
+                width: 100%;
+                float: left;
+                text-shadow: none;
+                color: @color-one;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                .icon-bar {
+                    background-color: transparent;
+                    height: 0px;
+                    width: 0px;
+                    box-shadow: none;
+                }
+                &.collapsed {
+                    color: @color-two;
+                    &:after {
+                        font-family: FontAwesome;
+                        content: '\f107';
+                        float: right;
+                        font-size: @baseFontSize + 2;
+                        margin-top: -2px;
+                    }
+                    &:before {
+                        content: 'Menu';
+                        text-transform: uppercase;
+                        float: left;
+                    }
+                }
+                &:after {
+                    font-family: FontAwesome;
+                    content: '\f106';
+                    float: right;
+                    font-size: @baseFontSize + 2;
+                    margin-top: -2px;
+                }
+                &:before {
+                    content: 'Menu';
+                    text-transform: uppercase;
+                    float: left;
+                }
+                &:hover, &:focus {
+                    color: @color-one;
+                }
+            }
+        }
+    }
+    .navbar {
         .btn-navbar {
             background-image: none;
             background-color: transparent;
@@ -256,22 +480,22 @@
     .navbar {
         &.navbar-inverse {
             .btn-navbar {
-            background-image: none;
-            background-color: transparent;
-            border-width: 0px;
-            box-shadow: none;
-            .icon-bar {
-                background-color: @color-five;
-                height: 3px;
-                width: 24px;
+                background-image: none;
+                background-color: transparent;
+                border-width: 0px;
                 box-shadow: none;
-            }
-            &:hover, &:focus {
                 .icon-bar {
-                    background-color: @color-one;
+                    background-color: @color-five;
+                    height: 3px;
+                    width: 24px;
+                    box-shadow: none;
+                }
+                &:hover, &:focus {
+                    .icon-bar {
+                        background-color: @color-one;
+                    }
                 }
             }
-        }
             .navbar-inner {
                 .nav-collapse {
                     .dropdown-menu {
