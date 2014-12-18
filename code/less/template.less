@@ -13,6 +13,7 @@
     .nav {
         > li {
             > .dropdown-menu {
+            	margin-top: 6px;
                 box-shadow: none;
                 &:before {
                     display: none;
@@ -32,6 +33,7 @@
             text-decoration: none;
             margin: 0;
             li {
+            	position: relative;
                 &.deeper {
                     > a {
                         text-shadow: none;
@@ -103,6 +105,7 @@
                 }
             }
             > li {
+            	position: relative;
                 > .dropdow-menu {
                     &:before {
                         display: none;
@@ -111,15 +114,15 @@
                         display: none;
                     }
                 }
-                &:last-child {
-                    > a {
-                        padding-right: 0px;
-                    }
-                }
-                &:first-child {
-                    > a {
-                        padding-left: 0px;
-                    }
+                &:hover, &:focus {
+                	&:after {
+                		content: '';
+                		height: 6px;
+                		width: 100%;
+                		position: absolute;
+                		bottom: -6px;
+                		background-color: @color-two;
+                	}
                 }
             }
         }
@@ -165,6 +168,7 @@
                 }
                 > li {
                     > .dropdown-menu {
+                    	margin-top: 0px;
                         li {
                             &.active {
                                 background-color: @color-one;
@@ -180,6 +184,9 @@
                     > .dropdown-menu {
                         margin-top: 0px;
                     }
+                    &:after {
+                		display: none;
+                	}
                 }
             }
         }
@@ -1031,6 +1038,11 @@ pre {
             border-bottom: none;
             .nav {
                 font-size: @baseFontSize - 2;
+                > li {
+                	 &:after {
+                		display: none;
+                	}
+                }
             }
         }
     }
