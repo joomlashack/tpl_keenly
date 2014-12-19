@@ -13,7 +13,7 @@
     .nav {
         > li {
             > .dropdown-menu {
-            	margin-top: 6px;
+                margin-top: 6px;
                 box-shadow: none;
                 &:before {
                     display: none;
@@ -33,7 +33,7 @@
             text-decoration: none;
             margin: 0;
             li {
-            	position: relative;
+                position: relative;
                 &.deeper {
                     > a {
                         text-shadow: none;
@@ -92,7 +92,7 @@
                                 }
                             }
                             .sub-menu {
-                            	margin-left: 5px;
+                                margin-left: 5px;
                                 &:before {
                                     display: none;
                                 }
@@ -105,7 +105,7 @@
                 }
             }
             > li {
-            	position: relative;
+                position: relative;
                 > .dropdow-menu {
                     &:before {
                         display: none;
@@ -115,14 +115,14 @@
                     }
                 }
                 &:hover, &:focus {
-                	&:after {
-                		content: '';
-                		height: 6px;
-                		width: 100%;
-                		position: absolute;
-                		bottom: -6px;
-                		background-color: @color-two;
-                	}
+                    &:after {
+                        content: '';
+                        height: 6px;
+                        width: 100%;
+                        position: absolute;
+                        bottom: -6px;
+                        background-color: @color-two;
+                    }
                 }
             }
         }
@@ -135,6 +135,7 @@
             border-top: none;
             padding-left: 20px;
             padding-right: 20px;
+            box-shadow: none;
             .nav, &.nav {
                 li {
                     &.deeper {
@@ -168,7 +169,7 @@
                 }
                 > li {
                     > .dropdown-menu {
-                    	margin-top: 0px;
+                        margin-top: 0px;
                         li {
                             &.active {
                                 background-color: @color-one;
@@ -185,8 +186,8 @@
                         margin-top: 0px;
                     }
                     &:after {
-                		display: none;
-                	}
+                        display: none;
+                    }
                 }
             }
         }
@@ -973,6 +974,12 @@ pre {
     }
 }
 // Page structure styles
+body {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 20px solid @color-two;
+}
 #header {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1039,9 +1046,9 @@ pre {
             .nav {
                 font-size: @baseFontSize - 2;
                 > li {
-                	 &:after {
-                		display: none;
-                	}
+                    &:after {
+                        display: none;
+                    }
                 }
             }
         }

@@ -23,6 +23,7 @@ defined('_JEXEC') or die('Restricted access');
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="<?php echo $wrightBodyClass ?>">
+	<div class="frame"></div>
 	<?php
 		if ($this->countModules('toolbar'))
 			:
