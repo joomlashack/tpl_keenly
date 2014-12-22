@@ -354,6 +354,7 @@ a {
     text-shadow: none;
     font-family: @serifFontFamily;
     text-transform: uppercase;
+    outline: 0px;
     .caret {
         border-bottom-color: transparent;
         border-top-color: transparent;
@@ -469,9 +470,6 @@ a {
             text-decoration: none;
         }
     }
-    &.active {
-        box-shadow: none;
-    }
     &.btn-small {
         padding: 2px 25px
     }
@@ -480,6 +478,10 @@ a {
     }
     &.btn-large {
         padding: 2px 35px
+    }
+    &:active {
+        box-shadow: none;
+        outline: none;
     }
 }
 .btn-group {
@@ -635,6 +637,13 @@ a {
                 background-color: transparent;
             }
         }
+    }
+}
+
+.icons-actions {
+    .btn {
+        border: none;
+        padding: 0px 15px;
     }
 }
 // Pagination
