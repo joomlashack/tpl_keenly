@@ -1012,9 +1012,7 @@ pre {
 }
 // Page structure styles
 body {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    .borderbox();
     border: 20px solid @color-two;
 }
 #header {
@@ -1071,6 +1069,21 @@ body {
             }
         }
     }
+}
+.borderbox {
+     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#sidebar1 {
+    .borderbox();
+    border-right: 1px solid @color-four;
+    padding-right: 5px;
+}
+#sidebar2 {
+    .borderbox();
+    border-left: 1px solid @color-four;
+    padding-left: 10px;
 }
 #footer {
     background-color: transparent;
