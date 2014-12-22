@@ -113,6 +113,10 @@
                 }
             }
             > li {
+                margin-right: 30px;
+                > a {
+                    padding: 15px 0px;
+                }
                 > .dropdow-menu {
                     &:before {
                         display: none;
@@ -131,6 +135,9 @@
                         background-color: @color-two;
                     }
                 }
+                &:last-child {
+                     margin-right: 0px;
+                } 
             }
         }
     }
@@ -850,7 +857,8 @@ pre {
     text-shadow: none;
     text-transform: uppercase;
     &.badge-info {
-        background-color: @color-four;
+         background-color: @label-bg;
+        color: @color-four;
     }
 }
 // Module styles
