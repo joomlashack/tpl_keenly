@@ -115,7 +115,7 @@
             > li {
                 margin-right: 30px;
                 > a {
-                    padding: 15px 0px;
+                    padding: 10px 0px;
                 }
                 > .dropdow-menu {
                     &:before {
@@ -136,8 +136,8 @@
                     }
                 }
                 &:last-child {
-                     margin-right: 0px;
-                } 
+                    margin-right: 0px;
+                }
             }
         }
     }
@@ -162,35 +162,60 @@
                         &:hover, &:focus {
                             text-shadow: none;
                             > a {
-                                color: @color-one;
+                                color: @color-five;
                                 &:after {
-                                    color: @color-one;
+                                    color: @color-five;
                                 }
                             }
                         }
                     }
                     &.active {
                         > a {
-                            color: @color-one;
+                            color: @color-five;
                             &:after {
-                                color: @color-one;
+                                color: @color-five;
                                 &:hover, &:focus {
                                     background-image: none;
                                 }
                             }
                         }
+                        &:hover, &:focus {
+                            background-color: @color-one;
+                        }
+                    }
+                    &:hover, &:focus {
+                        background-color: @color-one;
                     }
                 }
                 > li {
+                    margin-right: 0px;
                     > .dropdown-menu {
+                        background-color: @color-one;
                         margin-top: 0px;
                         li {
+                            a {
+                                border-bottom: 1px solid @color-two;
+                            }
                             &.active {
-                                background-color: @color-one;
+                                background-color: @color-two;
+                                a {
+                                    background-color: transparent;
+                                }
+                            }
+                            &:last-child {
+                                a {
+                                     border-bottom: none;
+                                }
+                            }
+                        }
+                        > li {
+                            &:hover, &:focus {
+                                background-color: @color-two;
                             }
                         }
                     }
                     > a {
+                        padding: 10px 15px;
                         text-shadow: none;
                         &:hover, &:focus {
                             text-shadow: none;
@@ -198,6 +223,18 @@
                     }
                     > .dropdown-menu {
                         margin-top: 0px;
+                        li {
+                            &.active {
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                            &:hover, &:focus {
+                                a {
+                                    background-color: @color-two;
+                                }
+                            }
+                        }
                     }
                     &:after {
                         display: none;
@@ -646,7 +683,6 @@ a {
         }
     }
 }
-
 .icons-actions {
     .btn {
         border: none;
@@ -857,7 +893,7 @@ pre {
     text-shadow: none;
     text-transform: uppercase;
     &.badge-info {
-         background-color: @label-bg;
+        background-color: @label-bg;
         color: @color-four;
     }
 }
@@ -1071,7 +1107,7 @@ body {
     }
 }
 .borderbox {
-     box-sizing: border-box;
+    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
