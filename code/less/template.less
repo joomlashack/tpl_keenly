@@ -242,6 +242,9 @@
 // Module Navs
 .well {
     box-shadow: none;
+    h3 {
+        text-shadow: none;
+    }
 }
 .module {
     .nav {
@@ -280,6 +283,9 @@
     dt {
         h3 {
             margin-right: 1px !important;
+            margin-bottom: -1px !important;
+        }
+        p {
             margin-bottom: -1px !important;
         }
         a {
@@ -855,6 +861,12 @@ pre {
             background-color: @color-one;
             border-color: @color-one;
         }
+    }
+}
+.contact-form {
+    legend {
+        font-size: @baseFontSize;
+        padding: 5px;
     }
 }
 .form-validate {

@@ -205,6 +205,13 @@
         .navbar-inner {
             background-color: @color-five;
             .nav {
+                li {
+                    &.active {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
                 > li {
                     &:hover, &:focus {
                         &:after {
@@ -343,6 +350,13 @@
         .navbar-inner {
             background-color: @color-five;
             .nav {
+                 li {
+                    &.active {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
                 > li {
                     &:hover, &:focus {
                         &:after {
@@ -481,6 +495,13 @@
         .navbar-inner {
             background-color: @color-five;
             .nav {
+                 li {
+                    &.active {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
                 > li {
                     &:hover, &:focus {
                         &:after {
@@ -489,7 +510,7 @@
                     }
                 }
             }
-               .nav-collapse {
+            .nav-collapse {
                 .dropdown-menu {
                     background-color: @color-two;
                     margin-bottom: 20px;
