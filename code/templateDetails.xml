@@ -84,6 +84,7 @@
 				<field name="logowidth" type="grid" default="4" label="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_DESC" />
 				<field name="body_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_BODY_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_BODY_FONT_DESC" />
 				<field name="header_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_HEADING_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_HEADING_FONT_DESC" />
+				<field name="mountedImage" type="text" default="300" label="TPL_JS_WRIGHT_FIELD_MOUNTED_IMAGE" description="TPL_JS_WRIGHT_FIELD_MOUNTED_IMAGEd_DESC" />
 				<field name="columns" type="columns" default="sidebar1:3;main:6;sidebar2:3" sidebars="2" label="TPL_JS_WRIGHT_FIELD_COLUMNS_LABEL" description="TPL_JS_WRIGHT_FIELD_COLUMNS_DESC" />
 				<field name="buttonspacer" label="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_LABEL" description="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_DESC" type="spacer" />
 				<field name="bs_rowmode" type="list" default="row" label="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_LABEL" description="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DESC">
