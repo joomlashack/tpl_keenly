@@ -86,19 +86,19 @@ defined('_JEXEC') or die('Restricted access');
 		<!-- single image -->
         <?php if ($wrightSingleArticleDisplay): ?>
             <div class="row-fluid">
-	            <div class="full-image span12">
+	            <div class="full-image span12 <?php if (!$showMountedImage): ?>full-image-margin<?php endif; ?>">
 	                <img id="full-image-img" src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
 	            </div>
             </div>
         <?php endif; ?>
         <!-- single image end -->
-		<div id="main-content" class="<?php echo $wrightGridMode; ?> <?php if ($wrightSingleArticleDisplay): ?>full-image-position<?php endif; ?>">
+		<div id="main-content" class="<?php echo $wrightGridMode; ?> <?php if ($showMountedImage): ?>full-image-position<?php endif; ?>">
 			<!-- sidebar1 -->
 			<aside id="sidebar1">
 				<w:module name="sidebar1" chrome="xhtml" />
 			</aside>
 			<!-- main -->
-			<section id="main" <?php if ($wrightSingleArticleDisplay): ?>style="margin-top: -<?php echo $mountedImage ?>px;"<?php endif; ?>>
+			<section id="main" <?php if ($showMountedImage): ?>style="margin-top: -<?php echo $mountedImage ?>px;"<?php endif; ?>>
 				<?php
 					if ($this->countModules('above-content')):
 				?>

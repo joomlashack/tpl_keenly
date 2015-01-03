@@ -16,7 +16,20 @@ $wrightSingleArticleImage = '';
 $app = JFactory::getApplication();
 $input = $app->input;
 
+// Monted image pixel parameter
+
 $mountedImage = $this->params->get('mountedImage','');
+
+// Sidebars count moundules if moudles = 0 mounted image will display as normal
+
+$sidebar1 = intval($this->countModules('sidebar1'));
+$sidebar2 = intval($this->countModules('sidebar2'));
+$sidebarsModule = $sidebar1 + $sidebar2;
+$showMountedImage = false;
+
+if ($sidebarsModule > 0 ) {
+	$showMountedImage = true;
+}
 
 $paramOption = $input->getVar('option', '');
 $paramView = $input->getVar('view', '');
