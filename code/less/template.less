@@ -920,16 +920,33 @@ pre {
         }
     }
 }
-.contact-form {
-    legend {
-        font-size: @baseFontSize;
-        padding: 5px;
+.contact {
+    .contact-form {
+        legend {
+            font-size: @baseFontSize;
+            padding: 0px 0px 5px 0px;
+            margin-bottom: 0px;
+            border-bottom: none;
+        }
+        .dl-horizontal {
+            margin-top: 0px;
+            dt {
+                font-family: @serifFontFamily;
+                text-align: left;
+            }
+            dd {
+                margin-bottom: 10px;
+            }
+        }
+        .form-actions {
+            border-top: none;
+        }
     }
-}
-.form-validate {
-    fieldset {
-        dd {
-            margin-left: 0;
+    .form-validate {
+        fieldset {
+            dd {
+                margin-left: 0;
+            }
         }
     }
 }
@@ -1080,41 +1097,6 @@ body {
         #sidebar1 {
             padding-top: 100px;
             border-right: none;
-        }
-    }
-}
-dl {
-    &.article-info {
-        margin: 0px;
-        padding: 0px;
-        &.muted {
-            margin-bottom: 30px;
-        }
-        font-size: @baseFontSize - 1;
-        [class ^= "icon-"] , [class *= " icon-"] {
-            margin-right: 0px;
-            text-decoration: none;
-            display: none;
-            &:before {
-                display: none;
-                content: '';
-            }
-        }
-
-        dd {
-            min-height: 0px;
-            padding: 0px;
-            [class ^= "icon-"] , [class *= " icon-"] {
-                display: none;
-                width: 0px;
-            }
-        }
-
-        dd > div:hover , dd:hover {
-            background-color: transparent;
-            > i {
-                font-size: 1.2em;
-            }
         }
     }
 }
