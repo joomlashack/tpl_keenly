@@ -921,6 +921,15 @@ pre {
     }
 }
 .contact {
+    .contact-position {
+        font-family: @serifFontFamily;
+    }
+    .contact-address {
+        padding-left: 25px;
+    }
+    .contact-contactinfo {
+        padding-left: 25px;
+    }
     .contact-form {
         legend {
             font-size: @baseFontSize;
@@ -933,6 +942,8 @@ pre {
             dt {
                 font-family: @serifFontFamily;
                 text-align: left;
+                white-space: normal;
+                width: 90px;
             }
             dd {
                 margin-bottom: 10px;
@@ -940,6 +951,7 @@ pre {
         }
         .form-actions {
             border-top: none;
+            padding-left: 90px;
         }
     }
     .form-validate {
