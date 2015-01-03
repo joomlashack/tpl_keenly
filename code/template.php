@@ -92,13 +92,13 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         <?php endif; ?>
         <!-- single image end -->
-		<div id="main-content" class="<?php echo $wrightGridMode; ?> <?php if ($showMountedImage): ?>full-image-position<?php endif; ?>">
+		<div id="main-content" class="<?php echo $wrightGridMode; ?> <?php if ($wrightSingleArticleDisplay && $showMountedImage): ?>full-image-position<?php endif; ?>">
 			<!-- sidebar1 -->
 			<aside id="sidebar1">
 				<w:module name="sidebar1" chrome="xhtml" />
 			</aside>
 			<!-- main -->
-			<section id="main" <?php if ($showMountedImage): ?>style="margin-top: -<?php echo $mountedImage ?>px;"<?php endif; ?>>
+			<section id="main" <?php if ($wrightSingleArticleDisplay && $showMountedImage): ?>style="margin-top: -<?php echo $mountedImage ?>px;"<?php endif; ?>>
 				<?php
 					if ($this->countModules('above-content')):
 				?>
