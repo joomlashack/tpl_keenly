@@ -921,6 +921,28 @@ pre {
     }
 }
 .contact {
+    .form-inline {
+        margin-bottom: 30px;
+        fieldset {
+            &.well {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                background-color: @inputBackground;
+                border: none;
+            }
+            font-family: @serifFontFamily;
+            text-transform: uppercase;
+            select {
+                margin-left: 20px;
+                border-radius: 0;
+                background-color: @color-five;
+            }
+        }
+    }
+    .contact-info-wrapper {
+        boder-bottom: 1px solid @color-four;
+        margin-bottom: 30px;
+    }
     .contact-position {
         font-family: @serifFontFamily;
     }
