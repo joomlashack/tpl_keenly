@@ -382,16 +382,88 @@
     .menu {
         &.nav {
             li {
+                &.active {
+                    margin-left: -19px;
+                    margin-right: -19px;
+                    background-color: @color-one;
+                    a {
+                        margin-right: 19px;
+                        margin-left: 19px;
+                        color: @color-five;
+                    }
+                }
                 &.dropdown {
                     .dropdown-menu {
                         background-color: @tableBorder;
                         li {
+                             border-top: 1px solid @tableBorder;
                             > a {
                                 &:hover, &:focus {
-                                    border-bottom-color: @tableBorder;
+                                    border-bottom-color: @inputBackground;
                                     background-color: @color-four;
+                                    border-top: 1px solid @color-four;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.kpills {
+    padding: 0;
+    background-color: transparent;
+    .menu {
+        &.nav {
+            li {
+                background-color: @inputBackground;
+                &.active {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    a {
+                        background-color: transparent;
+                        padding: 8px 0px;
+                    }
+                }
+                a {
+                    margin: 0px;
+                    padding-left: 19px;
+                    padding-right: 19px;
+                }
+                &.dropdown {
+                    .dropdown-menu {
+                        li {
+                            background-color: @tableBorder;
+                            a {
+                                padding-left: 19px;
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.klist {
+    background-color: @inputBackground;
+    border-top: 4px solid @color-three;
+    .menu {
+        &.nav {
+            &.nav-list {
+                padding-left: 0px;
+                padding-right: 0px;
+                li {
+                    background-color: @inputBackground;
+                    &.active {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        a {
+                            background-color: transparent;
+                            padding: 8px 0px;
                         }
                     }
                 }
@@ -1086,6 +1158,13 @@ pre {
     padding: 20px 0px;
     border-top-color: @color-four;
 }
+.remind, .reset {
+    .form-validate {
+        dd {
+            margin-left: 0;
+        }
+    }
+}
 // Keenly module styles
 .module {
     h3 {
@@ -1112,7 +1191,7 @@ pre {
     color: @color-five;
     background-color: @color-four;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     h3 {
         padding-left: 20px;
         padding-top: 10px;
@@ -1157,7 +1236,7 @@ pre {
     color: @color-five;
     background-color: @color-three;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     h3 {
         padding-left: 20px;
         padding-top: 10px;
@@ -1281,6 +1360,20 @@ body {
                         padding: 0px;
                         text-transform: none;
                         color: @color-three;
+                    }
+                }
+            }
+        }
+    }
+}
+.login {
+    + div {
+        .nav-stacked {
+            > li {
+                > a {
+                    border: none;
+                    &:hover, &:focus {
+                        background-color: transparent;
                     }
                 }
             }
