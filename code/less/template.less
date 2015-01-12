@@ -290,15 +290,15 @@
             font-family: @serifFontFamily;
             border-bottom: none;
             li {
-                border-bottom: 1px solid @tableBorder;
                 &.dropdown {
                     .dropdown-menu {
                         background-color: @inputBackground;
+                        margin-top: 0px;
                         li {
                             > a {
                                 color: @color-three;
                                 text-transform: none;
-                                border-bottom: 1px solid @inputBackground;
+                                border-bottom: 1px solid @tableBorder;
                                 padding: 8px 8px;
                                 font-size: @baseFontSize;
                                 &:hover, &:focus {
@@ -318,6 +318,7 @@
                 a {
                     padding: 8px 0px;
                     font-size: @baseFontSize;
+                    border-bottom: 1px solid @tableBorder;
                     &:hover, &:focus {
                         color: @color-one;
                         background-color: transparent;
@@ -387,6 +388,7 @@
                     margin-right: -19px;
                     background-color: @color-one;
                     a {
+                        border-bottom: none;
                         margin-right: 19px;
                         margin-left: 19px;
                         color: @color-five;
@@ -396,12 +398,11 @@
                     .dropdown-menu {
                         background-color: @tableBorder;
                         li {
-                             border-top: 1px solid @tableBorder;
+                            border-bottom: 1px solid @inputBackground;
                             > a {
+                                border-bottom: none;
                                 &:hover, &:focus {
-                                    border-bottom-color: @inputBackground;
                                     background-color: @color-four;
-                                    border-top: 1px solid @color-four;
                                 }
                             }
                         }
@@ -428,8 +429,9 @@
                 }
                 a {
                     margin: 0px;
-                    padding-left: 19px;
-                    padding-right: 19px;
+                    border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    padding: 10px 19px;
                 }
                 &.dropdown {
                     .dropdown-menu {
@@ -465,6 +467,9 @@
                             background-color: transparent;
                             padding: 8px 0px;
                         }
+                    }
+                    a {
+                        padding: 10px 0px;
                     }
                 }
             }
