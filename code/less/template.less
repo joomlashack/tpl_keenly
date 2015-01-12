@@ -337,6 +337,9 @@
                         color: @color-one;
                     }
                 }
+                &.active {
+                    color: @color-one;
+                }
             }
         }
     }
@@ -444,7 +447,9 @@
                     }
                 }
                 &:last-child {
-                    border-bottom: 0;
+                    a {
+                        border-bottom: 0;
+                    }
                 }
             }
         }
@@ -453,6 +458,10 @@
 .klist {
     background-color: @inputBackground;
     border-top: 4px solid @color-three;
+    padding: 0px;
+    h3 {
+        padding: 0px 10px;
+    }
     .menu {
         &.nav {
             &.nav-list {
@@ -461,15 +470,38 @@
                 li {
                     background-color: @inputBackground;
                     &.active {
-                        margin-left: 0px;
-                        margin-right: 0px;
+                        margin: 0px;
+                        border-bottom: 1px solid @tableBorder;
                         a {
+                            color: @color-two;
                             background-color: transparent;
-                            padding: 8px 0px;
+                            margin-left: 0px;
+                            margin-right: 0px;
+                            border-left: 8px solid @color-two;
+                            padding: 10px 7px;
                         }
                     }
                     a {
-                        padding: 10px 0px;
+                        padding: 10px 15px;
+                        margin: 0px;
+                    }
+                    &.dropdown {
+                        .dropdown-menu {
+                            li {
+                                background-color: @tableBorder;
+                                border-bottom: 1px solid @inputBackground;
+                                &:focus, &:hover {
+                                    a {
+                                        border-left: 8px solid @color-four;
+                                        padding: 10px 7px;
+                                        background-color: transparent;  
+                                    } 
+                                }
+                                a {
+                                    padding: 10px 15px;
+                                }
+                            }
+                        }
                     }
                 }
             }
