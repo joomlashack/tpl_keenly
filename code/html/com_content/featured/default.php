@@ -23,13 +23,23 @@ $this->wrightElementsStructure = Array(
 	);
 
 $this->wrightLeadingItemElementsStructure = Array(
-	"image",
+	'div.item-container',
+    'div.span6',
+    'div.image-container',
+    "image",
+    '/div',
+    '/div',
+    'div.span6',
+    'div.content-wrapper',
     "title",
     "icons",
     "legendtop",
     "article-info",
     "content",
-    "legendbottom"
+    "legendbottom",
+    '/div',
+    '/div',
+    '/div'
 	);
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
