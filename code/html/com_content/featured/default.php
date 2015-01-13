@@ -24,12 +24,12 @@ $this->wrightElementsStructure = Array(
 
 $this->wrightLeadingItemElementsStructure = Array(
 	'div.item-container',
-    'div.span6',
+    'div.span9',
     'div.image-container',
     "image",
     '/div',
     '/div',
-    'div.span6',
+    'div.span3',
     'div.content-wrapper',
     "title",
     "icons",
