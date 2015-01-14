@@ -20,5 +20,8 @@ $this->wrightIntroItemElementsStructure = Array(
 	'content'
 );
 
+$this->MoreItemsGridOrientation = Array('activeLayout' => true, 'moreitemsLayout' => 8, 'subcategoriesLayout' => 4); // Wright v.3: Layout options for the moreitmes and subcaterogies modules, (active, div span class 1,2,3 etc for the (1) moreitems and the (2)subcategories on a row oriented layout).
+
+
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 include Overrider::getOverride('com_content.category', 'blog');

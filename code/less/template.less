@@ -1362,6 +1362,10 @@ body {
         .image-container {
             border-right: 1px solid @color-four;
             padding-right: 20px;
+            [class^='img-intro-'] {
+                margin: 0px;
+                float: none;
+            }
         }
         .content-wrapper {
             padding-left: 20px;
@@ -1372,13 +1376,31 @@ body {
                 float: none;
             }
         }
+        .content-wrapper-left {
+            padding-right: 20px;
+            .readmore {
+                .btn {
+                    padding: 0px;
+                }
+                float: none;
+            }
+        }
+        .image-container-right {
+            border-left: 1px solid @color-four;
+            padding-left: 20px;
+            [class^='img-intro-'] {
+                margin: 0px;
+                float: none;
+            }
+        }
     }
     .items-row {
         border-bottom: 1px solid @color-four;
         margin-bottom: 20px;
         padding-bottom: 20px;
         .readmore {
-            float: none;
+            float: left;
+            margin-top: 15px;
             .btn {
                 padding: 0px;
             }
@@ -1395,6 +1417,9 @@ body {
                 margin-right: 25px;
                 border-bottom: none;
                 .label {
+                    &.label-info {
+                        padding: 0px 0px;
+                    }
                     background-color: transparent;
                     margin-top: 20px;
                     dt, dd {
@@ -1475,6 +1500,7 @@ dl {
         padding: 0px;
         &.muted {
             margin-bottom: 30px;
+            margin-top: 15px;
         }
         font-size: @baseFontSize - 1;
         [class^="icon-"], [class*="icon-"] {
@@ -1489,6 +1515,7 @@ dl {
         dd {
             min-height: 0px;
             padding: 0px;
+            color: @color-three;
             [class^="icon-"], [class*="icon-"] {
                 display: none;
                 width: 0px;
