@@ -368,7 +368,6 @@
                                 }
                             }
                         }
-
                     }
                     &.active {
                         a {
@@ -379,11 +378,14 @@
                     }
                     &.dropdown {
                         .dropdown-menu {
-                            background-color: @tableBorder;
-                            margin-bottom: 5px;
+                            margin-top: 0px;
                             li {
                                 a {
+                                    background-color: @tableBorder;
                                     border-bottom: 1px solid @color-five;
+                                    &:hover, &:focus {
+                                        background-color: #A9AA97;
+                                    }
                                 }
                             }
                         }
@@ -617,7 +619,8 @@ a {
         text-decoration: none;
     }
 }
-.btn {
+
+.btn{
     background-color: transparent;
     background-image: none;
     border-color: @color-two;
@@ -1109,6 +1112,12 @@ pre {
     }
 }
 //Label
+label {
+    &.finder {
+        .btn();
+        float: left;
+    }
+}
 .label {
     border-radius: 0;
     -webkit-border-radius: 0;
