@@ -345,6 +345,55 @@
     }
 }
 .module {
+    .menu {
+        &.nav-tabs {
+            border-left: none;
+            &.nav {
+                li {
+                    a {
+                        padding: 8px 15px;
+                        border: none;
+                        background-color: @inputBackground;
+                        border-radius: 0;
+                        -webkit-border-radius: 0;
+                        &:hover, &:focus {
+                            border: none;
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                            background-color: @tableBorder;
+                            color: @color-three;
+                            .caret {
+                                &:after {
+                                    color: @color-one;
+                                }
+                            }
+                        }
+
+                    }
+                    &.active {
+                        a {
+                            border: none;
+                            background-color: @color-one;
+                            color: @color-five;
+                        }
+                    }
+                    &.dropdown {
+                        .dropdown-menu {
+                            background-color: @tableBorder;
+                            margin-bottom: 5px;
+                            li {
+                                a {
+                                    border-bottom: 1px solid @color-five;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.module {
     .nav {
         li {
             > a {
