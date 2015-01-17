@@ -1637,3 +1637,22 @@ dl {
     text-transform: uppercase;
     border-bottom-color: @color-four;
 }
+.jss-slider {
+    .jss-image-container {
+        &.jss-descpos-top {
+            .jss-title-description {
+                &.jss-alignment-center {
+                    top: 0;
+                    bottom: 0;
+                    .jss-title {
+                        p, div {
+                            font-size: @baseFontSize + 44;
+                            text-transform: uppercase;
+                            font-family: @serifFontFamily;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
