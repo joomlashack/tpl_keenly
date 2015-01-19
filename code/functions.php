@@ -26,9 +26,13 @@ $sidebar1 = intval($this->countModules('sidebar1'));
 $sidebar2 = intval($this->countModules('sidebar2'));
 $sidebarsModule = $sidebar1 + $sidebar2;
 $showMountedImage = false;
+$mainContentClass = 'displaynormal';
 
 if ($sidebarsModule > 0 ) {
 	$showMountedImage = true;
+	if (($sidebar1 >= 1) && ($sidebar2 >= 1)) {
+			$mainContentClass = 'sidebarsactive';
+	}
 }
 
 $paramOption = $input->getVar('option', '');

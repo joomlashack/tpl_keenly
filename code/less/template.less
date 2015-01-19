@@ -1397,9 +1397,21 @@ body {
             padding-top: 20px;
             background-color: @color-five;
         }
+        &.sidebarsactive {
+            #main {
+                .borderbox();
+                padding-left: 50px;
+                padding-right: 50px;
+                background-color: @color-five;
+            }
+        }
         #sidebar1 {
             padding-top: 100px;
             border-right: none;
+        }
+        #sidebar2 {
+            padding-top: 100px;
+            border-left: none;
         }
     }
 }
