@@ -60,7 +60,7 @@
 	</positions>
 
 	<config>
-		<fields name="params" addfieldpath="/templates/js_wright/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_keenly/wright/parameters/joomla_2.5">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
                 <field name="wright" type="wright"/>
