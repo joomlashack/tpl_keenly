@@ -1030,6 +1030,24 @@ a {
     }
 }
 // Documentation styles
+blockquote {
+    border-left: none;
+    background-image: url(../images/left-blockquote.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding: 0 0 0 50px;
+    min-height: 50px;
+    &.pull-right {
+        padding: 0 0 0 50px;
+        border-right: none;
+    }
+    &.topquote {
+        padding: 50px 0 0 0;
+        p {
+            font-size: @baseFontSize + 16;
+        }
+    }
+}
 div, form, p {
     &.bs-docs-example {
         border-radius: 0;
