@@ -18,7 +18,12 @@ jQuery(document).ready(function($) {
                     if (jQuery(this).hasClass('in')) {
                         $itemCloneElement.addClass('active-menu');
                     }
-
+                    jQuery(this).children().each(function () {
+                    	if (checkingClass(jQuery(this), 'deeper')) {
+                    		jQuery(this).children('a').attr('href', jQuery(this).attr('href') + '-total-menu');
+                    		jQuery(this).children('ul').attr('id', jQuery(this).attr('id') + '-total-menu');
+                    	}
+                    });
                 }
             });
         } else {
