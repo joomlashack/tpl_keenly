@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
     $totalMenu = jQuery('.moduletable_ktotalmenu').children('.menu').children();
     jQuery('.total-menu-wrapper').append('<div class="total-menu-container"><div class="menu-close"><i class="icon-remove"></i></div><div class="menu-items"><div class="wrapper-items"></div></div><div class="submenu-items"><div class="wrapper-submenu-items"></div></div></div>');
+    
     // Rendering menu 
     jQuery($totalMenu).each(function() {
         if (jQuery(this).hasClass('parent')) {
@@ -8,10 +9,10 @@ jQuery(document).ready(function($) {
             $menuParent = jQuery(this).children();
             jQuery($menuParent).each(function() {
                 if (jQuery(this).is('a')) {
-                	$menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').attr('href', jQuery(this).attr('href') + '-total-menu').bind('click', itemMenuClickEvent);
-                	if (jQuery(this).parent().hasClass('active') && jQuery(this).hasClass('active')) {
-                		$menuItemElement.addClass('active');
-                	}
+                    $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').attr('href', jQuery(this).attr('href') + '-total-menu').bind('click', itemMenuClickEvent);
+                    if (jQuery(this).parent().hasClass('active')) {
+                        $menuItemElement.addClass('active');
+                    }
                 } else {
                     $itemCloneElement = jQuery(this).clone().appendTo('.wrapper-submenu-items').attr('id', jQuery(this).attr('id') + '-total-menu');
                     if (jQuery(this).hasClass('in')) {
@@ -20,21 +21,27 @@ jQuery(document).ready(function($) {
                 }
             });
         } else {
-            jQuery('.wrapper-items').append(jQuery(this).children('a'));
+            $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items');
+            if (jQuery(this).hasClass('active')) {
+            	 $linkItemMenu.addClass('active');
+            }
         }
     });
 
-	jQuery('.menu-close').bind('click', closeMenu);
-	jQuery('.total-menu-btn').bind('click', openMenu);
+    // Bing open and close functions
+    jQuery('.menu-close').bind('click', closeMenu);
+    jQuery('.total-menu-btn').bind('click', openMenu);
 
-	function openMenu() {
-		jQuery('.total-menu-wrapper').slideDown();
-	}
+    // Action functions 
+    function openMenu() {
+        jQuery('.total-menu-wrapper').slideDown();
+    }
 
-	function closeMenu() {
-		jQuery('.total-menu-wrapper').slideUp();
-	}
+    function closeMenu() {
+        jQuery('.total-menu-wrapper').slideUp();
+    }
 
+    // Selected item detects the menu that is open close it and open the corresponding item.
     function itemMenuClickEvent() {
         jQuery('*[active="true"]').removeClass('in');
         jQuery('*[active="true"]').height(0);
