@@ -2,11 +2,11 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_keenly</name>
-	<creationDate>December 2014</creationDate>
+	<creationDate>January 2015</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
-	<copyright>Copyright Joomlashack 2010-2014. All rights reserved</copyright>
+	<copyright>Copyright Joomlashack 2010-2015. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
 	<version>0.0.1</version>
     <description>TPL_JS_KEENLY_XML_DESCRIPTION</description>
@@ -66,7 +66,11 @@
                 <field name="wright" type="wright"/>
                 <field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC" />
                 <field name="rebrand" type="rebrand" default="no" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC" />
-                <field name="style" type="styles" default="elan-green" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="lesscompile" type="list" default="0" label="TPL_JS_WRIGHT_LESS_COMPILE" description="TPL_JS_WRIGHT_LESS_COMPILE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
                 <field name="modal" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
