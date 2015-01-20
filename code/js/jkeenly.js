@@ -1,7 +1,5 @@
 jQuery(document).ready(function($) {
     $totalMenu = jQuery('.moduletable_ktotalmenu').children('.menu').children();
-    jQuery('.total-menu-wrapper').append('<div class="total-menu-container"><div class="menu-close"><i class="icon-remove"></i></div><div class="menu-items"><div class="wrapper-items"></div></div><div class="submenu-items"><div class="wrapper-submenu-items"></div></div></div>');
-
     // Rendering menu 
     jQuery($totalMenu).each(function() {
         if (jQuery(this).hasClass('parent')) {

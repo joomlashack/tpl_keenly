@@ -1408,15 +1408,26 @@ body {
     display: none;
     padding-top: 20px;
     .menu-close {
-        width: 45px;
+        width: auto;
         height: 45px;
-        font-size: 35px;
         font-weight: lighter;
         position: absolute;
         color: @color-five;
         right: 20px;
         top: 40px;
         cursor: pointer;
+        .icon-remove {
+             font-size: 35px;
+        }
+        span {
+            height: 45px;
+            width: auto;
+            padding: 15px 15px;
+            text-transform: uppercase;
+            font-family: @serifFontFamily;
+            float: left;
+            font-size: @baseFontSize - 2;
+        }
     }
     .total-menu-container {
         width: 100%;
