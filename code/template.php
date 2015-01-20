@@ -34,6 +34,22 @@ defined('_JEXEC') or die('Restricted access');
 		endif;
 	?>
 	<div class="<?php echo $wrightContainerClass; ?>">
+		<!-- Total menu -->
+		<?php
+			if ($this->countModules('total-menu'))
+				:
+		?>
+		<div class="total-menu-wrapper">
+		<w:module type="none" name="total-menu" chrome="xhtml" />
+		</div>
+		<div class="total-menu-btn">
+		<a class="btn btn-navbar collapsed">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		</div>
+		<?php endif; ?>
 		<!-- header -->
 		<header id="header">
 			<div class="<?php echo $wrightGridMode; ?> clearfix">
@@ -195,6 +211,6 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 	   </footer>
 	</div>
-
+	<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_keenly/js/jkeenly.js'></script>
 </body>
 </html>
