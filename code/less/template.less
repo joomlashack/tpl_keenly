@@ -62,7 +62,6 @@
                 }
                 &.active {
                     > a {
-                        color: @color-two;
                         -webkit-box-shadow: none;
                         box-shadow: none;
                         text-shadow: none;
@@ -99,8 +98,10 @@
                                     color: @color-five;
                                 }
                             }
-                            .sub-menu {
-                                margin-left: 5px;
+                            .dropdown-menu {
+                                border-radius: 0;
+                                -webkit-border-radius: 0;
+                                box-shadow: none;
                                 &:before {
                                     display: none;
                                 }
@@ -1817,6 +1818,7 @@ dl {
 #footer {
     background-color: transparent;
     background-image: none;
+    filter: none;
     color: @textColor;
     .navbar {
         .navbar-inner {
