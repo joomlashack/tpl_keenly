@@ -46,10 +46,13 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="wrapper-items"></div>
 			</div>
 			<div class="submenu-items">
-				<div class="wrapper-submenu-items"></div>
+				<div class="wrapper-submenu-items"><w:module type="none" name="total-menu" chrome="xhtml" />
+				<div class="total-menu-inner">
+				<w:module type="none" name="total-menu-inner" chrome="xhtml" />
+				</div>
+				</div>
 			</div>
 		</div>
-		<w:module type="none" name="total-menu" chrome="xhtml" />
 		</div>
 		<div class="total-menu-btn">
 		<a class="btn btn-navbar collapsed">

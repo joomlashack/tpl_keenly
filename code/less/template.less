@@ -1396,7 +1396,18 @@ body {
 }
 // Total menus
 .moduletable_ktotalmenu {
-    display: none;
+    h3 {
+        display: none;
+    }
+    .menu {
+        &.nav-list {
+            > li {
+                > a {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 .total-menu-wrapper {
     position: fixed;
@@ -1413,17 +1424,18 @@ body {
         height: 45px;
         font-weight: lighter;
         position: absolute;
+        z-index: 1501;
         color: @color-five;
         right: 20px;
         top: 40px;
         cursor: pointer;
         .icon-remove {
-             font-size: 35px;
+            font-size: 24px;
         }
         span {
             height: 45px;
             width: auto;
-            padding: 15px 15px;
+            padding: 5px 15px 0px 15px;
             text-transform: uppercase;
             font-family: @serifFontFamily;
             float: left;
@@ -1439,6 +1451,7 @@ body {
             width: 50%;
             height: 100%;
             float: left;
+            position: relative;
             .wrapper-items {
                 margin-top: 50%;
                 margin-bottom: 50%;
@@ -1489,6 +1502,7 @@ body {
             width: 50%;
             height: 100%;
             float: right;
+            position: relative;
             .wrapper-submenu-items {
                 margin-top: 50%;
                 margin-bottom: 50%;
@@ -1535,6 +1549,16 @@ body {
                             }
                         }
                     }
+                }
+            }
+            .total-menu-inner {
+                position: absolute;
+                bottom: 75px;
+                text-align: center;
+                width: 100%;
+                .btn {
+                    border-color: @color-five;
+                    color: @color-five;
                 }
             }
         }
