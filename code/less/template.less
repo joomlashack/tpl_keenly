@@ -308,6 +308,10 @@
             background-image: none;
         }
     }
+    .nav-header {
+        text-shadow: none;
+        color: @color-five;
+    }
 }
 //Navs 
 .nav-tabs {
@@ -561,8 +565,10 @@
                 margin-left: 0;
                 padding: 8px 15px;
                 margin-right: 0;
-                &:hover, &:focus {
+                &:hover {
                     color: @color-one;
+                    border-left: 8px solid @color-two;
+                    padding: 8px 7px;
                 }
             }
             > .dropdown-toggle {
@@ -671,9 +677,8 @@
                     box-shadow: none;
                     border-right: none;
                     border-left: none;
-                }
-                &:hover, &:focus {
-                    border-bottom: none;
+                    &:hover, &:focus {
+                    }
                 }
             }
             &.deeper {
