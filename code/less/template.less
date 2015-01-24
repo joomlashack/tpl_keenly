@@ -584,6 +584,9 @@
                         &:last-child {
                             border-bottom: none;
                         }
+                        &:first-child {
+                            border-top: 1px solid @inputBackground;
+                        }
                         a {
                             padding: 8px 15px;
                             color: @color-three;
@@ -604,9 +607,15 @@
         margin-left: 0;
         > li {
             font-family: @serifFontFamily;
-            background-color: @inputBackground;
+            border-bottom: 4px solid transparent;
             > a {
+                background-color: @inputBackground;
                 color: @color-two;
+                margin-bottom: 0;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                border: none;
+                margin-left: 0;
                 &:hover, &:focus {
                     background-color: @Submenu-background;
                     color: @color-three;
@@ -638,15 +647,8 @@
                     border-right: none;
                     border-left: none;
                 }
-                > .dropdown-toggle {
-                    .caret {
-                        border-top-color: black;
-                    }
-                    &:hover, &:focus {
-                        .caret {
-                            border-top-color: black;
-                        }
-                    }
+                &:hover, &:focus {
+                    border-bottom: none;
                 }
             }
             &.deeper {
@@ -661,6 +663,9 @@
                         right: 15px;
                         top: 10px;
                     }
+                    &:hover, &:focus {
+                        background-color: @Submenu-hightlight;
+                    }
                 }
                 .submenu {
                     background-color: @Submenu-background;
@@ -670,6 +675,9 @@
                         border-bottom: 1px solid @inputBackground;
                         &:last-child {
                             border-bottom: none;
+                        }
+                        &:first-child {
+                            border-top: 1px solid @inputBackground;
                         }
                         a {
                             padding: 8px 15px;
