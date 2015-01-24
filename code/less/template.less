@@ -70,9 +70,6 @@
                             }
                         }
                     }
-                    .dropdown-menu {
-                        margin-left: 2px;
-                    }
                 }
                 &.active {
                     > a {
@@ -180,6 +177,20 @@
                                 color: @color-five;
                                 &:after {
                                     color: @color-five;
+                                }
+                            }
+                        }
+                        .dropdown-menu {
+                            border: none;
+                            .dropdown-submenu {
+                                .dropdown-menu {
+                                    > li {
+                                        a {
+                                            &:hover, &:focus {
+                                                background-color: @color-one;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
