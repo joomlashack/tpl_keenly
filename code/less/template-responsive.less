@@ -97,6 +97,7 @@
                 background-color: transparent;
                 border-width: 0px;
                 box-shadow: none;
+                margin-right: 10px;
                 .icon-bar {
                     background-color: @color-five;
                     height: 3px;
@@ -253,6 +254,7 @@
                 background-image: none;
                 background-color: transparent;
                 border-width: 0px;
+                margin-right: 10px;
                 box-shadow: none;
                 .icon-bar {
                     background-color: @color-five;
@@ -267,6 +269,8 @@
                 }
             }
             .navbar-inner {
+                padding-left: 0;
+                padding-right: 0;
                 .nav-collapse {
                     .dropdown-menu {
                         background-color: @color-two;
@@ -443,6 +447,7 @@
                 background-image: none;
                 background-color: transparent;
                 border-width: 0px;
+                margin-right: 10px;
                 box-shadow: none;
                 .icon-bar {
                     background-color: @color-five;
@@ -457,6 +462,8 @@
                 }
             }
             .navbar-inner {
+                padding-left: 0;
+                padding-right: 0;
                 .nav-collapse {
                     .dropdown-menu {
                         background-color: @color-two;
@@ -726,6 +733,7 @@
                 background-image: none;
                 background-color: transparent;
                 border-width: 0px;
+                margin-right: 10px;
                 box-shadow: none;
                 .icon-bar {
                     background-color: @color-five;
@@ -740,9 +748,10 @@
                 }
             }
             .navbar-inner {
+                padding-left: 0;
+                padding-right: 0;
                 .nav-collapse {
                     .dropdown-menu {
-                        background-color: @color-two;
                         margin-bottom: 20px;
                         a {
                             &:hover, &:focus {
@@ -750,6 +759,74 @@
                             }
                             border-radius: 0;
                             -webkit-border-radius: 0;
+                        }
+                    }
+                }
+                .nav {
+                    > li {
+                        &.deeper {
+                            &:hover, &:focus {
+                                background-color: transparent;
+                                > a {
+                                    color: @color-one;
+                                    &:after {
+                                        content: '\f107';
+                                        color: @color-one;
+                                    }
+                                }
+                            }
+                            .dropdown-menu {
+                                background-color: transparent;
+                                > li {
+                                    > a {
+                                        &:hover, &:focus {
+                                            color: @color-one;
+                                        }
+                                    }
+                                    &.deeper {
+                                        > li {
+                                            > a {
+                                                &:after {
+                                                    content: '\f107';
+                                                }
+                                            }
+                                            &:hover, &:focus {
+                                                > a {
+                                                    background-color: transparent;
+                                                    &:hover, &:focus {
+                                                        &:after {
+                                                            color: @color-one;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            > li {
+                                                a {
+                                                    &:hover, &:focus {
+                                                        background-color: transparent;
+                                                    }
+                                                }
+                                                &:hover, &:focus {
+                                                    background-color: transparent;
+                                                }
+                                                &.deeper {
+                                                    &:hover, &:focus {
+                                                        background-color: transparent;
+                                                        color: @color-one;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover, &:focus {
+                            > a {
+                                color: @color-one;
+                            }
                         }
                     }
                 }
@@ -842,8 +919,15 @@
             }
         }
     }
-    #footer {
-        margin-right: 0;
-        margin-left: 0;
+    .wrapper-footer {
+        #footer {
+            margin-right: 0;
+            margin-left: 0;
+            left: 0;
+            right: 0;
+            box-sizing: border-box;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
