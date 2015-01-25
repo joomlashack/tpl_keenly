@@ -313,7 +313,7 @@
         color: @color-five;
     }
 }
-//Navs 
+//Navs
 .nav-tabs {
     border-bottom: 1px solid @color-four;
     dt {
@@ -378,6 +378,82 @@
     }
 }
 // Keenly menus
+.kmenu {
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: none;
+        &:after {
+            content: ' ';
+            height: 2px;
+            width: 15%;
+            display: table;
+            margin-top: 10px;
+            background-color: @color-three;
+        }
+    }
+    .nav-list {
+        margin-top: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        > li {
+            font-family: @serifFontFamily;
+            border-bottom: 1px solid @Submenu-background;
+            > a {
+                color: @color-two;
+                margin-left: 0;
+                margin-right: 0;
+                padding: 8px 0px;
+                &:hover, &:focus {
+                    color: @color-one;
+                    background-color: transparent;
+                }
+            }
+            &.active {
+                > a {
+                    color: @color-one;
+                    background-color: transparent;
+                }
+            }
+            &.deeper {
+                > a {
+                    .caret {
+                        display: none;
+                    }
+                    &:after {
+                        content: '\f107';
+                        font-family: FontAwesome;
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                    }
+                }
+                .submenu {
+                    margin-left: 0;
+                    margin-right: 0;
+                    background-color: @inputBackground;
+                    li {
+                        a {
+                            padding-right: 12px;
+                            padding-left: 12px;
+                            border-bottom: 1px solid @Submenu-background;
+                            color: @color-three;
+                            &:hover, &:focus {
+                                background-color: @tableBorder;
+                            }
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &.active {
+                                background-color: @tableBorder;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .kwell {
     padding: 15px;
     border-radius: 0;
@@ -447,6 +523,9 @@
                             border-bottom: 1px solid @inputBackground;
                             color: @color-three;
                             &:hover, &:focus {
+                                background-color: @Submenu-hightlight;
+                            }
+                            &.active {
                                 background-color: @Submenu-hightlight;
                             }
                         }
@@ -530,6 +609,9 @@
                             &:hover, &:focus {
                                 background-color: @Submenu-hightlight;
                             }
+                            &.active {
+                                background-color: @Submenu-hightlight;
+                            }
                         }
                     }
                 }
@@ -565,9 +647,9 @@
                 margin-left: 0;
                 padding: 8px 15px;
                 margin-right: 0;
-                &:hover {
+                &:hover, &:focus {
                     color: @color-one;
-                    border-left: 8px solid @color-two;
+                    border-left: 8px solid @color-one;
                     padding: 8px 7px;
                 }
             }
@@ -584,13 +666,9 @@
             &.active {
                 > a {
                     background-color: transparent;
-                    border-left: 8px solid @color-two;
+                    border-left: 8px solid @color-one;
                     padding: 8px 7px;
-                    &:hover, &:focus {
-                        color: @color-one;
-                        background-color: transparent;
-                        border-left: 8px solid @color-one;
-                    }
+                    color: @color-one;
                 }
             }
             &.deeper {
@@ -622,6 +700,10 @@
                             padding: 8px 15px;
                             color: @color-three;
                             &:hover, &:focus {
+                                padding: 8px 7px;
+                                border-left: 8px solid @color-four;
+                            }
+                            &.active {
                                 padding: 8px 7px;
                                 border-left: 8px solid @color-four;
                             }
@@ -678,6 +760,8 @@
                     border-right: none;
                     border-left: none;
                     &:hover, &:focus {
+                        border-bottom: none;
+                        border-top: none;
                     }
                 }
             }
@@ -713,6 +797,9 @@
                             padding: 8px 15px;
                             color: @color-three;
                             &:hover, &:focus {
+                                background-color: @Submenu-hightlight;
+                            }
+                            &.active {
                                 background-color: @Submenu-hightlight;
                             }
                         }
@@ -1956,29 +2043,31 @@ dl {
     border-left: 1px solid @color-four;
     padding-left: 10px;
 }
-#footer {
-    background-color: transparent;
-    background-image: none;
-    filter: none;
-    color: @textColor;
-    .navbar {
-        .navbar-inner {
-            border-top: 6px solid @color-four;
-            border-bottom: none;
-            .nav {
-                font-size: @baseFontSize - 2;
-                > li {
-                    &:after {
-                        display: none;
+.wrapper-footer {
+    #footer {
+        background-color: transparent;
+        background-image: none;
+        filter: none;
+        color: @textColor;
+        .navbar {
+            .navbar-inner {
+                border-top: 6px solid @color-four;
+                border-bottom: none;
+                .nav {
+                    font-size: @baseFontSize - 2;
+                    > li {
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
             }
         }
-    }
-    .footer-content {
-        a {
-            &:hover, &:focus {
-                color: @color-one;
+        .footer-content {
+            a {
+                &:hover, &:focus {
+                    color: @color-one;
+                }
             }
         }
     }
