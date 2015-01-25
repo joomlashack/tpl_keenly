@@ -409,19 +409,69 @@
             }
         }
         .navbar-inner {
-            background-color: @color-five;
             .nav {
                 li {
+                    margin-right: 0;
+                    &.deeper {
+                        &:hover, &:focus {
+                            > a {
+                                &:after {
+                                    content: '\f107';
+                                }
+                            }
+                        }
+                    }
+                    &.dropdown {
+                        li {
+                            &.deeper {
+                                &:hover, &:focus {
+                                    background-color: transparent;
+                                    > a {
+                                        color: @color-two;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     &.active {
-                        &:after {
-                            display: none;
+                        > a {
+                            background-color: transparent;
+                            color: @color-two;
                         }
                     }
                 }
                 > li {
-                    &:hover, &:focus {
-                        &:after {
-                            display: none;
+                    &.deeper {
+                        .dropdown-menu {
+                            background-color: transparent;
+                            > li {
+                                > a {
+                                    border-bottom: none;
+                                    &:hover, &:focus {
+                                        background-color: transparent;
+                                        color: @color-two;
+                                    }
+                                }
+                                &.deeper {
+                                    > a {
+                                        &:after {
+                                            color: @color-two;
+                                            content: '\f107';
+                                        }
+                                        &:hover, &:focus {
+                                            background-color: transparent;
+                                            &:after {
+                                                color: @color-two;
+                                            }
+                                        }
+                                    }
+                                    &:hover, &:focus {
+                                        > a {
+                                            background-color: transparent;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -436,6 +486,11 @@
                         }
                         border-radius: 0;
                         -webkit-border-radius: 0;
+                    }
+                    li + li {
+                        a {
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -466,14 +521,138 @@
                 padding-right: 0;
                 .nav-collapse {
                     .dropdown-menu {
-                        background-color: @color-two;
                         margin-bottom: 20px;
                         a {
                             &:hover, &:focus {
-                                background-color: @color-one;
+                                background-color: transparent;
                             }
                             border-radius: 0;
                             -webkit-border-radius: 0;
+                        }
+                    }
+                }
+                .nav {
+                    > li {
+                        &.deeper {
+                            &:hover, &:focus {
+                                background-color: transparent;
+                                > a {
+                                    color: @color-one;
+                                    &:after {
+                                        content: '\f107';
+                                        color: @color-one;
+                                    }
+                                }
+                            }
+                            .dropdown-menu {
+                                background-color: transparent;
+                                > li {
+                                    > a {
+                                        &:hover, &:focus {
+                                            color: @color-one;
+                                        }
+                                    }
+                                    &.deeper {
+                                        > li {
+                                            > a {
+                                                &:after {
+                                                    content: '\f107';
+                                                }
+                                            }
+                                            &:hover, &:focus {
+                                                > a {
+                                                    background-color: transparent;
+                                                    &:hover, &:focus {
+                                                        &:after {
+                                                            color: @color-one;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            > li {
+                                                a {
+                                                    &:hover, &:focus {
+                                                        background-color: transparent;
+                                                    }
+                                                }
+                                                &:hover, &:focus {
+                                                    background-color: transparent;
+                                                    color: @color-one;
+                                                    &:after {
+                                                        color: @color-one;
+                                                    }
+                                                }
+                                                &.deeper {
+                                                    > a {
+                                                        display: none;
+                                                    }
+                                                    &:hover, &:focus {
+                                                        background-color: transparent;
+                                                        color: @color-one;
+                                                        > a {
+                                                            &:after {
+                                                                color: @color-one;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        > a {
+                                            background-color: transparent;
+                                            color: @color-one;
+                                            &:after {
+                                                color: @color-one
+                                            }
+                                            &:hover, &:focus {
+                                                background-color: transparent;
+                                            }
+                                        }
+                                    }
+                                }
+                                li {
+                                    &.deeper {
+                                        > a {
+                                            &:after {
+                                                content: '\f107';
+                                            }
+                                        }
+                                        &:hover, &:focus {
+                                            > a {
+                                                color: @color-one;
+                                                &:after {
+                                                    color: @color-one;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            > a {
+                                background-color: transparent;
+                                color: @color-one;
+                                &:after {
+                                    color: @color-one
+                                }
+                                &:hover, &:focus {
+                                    background-color: transparent;
+                                }
+                            }
+                            &:hover, &:focus {
+                                background-color: transparent;
+                            }
+                        }
+                        &:hover, &:focus {
+                            background-color: transparent;
+                            > a {
+                                color: @color-one;
+                            }
                         }
                     }
                 }
@@ -693,16 +872,67 @@
         .navbar-inner {
             .nav {
                 li {
+                    margin-right: 0;
+                    &.deeper {
+                        &:hover, &:focus {
+                            > a {
+                                &:after {
+                                    content: '\f107';
+                                }
+                            }
+                        }
+                    }
+                    &.dropdown {
+                        li {
+                            &.deeper {
+                                &:hover, &:focus {
+                                    background-color: transparent;
+                                    > a {
+                                        color: @color-two;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     &.active {
-                        &:after {
-                            display: none;
+                        > a {
+                            background-color: transparent;
+                            color: @color-two;
                         }
                     }
                 }
                 > li {
-                    &:hover, &:focus {
-                        &:after {
-                            display: none;
+                    &.deeper {
+                        .dropdown-menu {
+                            background-color: transparent;
+                            > li {
+                                > a {
+                                    border-bottom: none;
+                                    &:hover, &:focus {
+                                        background-color: transparent;
+                                        color: @color-two;
+                                    }
+                                }
+                                &.deeper {
+                                    > a {
+                                        &:after {
+                                            color: @color-two;
+                                            content: '\f107';
+                                        }
+                                        &:hover, &:focus {
+                                            background-color: transparent;
+                                            &:after {
+                                                color: @color-two;
+                                            }
+                                        }
+                                    }
+                                    &:hover, &:focus {
+                                        > a {
+                                            background-color: transparent;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -755,7 +985,7 @@
                         margin-bottom: 20px;
                         a {
                             &:hover, &:focus {
-                                background-color: @color-one;
+                                background-color: transparent;
                             }
                             border-radius: 0;
                             -webkit-border-radius: 0;
@@ -810,12 +1040,53 @@
                                                 }
                                                 &:hover, &:focus {
                                                     background-color: transparent;
+                                                    color: @color-one;
+                                                    &:after {
+                                                        color: @color-one;
+                                                    }
                                                 }
                                                 &.deeper {
+                                                    > a {
+                                                        display: none;
+                                                    }
                                                     &:hover, &:focus {
                                                         background-color: transparent;
                                                         color: @color-one;
+                                                        > a {
+                                                            &:after {
+                                                                color: @color-one;
+                                                            }
+                                                        }
                                                     }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        > a {
+                                            background-color: transparent;
+                                            color: @color-one;
+                                            &:after {
+                                                color: @color-one
+                                            }
+                                            &:hover, &:focus {
+                                                background-color: transparent;
+                                            }
+                                        }
+                                    }
+                                }
+                                li {
+                                    &.deeper {
+                                        > a {
+                                            &:after {
+                                                content: '\f107';
+                                            }
+                                        }
+                                        &:hover, &:focus {
+                                            > a {
+                                                color: @color-one;
+                                                &:after {
+                                                    color: @color-one;
                                                 }
                                             }
                                         }
@@ -823,7 +1094,23 @@
                                 }
                             }
                         }
+                        &.active {
+                            > a {
+                                background-color: transparent;
+                                color: @color-one;
+                                &:after {
+                                    color: @color-one
+                                }
+                                &:hover, &:focus {
+                                    background-color: transparent;
+                                }
+                            }
+                            &:hover, &:focus {
+                                background-color: transparent;
+                            }
+                        }
                         &:hover, &:focus {
+                            background-color: transparent;
                             > a {
                                 color: @color-one;
                             }
