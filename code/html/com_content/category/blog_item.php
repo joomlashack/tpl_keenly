@@ -14,8 +14,10 @@ $app = JFactory::getApplication();
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
-if (!empty($this->params->get('pageclass_sfx')) && $this->item->wrightType == 'leading') {
-	
+$specialLeadingStyle = $this->params->get('pageclass_sfx');
+
+if (!empty($specialLeadingStyle) && $this->item->wrightType == 'leading') {
+
 	$float = getIntroImageFloat($this->item);
 
 	switch ($float)
@@ -65,55 +67,54 @@ if (!empty($this->params->get('pageclass_sfx')) && $this->item->wrightType == 'l
 	}
 } else {
 
-if ($this->item->wrightType == 'leading')
-{
-	$float = getIntroImageFloat($this->item);
+	if ($this->item->wrightType == 'leading') {
 
-	switch ($float)
-	{
-		case 'left':
-			$this->item->wrightElementsStructure = Array(
-				'div.item-container',
-					'div.span6',
-						'div.image-container',
-							'image',
+		$float = getIntroImageFloat($this->item);
+		switch ($float)
+		{
+			case 'left':
+				$this->item->wrightElementsStructure = Array(
+					'div.item-container',
+						'div.span6',
+							'div.image-container',
+								'image',
+							'/div',
 						'/div',
-					'/div',
-					'div.span6',
-						'div.content-wrapper',
-							'title',
-							'icons',
-							'article-info',
-							'content',
+						'div.span6',
+							'div.content-wrapper',
+								'title',
+								'icons',
+								'article-info',
+								'content',
+							'/div',
 						'/div',
-					'/div',
-				'/div'
-			);
-			break;
+					'/div'
+				);
+				break;
 
-		case 'right':
-			$this->item->wrightElementsStructure = Array(
-				'div.item-container',
-					'div.span6',
-						'div.content-wrapper-left',
-							'title',
-							'icons',
-							'article-info',
-							'content',
+			case 'right':
+				$this->item->wrightElementsStructure = Array(
+					'div.item-container',
+						'div.span6',
+							'div.content-wrapper-left',
+								'title',
+								'icons',
+								'article-info',
+								'content',
+							'/div',
 						'/div',
-					'/div',
-					'div.span6',
-						'div.image-container-right',
-							'image',
+						'div.span6',
+							'div.image-container-right',
+								'image',
+							'/div',
 						'/div',
-					'/div',
-				'/div'
-			);
-			break;
+					'/div'
+				);
+				break;
 
-		default:
-			$this->item->wrightElementsStructure = Array();
+			default:
+				$this->item->wrightElementsStructure = Array();
+		}
 	}
-}
 }
 include Overrider::getOverride('com_content.category', 'blog_item');
