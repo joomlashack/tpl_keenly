@@ -1138,7 +1138,7 @@ a {
         font-family: @serifFontFamily;
         font-size: @baseFontSize + 2;
         font-weight: normal;
-        a {
+        a, span {
             border-radius: 50%;
             margin: 0px 5px;
             &:hover, &:focus {
@@ -1153,18 +1153,18 @@ a {
             }
         }
         &.active {
-            a {
+            a, span {
                 color: @color-five;
                 border-color: @color-one;
             }
         }
         &.disabled {
-            a {
+            a, span {
                 border-color: @color-four;
             }
         }
         &.pagination-start {
-            a {
+            a, span {
                 font-size: 0px;
                 &:before {
                     content: '\f100';
@@ -1173,7 +1173,7 @@ a {
             }
         }
         &.pagination-prev {
-            a {
+            a, span {
                 font-size: 0px;
                 &:before {
                     content: '\f104';
@@ -1182,7 +1182,7 @@ a {
             }
         }
         &.pagination-next {
-            a {
+            a, span {
                 font-size: 0px;
                 &:before {
                     content: '\f105';
@@ -1191,7 +1191,7 @@ a {
             }
         }
         &.pagination-end {
-            a {
+            a, span {
                 font-size: 0px;
                 &:before {
                     content: '\f101';
@@ -1203,13 +1203,13 @@ a {
     ul {
         box-shadow: none;
         > li {
-            > a {
+            > a, span {
                 padding: 13px 20px;
                 border-width: 2px;
                 -webkit-border-width: 2px;
             }
             &:last-child {
-                >a {
+                > a, span {
                     -webkit-border-top-right-radius: 50%;
                     border-top-right-radius: 50%;
                     -webkit-border-bottom-right-radius: 50%;
@@ -1217,7 +1217,7 @@ a {
                 }
             }
             &:first-child {
-                >a {
+                > a, span {
                     -webkit-border-top-left-radius: 50%;
                     border-top-left-radius: 50%;
                     -webkit-border-bottom-left-radius: 50%;
@@ -1858,6 +1858,7 @@ body {
         .image-container {
             border-right: 1px solid @color-four;
             padding-right: 20px;
+            display: table;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
@@ -1884,6 +1885,7 @@ body {
         .image-container-right {
             border-left: 1px solid @color-four;
             padding-left: 20px;
+            display: table;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
@@ -1943,6 +1945,7 @@ body {
     }
 }
 .khome {
+    margin: 0;
     .page-header {
         margin: 0px 0px 20px 0px;
         border-bottom: none;
@@ -1950,6 +1953,9 @@ body {
             font-size: @baseFontSize + 16;
             margin: 0px;
         }
+    }
+    .items-row {
+        border-bottom: none;
     }
 }
 #header {
