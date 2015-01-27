@@ -14,6 +14,57 @@ $app = JFactory::getApplication();
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
+if (!empty($this->params->get('pageclass_sfx')) && $this->item->wrightType == 'leading') {
+	
+	$float = getIntroImageFloat($this->item);
+
+	switch ($float)
+	{
+		case 'left':
+			$this->item->wrightElementsStructure = Array(
+				'div.item-container',
+					'div.span9',
+						'div.image-container',
+							'image',
+						'/div',
+					'/div',
+					'div.span3',
+						'div.content-wrapper',
+							'title',
+							'icons',
+							'article-info',
+							'content',
+						'/div',
+					'/div',
+				'/div'
+			);
+			break;
+
+		case 'right':
+			$this->item->wrightElementsStructure = Array(
+				'div.item-container',
+					'div.span3',
+						'div.content-wrapper-left',
+							'title',
+							'icons',
+							'article-info',
+							'content',
+						'/div',
+					'/div',
+					'div.span9',
+						'div.image-container-right',
+							'image',
+						'/div',
+					'/div',
+				'/div'
+			);
+			break;
+
+		default:
+			$this->item->wrightElementsStructure = Array();
+	}
+} else {
+
 if ($this->item->wrightType == 'leading')
 {
 	$float = getIntroImageFloat($this->item);
@@ -64,5 +115,5 @@ if ($this->item->wrightType == 'leading')
 			$this->item->wrightElementsStructure = Array();
 	}
 }
-
+}
 include Overrider::getOverride('com_content.category', 'blog_item');
