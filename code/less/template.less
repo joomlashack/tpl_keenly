@@ -1858,7 +1858,6 @@ body {
         .image-container {
             border-right: 1px solid @color-four;
             padding-right: 20px;
-            display: table;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
@@ -1885,7 +1884,6 @@ body {
         .image-container-right {
             border-left: 1px solid @color-four;
             padding-left: 20px;
-            display: table;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
@@ -1930,20 +1928,6 @@ body {
         }
     }
 }
-.login {
-    + div {
-        .nav-stacked {
-            > li {
-                > a {
-                    border: none;
-                    &:hover, &:focus {
-                        background-color: transparent;
-                    }
-                }
-            }
-        }
-    }
-}
 .khome {
     margin: 0;
     .page-header {
@@ -1956,6 +1940,21 @@ body {
     }
     .items-row {
         border-bottom: none;
+        }
+    }
+}
+.login {
+    + div {
+        .nav-stacked {
+            > li {
+                > a {
+                    border: none;
+                    &:hover, &:focus {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
     }
 }
 #header {
