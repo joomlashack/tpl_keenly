@@ -14,9 +14,10 @@ $app = JFactory::getApplication();
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
-$specialLeadingStyle = $this->params->get('pageclass_sfx');
+$template = $app->getTemplate(true);
+$specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
 
-if (!empty($specialLeadingStyle) && $this->item->wrightType == 'leading') {
+if (!empty($specialHomeLayout) && $this->item->wrightType == 'leading') {
 
 	$float = getIntroImageFloat($this->item);
 
