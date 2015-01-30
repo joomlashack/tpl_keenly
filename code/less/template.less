@@ -1406,12 +1406,14 @@ label {
     }
     .contact-position {
         font-family: @serifFontFamily;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .contact-address {
-        padding-left: 25px;
+        padding-left: 0px;
     }
     .contact-contactinfo {
-        padding-left: 25px;
+        padding-left: 0px;
     }
     .contact-form {
         legend {
@@ -1442,6 +1444,18 @@ label {
             dd {
                 margin-left: 0;
             }
+        }
+    }
+    .well {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid @color-four;
+        padding: 0px 0px 20px 0px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        &.well-small {
+            padding: 19px;
         }
     }
 }
