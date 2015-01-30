@@ -1143,7 +1143,8 @@ a {
             margin: 0px 5px;
             &:hover, &:focus {
                 border-color: @color-one;
-                color: @color-five;
+                color: @color-one;
+                background-color: transparent;
             }
             &:before {
                 font-family: FontAwesome;
@@ -1207,6 +1208,18 @@ a {
                 padding: 13px 20px;
                 border-width: 2px;
                 -webkit-border-width: 2px;
+                &:hover, &:focus {
+                    background-color: transparent;
+                    color: @color-one;
+                }
+            }
+            &.active {
+                a, span {
+                    &:hover, &:focus {
+                        color: @color-five;
+                        background-color: @color-one;
+                    }
+                }
             }
             &:last-child {
                 > a, span {
