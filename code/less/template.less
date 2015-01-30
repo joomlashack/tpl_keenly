@@ -1155,49 +1155,96 @@ a {
             }
         }
         &.active {
-            a, span {
+            a {
                 color: @color-five;
                 border-color: @color-one;
             }
         }
         &.disabled {
-            a, span {
+            a{
                 border-color: @color-four;
             }
         }
         &.pagination-start {
-            a, span {
+            a {
                 font-size: 0px;
                 &:before {
                     content: '\f100';
                     margin-right: 2px;
                 }
             }
+            span {
+                font-size: 0px;
+                &.pagenav {
+                    border-color: @color-four;
+                    background-color: transparent;
+                }
+                &:before {
+                    content: '\f100';
+                    color: @color-four;
+                }
+            }
+
         }
         &.pagination-prev {
-            a, span {
+            a {
                 font-size: 0px;
                 &:before {
                     content: '\f104';
                     margin-right: 2px;
                 }
             }
+            span {
+                font-size: 0px;
+                &.pagenav {
+                    border-color: @color-four;
+                    background-color: transparent;
+                }
+                &:before {
+                    content: '\f104';
+                    color: @color-four;
+                }
+            }
         }
         &.pagination-next {
-            a, span {
+            a{
                 font-size: 0px;
                 &:before {
                     content: '\f105';
                     margin-left: 2px;
                 }
             }
+           span {
+                font-size: 0px;
+                &.pagenav {
+                    border-color: @color-four;
+                    background-color: transparent;
+                }
+                &:before {
+                    content: '\f105';
+                    margin-left: 2px;
+                    color: @color-four;
+                }
+            }
         }
         &.pagination-end {
-            a, span {
+            a {
                 font-size: 0px;
                 &:before {
                     content: '\f101';
                     margin-left: 2px;
+                }
+            }
+            span {
+                font-size: 0px;
+                &.pagenav {
+                    border-color: @color-four;
+                    background-color: transparent;
+                }
+                &:before {
+                    content: '\f101';
+                    margin-left: 2px;
+                    color: @color-four;
                 }
             }
         }
@@ -1212,6 +1259,13 @@ a {
                 &:hover, &:focus {
                     background-color: transparent;
                     color: @color-one;
+                }
+            }
+            > span {
+                &.pagenav {
+                    color: @color-five;
+                    background-color: @color-one;
+                    border-color: @color-one;
                 }
             }
             &.active {
