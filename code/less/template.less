@@ -810,6 +810,20 @@
         }
     }
 }
+// No border on nav-tabs after loginform
+.control-group + .nav {
+    &.nav-tabs {
+        &.nav-stacked {
+            li {
+                > a {
+                    border: none;
+                    border-radius: 0;
+                    -webkit-border-radius: 0;
+                }
+            }
+        }
+    }
+}
 //Buttons
 a {
     outline: 0px;
@@ -1457,6 +1471,7 @@ label {
         input[name^="searchword"] {
             border-radius: 0;
             -webkit-border-radius: 0;
+            margin-bottom: 0 !important;
         }
     }
 }
