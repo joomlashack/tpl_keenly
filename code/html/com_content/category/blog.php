@@ -25,7 +25,7 @@ $this->MoreItemsGridOrientation = Array('activeLayout' => true, 'moreitemsLayout
 $template = $app->getTemplate(true);
 $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
 
-if (!empty($specialHomeLayout))  {
+if ($specialHomeLayout)  {
 	$this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
 	$this->layoutSpanorder = Array(3,6,3);
 

@@ -17,7 +17,7 @@ require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.
 $template = $app->getTemplate(true);
 $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
 
-if (!empty($specialHomeLayout) && $this->item->wrightType == 'leading') {
+if ($specialHomeLayout && $this->item->wrightType == 'leading') {
 
 	$float = getIntroImageFloat($this->item);
 
