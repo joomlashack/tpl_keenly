@@ -302,62 +302,60 @@
         }
     }
 }
-.dropdown {
-    .dropdown-menu {
-        border-radius: 0px;
-        -webkit-boder-radius: 0;
-        font-family: @serifFontFamily;
-        padding-left: 5px;
-        padding-right: 5px;
-        text-transform: uppercase;
-        box-shadow: none;
-        > li {
+.dropdown-menu {
+    border-radius: 0px;
+    -webkit-boder-radius: 0;
+    font-family: @serifFontFamily;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: uppercase;
+    box-shadow: none;
+    > li {
+        a {
+            border-bottom: 1px solid @color-one;
+            font-weight: normal;
+            padding: 5px 15px;
+        }
+        &:last-child {
             a {
-                border-bottom: 1px solid @color-one;
-                font-weight: normal;
-                padding: 5px 15px;
-            }
-            &:last-child {
-                a {
-                    border-bottom: none;
-                }
-            }
-            > a {
-                &:hover, &:focus {
-                    background-image: none;
-                }
-            }
-            &.deeper {
-                > a {
-                    &:after {
-                        font-family: FontAwesome;
-                        float: none;
-                        display: inline;
-                        content: '\f105';
-                        color: @color-five;
-                    }
-                }
+                border-bottom: none;
             }
         }
-        &.sub-menu {
-            box-shadow: none;
-            &:after {
-                display: none;
-            }
-            &:before {
-                display: none;
-            }
-        }
-        > .active {
-            > a {
-                background-color: @color-one;
+        > a {
+            &:hover, &:focus {
                 background-image: none;
             }
         }
-        .nav-header {
-            text-shadow: none;
-            color: @color-five;
+        &.deeper {
+            > a {
+                &:after {
+                    font-family: FontAwesome;
+                    float: none;
+                    display: inline;
+                    content: '\f105';
+                    color: @color-five;
+                }
+            }
         }
+    }
+    &.sub-menu {
+        box-shadow: none;
+        &:after {
+            display: none;
+        }
+        &:before {
+            display: none;
+        }
+    }
+    > .active {
+        > a {
+            background-color: @color-one;
+            background-image: none;
+        }
+    }
+    .nav-header {
+        text-shadow: none;
+        color: @color-five;
     }
 }
 //Navs
@@ -1998,6 +1996,9 @@ body {
             border-left: none;
         }
     }
+}
+div.intro {
+    padding: 0;
 }
 .blog, .blog-featured {
     .items-leading {
