@@ -70,6 +70,11 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading') {
 
 	if ($this->item->wrightType == 'leading') {
 
+
+		$itemImages = json_decode($this->item->images);
+
+		if ($itemImages->image_intro !== '') {
+
 		$float = getIntroImageFloat($this->item);
 		switch ($float)
 		{
@@ -116,6 +121,9 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading') {
 			default:
 				$this->item->wrightElementsStructure = Array();
 		}
+	} else {
+		$this->item->wrightElementsStructure = Array();
+	}
 	}
 }
 include Overrider::getOverride('com_content.category', 'blog_item');
