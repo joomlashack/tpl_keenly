@@ -205,7 +205,9 @@ defined('_JEXEC') or die('Restricted access');
 				:
 			?>
 			<!-- bottom-menu -->
+			<div class="dropup">
 			<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" name="bottom-menu" />
+			</div>
 			<?php
 				endif;
 			?>
