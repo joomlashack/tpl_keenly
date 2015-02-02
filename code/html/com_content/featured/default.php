@@ -14,34 +14,33 @@ $app = JFactory::getApplication();
 
 $this->wrightElementsStructure = Array(
 	"image",
-    "title",
-    "icons",
-    "legendtop",
-    "content",
-    "article-info",
-    "legendbottom"
-	);
+	"title",
+	"icons",
+	"legendtop",
+	"content",
+	"article-info",
+	"legendbottom"
+);
 
 $this->wrightLeadingItemElementsStructure = Array(
 	'div.item-container',
-    'div.span9',
-    'div.image-container',
-    "image",
-    '/div',
-    '/div',
-    'div.span3',
-    'div.content-wrapper',
-    "title",
-    "icons",
-    "legendtop",
-    "article-info",
-    "content",
-    "legendbottom",
-    '/div',
-    '/div',
-    '/div'
+	'div.span9',
+	'div.image-container',
+	"image",
+	'/div',
+	'/div',
+	'div.span3',
+	'div.content-wrapper',
+	"title",
+	"icons",
+	"legendtop",
+	"article-info",
+	"content",
+	"legendbottom",
+	'/div',
+	'/div',
+	'/div'
 	);
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_content.featured'));
-?>
+require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
+include Overrider::getOverride('com_content.featured');
