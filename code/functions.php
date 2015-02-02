@@ -1,11 +1,11 @@
 <?php
 /**
-* @package Keenly
-* @subpackage Functions
-*
-* @copyright Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets. All rights reserved.
-* @license GNU General Public License version 2 or later; see LICENSE.txt
-*/
+ * @package     Keenly
+ * @subpackage  Functions
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
@@ -18,7 +18,7 @@ $input = $app->input;
 
 // Monted image pixel parameter
 
-$mountedImage = $this->params->get('mountedImage','');
+$mountedImage = $this->params->get('mountedImage', '');
 
 // Sidebars count moundules if moudles = 0 mounted image will display as normal
 
@@ -28,9 +28,12 @@ $sidebarsModule = $sidebar1 + $sidebar2;
 $showMountedImage = false;
 $mainContentClass = 'displaynormal';
 
-if ($sidebarsModule > 0 ) {
+if ($sidebarsModule > 0 )
+{
 	$showMountedImage = true;
-	if (($sidebar1 >= 1) && ($sidebar2 >= 1)) {
+
+	if (($sidebar1 >= 1) && ($sidebar2 >= 1))
+	{
 			$mainContentClass = 'sidebarsactive';
 	}
 }
