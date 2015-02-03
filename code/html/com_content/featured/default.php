@@ -12,6 +12,13 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
+
+$template = $app->getTemplate(true);
+$templateSpanValue = intval ($template->params->get('imageSpan'));
+
+$imageSpan = 'span' . $templateSpanValue;
+$contentSpan = 'span' . (12 - $templateSpanValue); 
+
 $this->wrightElementsStructure = Array(
 	"image",
 	"title",
@@ -24,12 +31,12 @@ $this->wrightElementsStructure = Array(
 
 $this->wrightLeadingItemElementsStructure = Array(
 	'div.item-container',
-	'div.span9',
+	'div.'. $imageSpan,
 	'div.image-container',
 	"image",
 	'/div',
 	'/div',
-	'div.span3',
+	'div.' . $contentSpan,
 	'div.content-wrapper',
 	"title",
 	"icons",
