@@ -47,8 +47,6 @@ jQuery(document).ready(function($) {
 
     // Selected item detects the menu that is open close it and open the corresponding item.
     function itemMenuClickEvent(event) {
-        console.log(event);
-        event.preventDefault();
         jQuery('.active-menu').removeClass('in');
         jQuery('.active-menu').removeClass('active-menu');
         $menuSubmenuItem = jQuery(this).attr('href');
