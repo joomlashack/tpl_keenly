@@ -1260,14 +1260,13 @@
     }
     .jss-slider {
         .jss-image-container {
-            &.jss-descpos-top {
-                .jss-title-description {
-                    &.jss-alignment-center {
-                        top: 0;
-                        bottom: 0;
-                        .jss-title {
-                            font-size: @baseFontSize + 5;
-                        }
+            .jss-title-description {
+                &.jss-alignment-center {
+                    top: 0;
+                    bottom: 0;
+                    font-size: @baseFontSize + 5;
+                    .h4 {
+                        font-size: inherit;
                     }
                 }
             }
@@ -1291,7 +1290,6 @@
                 padding-right: 0px;
             }
             .content-wrapper {
-                padding-left: 0px;
                 padding-top: 20px;
             }
             .image-container-right {
@@ -1299,7 +1297,6 @@
                 padding-left: 0px;
             }
             .content-wrapper-left {
-                padding-right: 0px;
             }
         }
     }

@@ -2124,21 +2124,20 @@ div.intro {
         }
     }
 }
-.khome {
-    margin: 0;
-    .page-header {
-        margin: 0px 0px 20px 0px;
-        border-bottom: none;
-        h1 {
-            font-size: @baseFontSize + 16;
-            margin: 0px;
+.cat-children {
+    ul {
+        li {
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
-    .items-row {
-        border-bottom: none;
-        .item {
-            [class^="img-intro-"] {
-                margin: 0;
+}
+.categories-list {
+    ul {
+        li {
+            &.last {
+                border-bottom: none;
             }
         }
     }
