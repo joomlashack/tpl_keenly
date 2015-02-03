@@ -1922,13 +1922,21 @@ body {
                 }
             }
             .total-menu-inner {
-                position: absolute;
-                bottom: 75px;
-                font-family: @serifFontFamily;
-                text-transform: uppercase;
-                color: @color-five;
-                font-size: @baseFontSize + 2;
+                display: table;
                 width: 100%;
+                height: auto;
+                .moduletable {
+                    position: absolute;
+                    bottom: 75px;
+                    font-family: @serifFontFamily;
+                    text-transform: uppercase;
+                    color: @color-five;
+                    font-size: @baseFontSize + 2;
+                    margin: 0 auto;
+                    left: 0;
+                    right: 0;
+                    display: table;
+                }
                 .btn {
                     border-color: @color-five;
                     color: @color-five;
@@ -2185,8 +2193,14 @@ div.intro {
         }
     }
 }
-.wright-newsflash-author {
-    color: @color-two;
+.newsflash {
+    .wright-newsflash-author {
+        color: @color-two;
+    }
+    .newsflash-title {
+        margin: 0;
+        font-size: @baseFontSize + 2;
+    }
 }
 dl {
     &.article-info {
