@@ -306,8 +306,6 @@
     border-radius: 0px;
     -webkit-boder-radius: 0;
     font-family: @serifFontFamily;
-    padding-left: 5px;
-    padding-right: 5px;
     text-transform: uppercase;
     box-shadow: none;
     > li {
@@ -315,6 +313,8 @@
             border-bottom: 1px solid @color-one;
             font-weight: normal;
             padding: 5px 15px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
         &:last-child {
             a {
@@ -337,6 +337,11 @@
                 }
             }
         }
+        &:hover,&:focus {
+            background-color: @color-one;
+            border-top: 1px solid @color-one;
+            margin-top: -1px;
+        }
     }
     &.sub-menu {
         box-shadow: none;
@@ -348,8 +353,10 @@
         }
     }
     > .active {
+        background-color: @color-one;
+        border-top: 1px solid @color-one;
+        margin-top: -1px;
         > a {
-            background-color: @color-one;
             background-image: none;
         }
     }
@@ -2316,6 +2323,9 @@ dl {
                 font-size: @baseFontSize + 44;
                 text-transform: uppercase;
                 font-family: @serifFontFamily;
+                h4 {
+                    font-size: inherit;
+                }
             }
         }
     }
