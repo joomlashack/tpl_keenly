@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
     $totalMenu = jQuery('.moduletable_ktotalmenu').children('.menu').children();
+    $hoveredParent = $();
     // Rendering menu 
     jQuery($totalMenu).each(function() {
         if (jQuery(this).hasClass('parent')) {
@@ -10,6 +11,7 @@ jQuery(document).ready(function($) {
                     $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);
                     if (checkingClass(jQuery(this).parent(), 'active')) {
                         $menuItemElement.addClass('active');
+                        $menuItemElement.addClass('current-active');
                     }
                 } else {
                     if (jQuery(this).hasClass('in')) {
@@ -21,6 +23,7 @@ jQuery(document).ready(function($) {
             $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);;
             if (checkingClass(jQuery(this), 'active')) {
                 $linkItemMenu.addClass('active');
+                $linkItemMenu.addClass('current-active');
             }
         }
     });
@@ -47,6 +50,11 @@ jQuery(document).ready(function($) {
 
     // Selected item detects the menu that is open close it and open the corresponding item.
     function itemMenuClickEvent(event) {
+        if (!checkingClass(jQuery(this),'active')) {
+            jQuery(this).addClass('active');
+            $hoveredParent.removeClass('active');
+            $hoveredParent = jQuery(this);
+        }
         jQuery('.active-menu').removeClass('in');
         jQuery('.active-menu').removeClass('active-menu');
         $menuSubmenuItem = jQuery(this).attr('href');
