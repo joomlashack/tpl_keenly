@@ -338,7 +338,7 @@
                 }
             }
         }
-        &:hover,&:focus {
+        &:hover, &:focus {
             background-color: @color-one;
             border-top: 1px solid @color-one;
             margin-top: -1px;
@@ -1391,6 +1391,7 @@ blockquote {
     }
     &.topquote {
         padding: 50px 0 0 0;
+        display: table;
         p {
             font-size: @baseFontSize + 16;
         }
@@ -1629,7 +1630,7 @@ label {
         }
     }
     .dl-horizontal {
-        dd { 
+        dd {
             margin-left: 0;
             margin-bottom: 10px;
             span {
@@ -2109,23 +2110,39 @@ div.intro {
             margin-left: 0px;
         }
         .image-container {
-            border-right: 1px solid @color-four;
             padding-right: 20px;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
+            }
+            .pull-left {
+                float: none;
+                margin: 0;
             }
         }
         .content-wrapper {
+            border-left: 1px solid @color-four;
             padding-left: 20px;
+            h1, h2, h3, h4, h5, h6 {
+                margin-top: 0;
+            }
             .readmore {
                 .btn {
                     padding: 0px;
                 }
                 float: none;
             }
+            .btn-group {
+                .btn {
+                    border: none;
+                }
+            }
         }
         .content-wrapper-left {
+            border-right: 1px solid @color-four;
+            h1, h2, h3, h4, h5, h6 {
+                margin-top: 0;
+            }
             padding-right: 20px;
             .readmore {
                 .btn {
@@ -2133,13 +2150,21 @@ div.intro {
                 }
                 float: none;
             }
+            .btn-group {
+                .btn {
+                    border: none;
+                }
+            }
         }
         .image-container-right {
-            border-left: 1px solid @color-four;
             padding-left: 20px;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
+            }
+            .pull-right {
+                float: none;
+                margin: 0;
             }
         }
     }

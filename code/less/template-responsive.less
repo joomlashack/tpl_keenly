@@ -728,19 +728,16 @@
     .blog, .blog-featured {
         .item-container {
             .image-container {
-                border-right: none;
-                padding-right: 0px;
+               
             }
             .content-wrapper {
-                padding-left: 0px;
-                padding-top: 20px;
+                
             }
             .image-container-right {
-                border-left: none;
-                padding-left: 0px;
+               
             }
             .content-wrapper-left {
-                padding-right: 0px;
+               
             }
         }
     }
@@ -1286,17 +1283,28 @@
     .blog, .blog-featured {
         .item-container {
             .image-container {
-                border-right: none;
                 padding-right: 0px;
             }
             .content-wrapper {
+                border-left: none;
+                padding-left: 0;
                 padding-top: 20px;
             }
             .image-container-right {
                 border-left: none;
                 padding-left: 0px;
+                padding-top: 20px;
             }
-            .content-wrapper-left {}
+            .content-wrapper-left {
+                border-right: 0;
+                padding-right: 0;
+            }
+        }
+        .items-row {
+            .item {
+                margin-bottom: 20px;
+                float: left;
+            }
         }
     }
     .input-append, .input-prepend {
