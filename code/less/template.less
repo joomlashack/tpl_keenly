@@ -1552,6 +1552,25 @@ label {
     }
 }
 .contact {
+    .accordion-group {
+        background-color: transparent;
+        .accordion-heading {
+            font-family: @serifFontFamily;
+            font-size: @baseFontSize + 4;
+            font-weight: normal;
+        }
+    }
+    .well {
+        padding: 0px 0px 20px 0px;
+        &.well-small {
+            font-family: @serifFontFamily;
+            text-transform: uppercase;
+            select {
+                margin-left: 10px;
+                background-color: @color-five;
+            }
+        }
+    }
     .form-inline {
         margin-bottom: 30px;
         fieldset {
@@ -1609,6 +1628,19 @@ label {
             padding-left: 90px;
         }
     }
+    .dl-horizontal {
+        dd { 
+            margin-left: 0;
+            margin-bottom: 10px;
+            span {
+                margin-left: 0;
+                margin-left: 10px;
+            }
+        }
+        dt {
+            width: auto;
+        }
+    }
     .form-validate {
         fieldset {
             dd {
@@ -1628,6 +1660,30 @@ label {
             padding: 19px;
             background-color: @wellBackground;
             border-bottom: none;
+        }
+    }
+    .form-horizontal {
+        .control-group {
+            .control-label {
+                min-width: 90px;
+                text-align: left;
+                width: 90px;
+                label {
+                    width: auto;
+                    font-family: @serifFontFamily;
+                    span {
+                        &.star {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .controls {
+            margin-left: 0;
+        }
+        legend + .control-group {
+            margin-top: 0;
         }
     }
 }
