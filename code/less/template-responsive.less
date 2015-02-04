@@ -1296,7 +1296,24 @@
                 border-left: none;
                 padding-left: 0px;
             }
-            .content-wrapper-left {
+            .content-wrapper-left {}
+        }
+    }
+    .input-append, .input-prepend {
+        &.input-append {
+            .btn-group + input[class*="span"] {
+                width: 80px;
+            }
+        }
+        input[id^="appendedInputButtons"] {
+            width: 90px;
+        }
+        &.first-child {
+            width: 75px;
+        }
+        button {
+            &.btn {
+                padding: 2px 10px;
             }
         }
     }
