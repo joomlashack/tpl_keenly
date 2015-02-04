@@ -9,6 +9,9 @@ jQuery(document).ready(function($) {
             jQuery($menuParent).each(function() {
                 if (jQuery(this).is('a')) {
                     $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);
+                    $menuItemLinkItem = $menuItemElement.attr('href');
+                    $menuItemElement.attr('id', '#' + $menuItemLinkItem);
+                    $menuItemElement.attr('href', '#');
                     if (checkingClass(jQuery(this).parent(), 'active')) {
                         $menuItemElement.addClass('active');
                         $menuItemElement.addClass('current-active');
@@ -57,8 +60,8 @@ jQuery(document).ready(function($) {
         }
         jQuery('.active-menu').removeClass('in');
         jQuery('.active-menu').removeClass('active-menu');
-        $menuSubmenuItem = jQuery(this).attr('href');
-        jQuery($menuSubmenuItem).addClass('active-menu');
-        jQuery($menuSubmenuItem).addClass('in');
+        $menuSubmenuItem = jQuery(this).attr('id').replace(/#/g, '');
+        jQuery('#' + $menuSubmenuItem).addClass('active-menu');
+        jQuery('#' + $menuSubmenuItem).addClass('in');
     }
 });
