@@ -19,6 +19,77 @@ $templateSpanValue = intval ($template->params->get('imageSpan'));
 $imageSpan = 'span' . $templateSpanValue;
 $contentSpan = 'span' . (12 - $templateSpanValue); 
 
+$float = json_decode($this->items['0']->images);
+
+if ($float->image_intro !== '') {
+
+	switch ($float->float_intro)
+	  {
+	  	case 'left':
+			$this->wrightLeadingItemElementsStructure = Array(
+			'div.item-container',
+				'div.'. $imageSpan,
+					'div.image-container',
+					"image",
+					'/div',
+				'/div',
+				'div.' . $contentSpan,
+					'div.content-wrapper',
+					"title",
+					"icons",
+					"legendtop",
+					"article-info",
+					"content",
+					"legendbottom",
+					'/div',
+				'/div',
+			'/div'
+			);
+			break;
+		case 'right':
+		$this->wrightLeadingItemElementsStructure = Array(
+			'div.item-container',
+				'div.' . $contentSpan,
+					'div.content-wrapper-left',
+					"title",
+					"icons",
+					"legendtop",
+					"article-info",
+					"content",
+					"legendbottom",
+					'/div',
+				'/div',
+				'div.'. $imageSpan,
+					'div.image-container-right',
+					"image",
+					'/div',
+				'/div',
+			'/div'
+			);
+		break;
+		default:
+		$this->wrightLeadingItemElementsStructure = Array(
+		"image",
+		"title",
+		"icons",
+		"legendtop",
+		"article-info",
+		"content",
+		"legendbottom");
+	}
+} else {
+
+$this->wrightLeadingItemElementsStructure = Array(
+	"image",
+	"title",
+	"icons",
+	"legendtop",
+	"article-info",
+	"content",
+	"legendbottom");
+
+}
+
 $this->wrightElementsStructure = Array(
 	"image",
 	"title",
@@ -28,26 +99,6 @@ $this->wrightElementsStructure = Array(
 	"article-info",
 	"legendbottom"
 );
-
-$this->wrightLeadingItemElementsStructure = Array(
-	'div.item-container',
-	'div.'. $imageSpan,
-	'div.image-container',
-	"image",
-	'/div',
-	'/div',
-	'div.' . $contentSpan,
-	'div.content-wrapper',
-	"title",
-	"icons",
-	"legendtop",
-	"article-info",
-	"content",
-	"legendbottom",
-	'/div',
-	'/div',
-	'/div'
-	);
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 include Overrider::getOverride('com_content.featured');
