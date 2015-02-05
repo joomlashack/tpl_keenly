@@ -1,4 +1,36 @@
-@media (max-width: 1260px) and (min-width: 1200px) {} @media (min-width: 1200px) {
+@media (max-width: 1260px) and (min-width: 1200px) {
+    @gridColumns: 12;
+    @gridColumnWidth: 60px;
+    @gridGutterWidth: 20px;
+    @gridColumnWidth1260: 40px;
+    @gridGutterWidth1260: 30px;
+    @gridRowWidth1260: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth1260 * (@gridColumns - 1));
+    // Fixed grid
+    #grid > .core(@gridColumnWidth, @gridGutterWidth1260);
+}
+@media (max-width: 1035px) and (min-width: 980px) {
+    @gridColumns: 12;
+    @gridColumnWidth: 55px;
+    @gridGutterWidth: 20px;
+    @gridColumnWidth1035: 40px;
+    @gridGutterWidth1035: 20px;
+    @gridRowWidth1035: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth1035 * (@gridColumns - 1));
+    // Fixed grid
+    #grid > .core(@gridColumnWidth, @gridGutterWidth1035);
+
+}
+@media (max-width: 800px) and (min-width: 768px) {
+    @gridColumns: 12;
+    @gridColumnWidth: 40px;
+    @gridGutterWidth: 15px;
+    @gridColumnWidth800: 40px;
+    @gridGutterWidth800: 20px;
+    @gridRowWidth800: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth800 * (@gridColumns - 1));
+    // Fixed grid
+    #grid > .core(@gridColumnWidth, @gridGutterWidth800);
+
+}
+@media (min-width: 1200px) {
     #menu {
         .navbar {
             .btn-navbar {
@@ -1324,7 +1356,7 @@
     }
     form {
         &.bs-docs-example {
-             padding: 60px 5px 25px 5px;
+            padding: 60px 5px 25px 5px;
         }
     }
     .input-append, .input-prepend {
@@ -1352,7 +1384,7 @@
         }
     }
     .input-append {
-         input[id*="appendedInputButtons"] {
+        input[id*="appendedInputButtons"] {
             width: 40px;
         }
     }
