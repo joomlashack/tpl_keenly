@@ -2179,6 +2179,27 @@ div.intro {
                 padding: 0px;
             }
         }
+        &.extra-border {
+            border-bottom: none;
+            margin-bottom: 0;
+            .item {
+                [class^="img-intro-"] {
+                    margin: 0;
+                    float: none;
+                }
+            }
+        }
+        &.row-fluid {
+            &.extra-border {
+                [class*="span"] {
+                    
+                }
+                .item {
+                    .borderbox();
+                    
+                }
+            }
+        }
     }
     .cat-children {
         h3 {

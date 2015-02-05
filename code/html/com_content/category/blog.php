@@ -28,6 +28,7 @@ $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1'
 
 if ($specialHomeLayout)
 {
+	$this->wrightIntroRowsClass = 'extra-border';
 	$this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
 	$this->layoutSpanorder = Array(3,6,3);
 }
