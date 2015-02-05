@@ -1,8 +1,4 @@
-@media (max-width: 1260px) and (min-width: 1200px) {
-  
-}
-
-@media (min-width: 1200px) {
+@media (max-width: 1260px) and (min-width: 1200px) {} @media (min-width: 1200px) {
     #menu {
         .navbar {
             .btn-navbar {
@@ -731,18 +727,7 @@
     }
     .blog, .blog-featured {
         .item-container {
-            .image-container {
-               
-            }
-            .content-wrapper {
-                
-            }
-            .image-container-right {
-               
-            }
-            .content-wrapper-left {
-               
-            }
+            .image-container {} .content-wrapper {} .image-container-right {} .content-wrapper-left {}
         }
     }
 }
@@ -1308,6 +1293,27 @@
             .item {
                 margin-bottom: 20px;
                 float: left;
+            }
+            &.row-fluid {
+                &.extra-border {
+                    [class*="span"] {
+                        margin-left: 0;
+                        padding-right: 0px;
+                        &:first-child {
+                            box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            border-right: none;
+                            padding-right: 0;
+                            margin-right: 0;
+                            margin-left: 0;
+                        }
+                        &:last-of-type {
+                            margin-left: 0;
+                            padding-left: 0;
+                            border-left: none;
+                        }
+                    }
+                }
             }
         }
     }

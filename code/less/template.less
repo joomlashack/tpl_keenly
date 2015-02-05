@@ -2192,11 +2192,21 @@ div.intro {
         &.row-fluid {
             &.extra-border {
                 [class*="span"] {
-                    
-                }
-                .item {
-                    .borderbox();
-                    
+                    margin-left: 0;
+                    padding-right: 0px;
+                    &:first-child {
+                        .borderbox();
+                        border-right: 1px solid @color-four;
+                        padding-right: 15px;
+                        margin-right: 1.25%;
+                        margin-left: 0;
+                    }
+                    &:last-of-type {
+                        margin-left: 1.25%;
+                        padding-left: 15px;
+                        border-left: 1px solid @color-four;
+
+                    }
                 }
             }
         }
