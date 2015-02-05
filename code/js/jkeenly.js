@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
     $totalMenu = jQuery('.wrapper-submenu-items').children('.moduletable').children('.menu').children();
-    console.log($totalMenu);
     $hoveredParent = $();
     // Rendering menu 
     jQuery($totalMenu).each(function() {
@@ -54,15 +53,17 @@ jQuery(document).ready(function($) {
 
     // Selected item detects the menu that is open close it and open the corresponding item.
     function itemMenuClickEvent(event) {
-        if (!checkingClass(jQuery(this),'active')) {
+        if (!checkingClass(jQuery(this), 'active')) {
             jQuery(this).addClass('active');
             $hoveredParent.removeClass('active');
             $hoveredParent = jQuery(this);
         }
         jQuery('.active-menu').removeClass('in');
         jQuery('.active-menu').removeClass('active-menu');
-        $menuSubmenuItem = jQuery(this).attr('id').replace(/#/g, '');
-        jQuery('#' + $menuSubmenuItem).addClass('active-menu');
-        jQuery('#' + $menuSubmenuItem).addClass('in');
+        if (jQuery(this).attr('id')) {
+            $menuSubmenuItem = jQuery(this).attr('id').replace(/#/g, '');
+            jQuery('#' + $menuSubmenuItem).addClass('active-menu');
+            jQuery('#' + $menuSubmenuItem).addClass('in');
+        }
     }
 });
