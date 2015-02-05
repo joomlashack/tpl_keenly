@@ -1317,14 +1317,27 @@
             }
         }
     }
+    .form-inline {
+        textarea {
+            width: 175px;
+        }
+    }
+    form {
+        &.bs-docs-example {
+             padding: 60px 5px 25px 5px;
+        }
+    }
     .input-append, .input-prepend {
         &.input-append {
             .btn-group + input[class*="span"] {
-                width: 80px;
+                width: 25qpx;
             }
         }
         input[id^="appendedInputButtons"] {
-            width: 90px;
+            width: 10px;
+        }
+        input {
+            width: 70px;
         }
         &.first-child {
             width: 75px;
@@ -1333,6 +1346,19 @@
             &.btn {
                 padding: 2px 10px;
             }
+        }
+        input[class*="span"] {
+            width: 120px;
+        }
+    }
+    .input-append {
+         input[id*="appendedInputButtons"] {
+            width: 40px;
+        }
+    }
+    .input-prepend {
+        input[id*="appendedPrependedDropdownButton"] {
+            width: 25px;
         }
     }
 }
