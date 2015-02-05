@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
-    $totalMenu = jQuery('.moduletable_ktotalmenu').children('.menu').children();
+    $totalMenu = jQuery('.wrapper-submenu-items').children('.moduletable').children('.menu').children();
+    console.log($totalMenu);
     $hoveredParent = $();
     // Rendering menu 
     jQuery($totalMenu).each(function() {
