@@ -309,13 +309,15 @@
     font-family: @serifFontFamily;
     text-transform: uppercase;
     box-shadow: none;
+    padding: 0;
+    border: none;
     > li {
         a {
             border-bottom: 1px solid @color-one;
             font-weight: normal;
-            padding: 5px 15px;
-            margin-left: 5px;
-            margin-right: 5px;
+            padding: 7px 10px 7px 0px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
         &:last-child {
             a {
@@ -328,6 +330,12 @@
             }
         }
         &.deeper {
+            .dropdown-menu {
+                border-left: none;
+                &:hover, &:focus {
+                    border-color: @color-one;
+                }
+            }
             > a {
                 &:after {
                     font-family: FontAwesome;
@@ -342,6 +350,12 @@
             background-color: @color-one;
             border-top: 1px solid @color-one;
             margin-top: -1px;
+        }
+        &:first-child {
+            &:hover, &:focus {
+                border-top: none;
+                margin-top: 0;
+            }
         }
     }
     &.sub-menu {
@@ -360,10 +374,21 @@
         > a {
             background-image: none;
         }
+        &:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
     }
     .nav-header {
         text-shadow: none;
         color: @color-five;
+    }
+    .divider {
+        margin-bottom: 0;
+        &:hover, &:focus {
+            margin-top: 9px;
+            border-top: none;
+        }
     }
 }
 //Navs

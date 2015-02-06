@@ -15,7 +15,6 @@
     @gridRowWidth1035: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth1035 * (@gridColumns - 1));
     // Fixed grid
     #grid > .core(@gridColumnWidth, @gridGutterWidth1035);
-
 }
 @media (max-width: 800px) and (min-width: 768px) {
     @gridColumnWidth: 40px;
@@ -25,7 +24,6 @@
     @gridRowWidth800: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth800 * (@gridColumns - 1));
     // Fixed grid
     #grid > .core(@gridColumnWidth, @gridGutterWidth800);
-
 }
 @media (min-width: 1200px) {
     #menu {
@@ -306,6 +304,19 @@
                             border-radius: 0;
                             -webkit-border-radius: 0;
                         }
+                        > li {
+                            &:hover, &:focus {
+                                background-color: transparent;
+                                border-top: none;
+                                margin-top: 0;
+                            }
+                            &:first-child {
+                                &:hover, &:focus {
+                                    border-top: none;
+                                    margin-top: 0;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -481,6 +492,26 @@
                                         color: @color-two;
                                     }
                                 }
+                                &:hover, &:focus {
+                                    background-color: transparent;
+                                    border-top: none;
+                                    margin-top: 0;
+                                }
+                                &:first-child {
+                                    &:hover, &:focus {
+                                        border-top: none;
+                                        margin-top: 0;
+                                    }
+                                }
+                                &.active {
+                                    border-top: none;
+                                    margin-top: 0;
+                                    background-color: transparent;
+                                    &:hover, &:focus {
+                                        border-top: none;
+                                        margin-top: 0;
+                                    }
+                                }
                                 &.deeper {
                                     > a {
                                         &:after {
@@ -557,6 +588,28 @@
                             }
                             border-radius: 0;
                             -webkit-border-radius: 0;
+                        }
+                        > li {
+                            &:hover, &:focus {
+                                background-color: transparent;
+                                border-top: none;
+                                margin-top: 0;
+                            }
+                            &:first-child {
+                                &:hover, &:focus {
+                                    border-top: none;
+                                    margin-top: 0;
+                                }
+                            }
+                            &.active {
+                                border-top: none;
+                                margin-top: 0;
+                                background-color: transparent;
+                                &:hover, &:focus {
+                                    border-top: none;
+                                    margin-top: 0;
+                                }
+                            }
                         }
                     }
                 }
