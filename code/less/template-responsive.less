@@ -25,6 +25,18 @@
     // Fixed grid
     #grid > .core(@gridColumnWidth, @gridGutterWidth800);
 }
+@media (max-width: 1200px) and (min-width: 980px) {
+    .blog, .blog-featured {
+        .item-container {
+            .content-wrapper {
+                padding-left: 10px;
+            }
+            .image-container-right {
+                padding-left: 10px;
+            }
+        }
+    }
+}
 @media (min-width: 1200px) {
     #menu {
         .navbar {
@@ -770,6 +782,16 @@
             }
         }
     }
+    .blog, .blog-featured {
+        .item-container {
+            .content-wrapper {
+                padding-left: 10px;
+            }
+            .image-container-right {
+                padding-left: 10px;
+            }
+        }
+    }
     // Keenly special menu styles
     .kwell {
         .nav-list {
@@ -1343,6 +1365,13 @@
     }
     .blog, .blog-featured {
         .item-container {
+            .span0 {
+                margin-left: 0px;
+                margin-right: 0px;
+                .divider-vertical {
+                    height: 0px;
+                }
+            }
             .image-container {
                 padding-right: 0px;
             }

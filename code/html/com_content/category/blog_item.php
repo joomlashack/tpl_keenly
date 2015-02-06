@@ -26,17 +26,23 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 		case 'left':
 			$this->item->wrightElementsStructure = Array(
 				'div.item-container',
-					'div.span9',
-						'div.image-container',
-							'image',
+					'div.row',
+						'div.span9',
+							'div.image-container',
+								'image',
+							'/div',
 						'/div',
-					'/div',
-					'div.span3',
-						'div.content-wrapper',
-							'title',
-							'icons',
-							'article-info',
-							'content',
+						'div.span0',
+						'div.divider-vertical',
+						'/div',
+						'/div',
+						'div.span3',
+							'div.content-wrapper',
+								'title',
+								'icons',
+								'article-info',
+								'content',
+							'/div',
 						'/div',
 					'/div',
 				'/div'
@@ -46,6 +52,7 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 		case 'right':
 			$this->item->wrightElementsStructure = Array(
 				'div.item-container',
+				'div.row',
 					'div.span3',
 						'div.content-wrapper-left',
 							'title',
@@ -54,10 +61,15 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 							'content',
 						'/div',
 					'/div',
+					'div.span0',
+						'div.divider-vertical',
+						'/div',
+					'/div',
 					'div.span9',
 						'div.image-container-right',
 							'image',
 						'/div',
+					'/div',
 					'/div',
 				'/div'
 			);
@@ -82,10 +94,15 @@ else
 				case 'left':
 					$this->item->wrightElementsStructure = Array(
 						'div.item-container',
+						'div.row',
 							'div.span6',
 								'div.image-container',
 									'image',
 								'/div',
+							'/div',
+							'div.span0',
+							'div.divider-vertical',
+							'/div',
 							'/div',
 							'div.span6',
 								'div.content-wrapper',
@@ -95,6 +112,7 @@ else
 									'content',
 								'/div',
 							'/div',
+							'/div',
 						'/div'
 					);
 					break;
@@ -102,6 +120,7 @@ else
 				case 'right':
 					$this->item->wrightElementsStructure = Array(
 						'div.item-container',
+						'div.row',
 							'div.span6',
 								'div.content-wrapper-left',
 									'title',
@@ -110,10 +129,15 @@ else
 									'content',
 								'/div',
 							'/div',
+							'div.span0',
+							'div.divider-vertical',
+							'/div',
+							'/div',
 							'div.span6',
 								'div.image-container-right',
 									'image',
 								'/div',
+							'/div',
 							'/div',
 						'/div'
 					);

@@ -213,10 +213,9 @@
                             .dropdown-submenu {
                                 .dropdown-menu {
                                     > li {
-                                        &:hover, &:focus {
-                                            background-color: @color-one;
-                                            a {
-                                                background-color: transparent;
+                                        a {
+                                            &:hover, &:focus {
+                                                background-color: @color-one;
                                             }
                                         }
                                     }
@@ -2136,17 +2135,21 @@ div.intro {
         }
     }
     .item-container {
-        [class^='span'] {
-            margin-left: 0px;
+        position: relative;
+        .span0 {
+            margin-left: 15px;
+            margin-right: 15px;
+            .divider-vertical {
+                position: absolute;
+                width: 1px;
+                background-color: @color-four;
+                height: 100%;
+            }
         }
         .image-container {
-            padding-right: 20px;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
-                img {
-                    width: 100%;
-                }
             }
             .pull-left {
                 float: none;
@@ -2154,8 +2157,6 @@ div.intro {
             }
         }
         .content-wrapper {
-            border-left: 1px solid @color-four;
-            padding-left: 20px;
             h1, h2, h3, h4, h5, h6 {
                 margin-top: 0;
             }
@@ -2172,11 +2173,9 @@ div.intro {
             }
         }
         .content-wrapper-left {
-            border-right: 1px solid @color-four;
             h1, h2, h3, h4, h5, h6 {
                 margin-top: 0;
             }
-            padding-right: 20px;
             .readmore {
                 .btn {
                     padding: 0px;
@@ -2190,7 +2189,6 @@ div.intro {
             }
         }
         .image-container-right {
-            padding-left: 20px;
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
@@ -2219,9 +2217,6 @@ div.intro {
                 [class^="img-intro-"] {
                     margin: 0;
                     float: none;
-                    img {
-                        width: 100%;
-                    }
                 }
             }
         }
