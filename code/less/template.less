@@ -2136,8 +2136,9 @@ div.intro {
     }
     .item-container {
         position: relative;
-        .span0 {
+        .divider-container {
             margin-left: 15px;
+            float: left;
             margin-right: 15px;
             .divider-vertical {
                 position: absolute;
@@ -2201,8 +2202,6 @@ div.intro {
     }
     .items-row {
         border-bottom: 1px solid @color-four;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
         .readmore {
             float: left;
             margin-top: 15px;
@@ -2213,10 +2212,24 @@ div.intro {
         &.extra-border {
             border-bottom: none;
             margin-bottom: 0;
+            position: relative;
             .item {
                 [class^="img-intro-"] {
                     margin: 0;
                     float: none;
+                }
+            }
+            .items-divider {
+               margin: 0% 1.2%;
+                width: 1px;
+                height: 1px;
+                float: left;
+                display: block;
+                .divider-vertical {
+                    width: 1px;
+                    height: 100%;
+                    background-color: @color-four;
+                    position: absolute;
                 }
             }
         }
@@ -2225,18 +2238,6 @@ div.intro {
                 [class*="span"] {
                     margin-left: 0;
                     padding-right: 0px;
-                    &:first-child {
-                        .borderbox();
-                        border-right: 1px solid @color-four;
-                        padding-right: 15px;
-                        margin-right: 1.25%;
-                        margin-left: 0;
-                    }
-                    &:last-of-type {
-                        margin-left: 1.25%;
-                        padding-left: 15px;
-                        border-left: 1px solid @color-four;
-                    }
                 }
             }
         }
