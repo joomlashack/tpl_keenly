@@ -47,9 +47,9 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<div class="submenu-items">
 				<div class="wrapper-submenu-items"><w:module type="none" name="total-menu" chrome="xhtml" />
+				</div>
 				<div class="total-menu-inner">
 				<w:module type="none" name="total-menu-inner" chrome="xhtml" />
-				</div>
 				</div>
 			</div>
 		</div>
