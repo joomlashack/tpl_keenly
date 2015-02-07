@@ -456,70 +456,6 @@
     }
 }
 // Keenly menus
-.menu {
-    &.nav-list {
-        &.nav {
-            margin-top: 15px;
-            padding-left: 0;
-            padding-right: 0;
-            > li {
-                font-family: @serifFontFamily;
-                border-bottom: 1px solid @Submenu-background;
-                > a {
-                    color: @color-two;
-                    margin-left: 0;
-                    margin-right: 0;
-                    padding: 8px 0px;
-                    &:hover, &:focus {
-                        color: @color-one;
-                        background-color: transparent;
-                    }
-                }
-                &.active {
-                    > a {
-                        color: @color-one;
-                        background-color: transparent;
-                    }
-                }
-                &.deeper {
-                    > a {
-                        .caret {
-                            display: none;
-                        }
-                        &:after {
-                            content: '\f107';
-                            font-family: FontAwesome;
-                            position: absolute;
-                            right: 10px;
-                        }
-                    }
-                    .submenu {
-                        margin-left: 0;
-                        margin-right: 0;
-                        background-color: @inputBackground;
-                        li {
-                            a {
-                                padding-right: 12px;
-                                padding-left: 12px;
-                                border-bottom: 1px solid @Submenu-background;
-                                color: @color-three;
-                                &:hover, &:focus {
-                                    background-color: @tableBorder;
-                                }
-                                &:last-child {
-                                    border-bottom: none;
-                                }
-                                &.active {
-                                    background-color: @tableBorder;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 .well {
     padding: 15px;
     border-radius: 0;
@@ -683,83 +619,141 @@
         }
     }
 }
-.menu {
-    &.nav {
-        &.nav-list {
-            &.nav {
-                margin-top: 20px;
-                padding-left: 0;
-                padding-right: 0;
-                > li {
-                    font-family: @serifFontFamily;
-                    border-bottom: 1px solid @Submenu-background;
-                    &:last-child {
-                        border-bottom: none;
-                    }
-                    > a {
-                        color: @color-two;
-                        margin-left: 0;
-                        padding: 8px 15px;
-                        margin-right: 0;
-                        &:hover, &:focus {
-                            color: @color-one;
-                            border-left: 8px solid @color-one;
-                            padding: 8px 7px;
+.well {
+    .menu {
+        &.nav {
+            &.nav-list {
+                &.nav {
+                    margin-top: 20px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    > li {
+                        font-family: @serifFontFamily;
+                        border-bottom: 1px solid @Submenu-background;
+                        &:last-child {
+                            border-bottom: none;
                         }
-                    }
-                    > .dropdown-toggle {
-                        .caret {
-                            border-top-color: white;
-                        }
-                        &:hover, &:focus {
-                            .caret {
-                                border-top-color: black;
-                            }
-                        }
-                    }
-                    &.active {
                         > a {
-                            background-color: transparent;
-                            border-left: 8px solid @color-one;
-                            padding: 8px 7px;
-                            color: @color-one;
-                        }
-                    }
-                    &.deeper {
-                        > a {
-                            .caret {
-                                display: none;
-                            }
-                            &:after {
-                                content: '\f107';
-                                font-family: FontAwesome;
-                                position: absolute;
-                                right: 15px;
-                            }
-                        }
-                        .submenu {
-                            background-color: @Submenu-background;
+                            color: @color-two;
                             margin-left: 0;
+                            padding: 8px 15px;
                             margin-right: 0;
-                            li {
-                                border-bottom: 1px solid @inputBackground;
-                                &:last-child {
-                                    border-bottom: none;
+                            &:hover, &:focus {
+                                color: @color-one;
+                                border-left: 8px solid @color-one;
+                                padding: 8px 7px;
+                            }
+                        }
+                        > .dropdown-toggle {
+                            .caret {
+                                border-top-color: white;
+                            }
+                            &:hover, &:focus {
+                                .caret {
+                                    border-top-color: black;
                                 }
-                                &:first-child {
-                                    border-top: 1px solid @inputBackground;
+                            }
+                        }
+                        &.active {
+                            > a {
+                                background-color: transparent;
+                                border-left: 8px solid @color-one;
+                                padding: 8px 7px;
+                                color: @color-one;
+                            }
+                        }
+                        &.deeper {
+                            > a {
+                                .caret {
+                                    display: none;
                                 }
-                                a {
-                                    padding: 8px 15px;
-                                    color: @color-three;
-                                    &:hover, &:focus {
-                                        padding: 8px 7px;
-                                        border-left: 8px solid @color-four;
+                                &:after {
+                                    content: '\f107';
+                                    font-family: FontAwesome;
+                                    position: absolute;
+                                    right: 15px;
+                                }
+                            }
+                            .submenu {
+                                background-color: @Submenu-background;
+                                margin-left: 0;
+                                margin-right: 0;
+                                li {
+                                    border-bottom: 1px solid @inputBackground;
+                                    &:last-child {
+                                        border-bottom: none;
                                     }
-                                    &.active {
-                                        padding: 8px 7px;
-                                        border-left: 8px solid @color-four;
+                                    &:first-child {
+                                        border-top: 1px solid @inputBackground;
                                     }
+                                    a {
+                                        padding: 8px 15px;
+                                        color: @color-three;
+                                        &:hover, &:focus {
+                                            padding: 8px 7px;
+                                            border-left: 8px solid @color-four;
+                                        }
+                                        &.active {
+                                            padding: 8px 7px;
+                                            border-left: 8px solid @color-four;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.tabbable {
+    &.tabs-right {
+        .menu {
+            &.nav-tabs {
+                &.nav {
+                    > li {
+                        &.deeper {
+                            .submenu {
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                width: 100%;
+                            }
+                            > a {
+                                &:after {
+                                    content: '\f105';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.tabs-left {
+        .menu {
+            &.nav-tabs {
+                &.nav {
+                    > li {
+                        &.deeper {
+                            .submenu {
+                                position: absolute;
+                                top: 0;
+                                right: 100%;
+                                width: 100%;
+                            }
+                            > a {
+                                &:after {
+                                    display: none;
+                                }
+                                &:before {
+                                    font-family: FontAwesome;
+                                    content: '\f104';
+                                    color: @color-one;
+                                    margin-right: 10px;
                                 }
                             }
                         }
@@ -774,6 +768,7 @@
         &.nav {
             border-left: none;
             margin-left: 0;
+            border-bottom: none;
             > li {
                 font-family: @serifFontFamily;
                 border-bottom: 4px solid transparent;
@@ -786,7 +781,7 @@
                     border: none;
                     margin-left: 0;
                     &:hover, &:focus {
-                        background-color: @Submenu-background;
+                        background-color: @Submenu-hightlight;
                         color: @color-three;
                         border-radius: 0;
                         -webkit-border-radius: 0;
@@ -833,8 +828,11 @@
                             right: 15px;
                             top: 10px;
                         }
-                        &:hover, &:focus {
+                        &:hover {
                             background-color: @Submenu-hightlight;
+                        }
+                        &:focus {
+                            background-color: @Submenu-background;
                         }
                     }
                     .submenu {
@@ -857,6 +855,70 @@
                                 }
                                 &.active {
                                     background-color: @Submenu-hightlight;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.menu {
+    &.nav-list {
+        &.nav {
+            margin-top: 15px;
+            padding-left: 0;
+            padding-right: 0;
+            > li {
+                font-family: @serifFontFamily;
+                border-bottom: 1px solid @Submenu-background;
+                > a {
+                    color: @color-two;
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding: 8px 0px;
+                    &:hover, &:focus {
+                        color: @color-one;
+                        background-color: transparent;
+                    }
+                }
+                &.active {
+                    > a {
+                        color: @color-one;
+                        background-color: transparent;
+                    }
+                }
+                &.deeper {
+                    > a {
+                        .caret {
+                            display: none;
+                        }
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            position: absolute;
+                            right: 10px;
+                        }
+                    }
+                    .submenu {
+                        margin-left: 0;
+                        margin-right: 0;
+                        background-color: @inputBackground;
+                        li {
+                            a {
+                                padding-right: 12px;
+                                padding-left: 12px;
+                                border-bottom: 1px solid @Submenu-background;
+                                color: @color-three;
+                                &:hover, &:focus {
+                                    background-color: @tableBorder;
+                                }
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                                &.active {
+                                    background-color: @tableBorder;
                                 }
                             }
                         }
