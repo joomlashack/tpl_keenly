@@ -456,73 +456,62 @@
     }
 }
 // Keenly menus
-.kmenu {
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        text-shadow: none;
-        &:after {
-            content: ' ';
-            height: 2px;
-            width: 15%;
-            display: table;
-            margin-top: 10px;
-            background-color: @color-three;
-        }
-    }
-    .nav-list {
-        margin-top: 15px;
-        padding-left: 0;
-        padding-right: 0;
-        > li {
-            font-family: @serifFontFamily;
-            border-bottom: 1px solid @Submenu-background;
-            > a {
-                color: @color-two;
-                margin-left: 0;
-                margin-right: 0;
-                padding: 8px 0px;
-                &:hover, &:focus {
-                    color: @color-one;
-                    background-color: transparent;
-                }
-            }
-            &.active {
+.menu {
+    &.nav-list {
+        &.nav {
+            margin-top: 15px;
+            padding-left: 0;
+            padding-right: 0;
+            > li {
+                font-family: @serifFontFamily;
+                border-bottom: 1px solid @Submenu-background;
                 > a {
-                    color: @color-one;
-                    background-color: transparent;
-                }
-            }
-            &.deeper {
-                > a {
-                    .caret {
-                        display: none;
-                    }
-                    &:after {
-                        content: '\f107';
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 10px;
-                    }
-                }
-                .submenu {
+                    color: @color-two;
                     margin-left: 0;
                     margin-right: 0;
-                    background-color: @inputBackground;
-                    li {
-                        a {
-                            padding-right: 12px;
-                            padding-left: 12px;
-                            border-bottom: 1px solid @Submenu-background;
-                            color: @color-three;
-                            &:hover, &:focus {
-                                background-color: @tableBorder;
-                            }
-                            &:last-child {
-                                border-bottom: none;
-                            }
-                            &.active {
-                                background-color: @tableBorder;
+                    padding: 8px 0px;
+                    &:hover, &:focus {
+                        color: @color-one;
+                        background-color: transparent;
+                    }
+                }
+                &.active {
+                    > a {
+                        color: @color-one;
+                        background-color: transparent;
+                    }
+                }
+                &.deeper {
+                    > a {
+                        .caret {
+                            display: none;
+                        }
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            position: absolute;
+                            right: 10px;
+                        }
+                    }
+                    .submenu {
+                        margin-left: 0;
+                        margin-right: 0;
+                        background-color: @inputBackground;
+                        li {
+                            a {
+                                padding-right: 12px;
+                                padding-left: 12px;
+                                border-bottom: 1px solid @Submenu-background;
+                                color: @color-three;
+                                &:hover, &:focus {
+                                    background-color: @tableBorder;
+                                }
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                                &.active {
+                                    background-color: @tableBorder;
+                                }
                             }
                         }
                     }
@@ -531,7 +520,7 @@
         }
     }
 }
-.kwell {
+.well {
     padding: 15px;
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -550,331 +539,325 @@
             background-color: @color-three;
         }
     }
-    .nav-list {
-        margin-top: 15px;
-        padding: 0;
-        > li {
-            font-family: @serifFontFamily;
-            border-bottom: 1px solid @Submenu-background;
-            &:last-child {
-                border-bottom: none;
-            }
-            > a {
-                color: @color-two;
-                padding-bottom: 5px;
-                padding-top: 5px;
-                &:hover, &:focus {
-                    color: @color-five;
-                    background-color: @color-two;
-                }
-            }
-            &.active {
-                > a {
-                    color: @color-five;
-                    &:hover, &:focus {
-                        color: @color-five;
-                    }
-                }
-            }
-            &.deeper {
-                > a {
-                    .caret {
-                        display: none;
-                    }
-                    &:after {
-                        content: '\f107';
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 10px;
-                    }
-                }
-                .submenu {
-                    margin-left: 0;
-                    margin-right: 0;
-                    background-color: @Submenu-background;
-                    li {
-                        a {
-                            padding-right: 12px;
-                            padding-left: 12px;
-                            border-bottom: 1px solid @inputBackground;
-                            color: @color-three;
-                            &:hover, &:focus {
-                                background-color: @Submenu-hightlight;
-                            }
-                            &.active {
-                                background-color: @Submenu-hightlight;
-                            }
-                        }
-                    }
-                }
-            }
-            &:hover, &:focus {
-                border-bottom: 1px solid @inputBackground;
+    &.nav-list {
+        &.nav {
+            margin-top: 15px;
+            padding: 0;
+            > li {
+                font-family: @serifFontFamily;
+                border-bottom: 1px solid @Submenu-background;
                 &:last-child {
                     border-bottom: none;
                 }
-            }
-        }
-    }
-}
-.kpills {
-    padding: 0;
-    background-color: transparent;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    border: 0;
-    box-shadow: none;
-    .nav-pills {
-        > li {
-            font-family: @serifFontFamily;
-            background-color: @inputBackground;
-            > a {
-                color: @color-two;
-                &:hover, &:focus {
-                    color: @color-two;
-                    background-color: @color-two;
-                    border-radius: 0;
-                    -wekit-border-radius: 0;
-                    color: @color-five;
-                }
-            }
-            > .dropdown-toggle {
-                .caret {
-                    border-top-color: white;
-                }
-                &:hover, &:focus {
-                    .caret {
-                        border-top-color: black;
-                    }
-                }
-            }
-            &.active {
                 > a {
-                    color: @color-five;
-                    border-radius: 0;
-                    -wekit-border-radius: 0;
+                    color: @color-two;
+                    padding-bottom: 5px;
+                    padding-top: 5px;
                     &:hover, &:focus {
                         color: @color-five;
                         background-color: @color-two;
                     }
                 }
-            }
-            &.deeper {
-                > a {
-                    .caret {
-                        display: none;
-                    }
-                    &:after {
-                        content: '\f107';
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 10px;
-                    }
-                }
-                .submenu {
-                    margin-left: 0;
-                    margin-right: 0;
-                    background-color: @Submenu-background;
-                    li {
-                        a {
-                            padding-right: 12px;
-                            padding-left: 12px;
-                            color: @color-three;
-                            border-bottom: 1px solid @inputBackground;
-                            &:hover, &:focus {
-                                background-color: @Submenu-hightlight;
-                            }
-                            &.active {
-                                background-color: @Submenu-hightlight;
-                            }
+                &.active {
+                    > a {
+                        color: @color-five;
+                        &:hover, &:focus {
+                            color: @color-five;
                         }
                     }
                 }
-            }
-        }
-    }
-}
-.klist {
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    border-top: 4px solid @color-three;
-    padding: 0;
-    h3 {
-        margin-top: 20px;
-        margin-left: 15px;
-        margin-bottom: 0;
-        text-shadow: none;
-    }
-    .nav-list {
-        margin-top: 20px;
-        padding-left: 0;
-        padding-right: 0;
-        > li {
-            font-family: @serifFontFamily;
-            border-bottom: 1px solid @Submenu-background;
-            &:last-child {
-                border-bottom: none;
-            }
-            > a {
-                color: @color-two;
-                margin-left: 0;
-                padding: 8px 15px;
-                margin-right: 0;
-                &:hover, &:focus {
-                    color: @color-one;
-                    border-left: 8px solid @color-one;
-                    padding: 8px 7px;
-                }
-            }
-            > .dropdown-toggle {
-                .caret {
-                    border-top-color: white;
-                }
-                &:hover, &:focus {
-                    .caret {
-                        border-top-color: black;
-                    }
-                }
-            }
-            &.active {
-                > a {
-                    background-color: transparent;
-                    border-left: 8px solid @color-one;
-                    padding: 8px 7px;
-                    color: @color-one;
-                }
-            }
-            &.deeper {
-                > a {
-                    .caret {
-                        display: none;
-                    }
-                    &:after {
-                        content: '\f107';
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 15px;
-                    }
-                }
-                .submenu {
-                    background-color: @Submenu-background;
-                    margin-left: 0;
-                    margin-right: 0;
-                    li {
-                        border-bottom: 1px solid @inputBackground;
-                        &:last-child {
-                            border-bottom: none;
+                &.deeper {
+                    > a {
+                        .caret {
+                            display: none;
                         }
-                        &:first-child {
-                            border-top: 1px solid @inputBackground;
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            position: absolute;
+                            right: 10px;
                         }
-                        a {
-                            padding: 8px 15px;
-                            color: @color-three;
-                            &:hover, &:focus {
-                                padding: 8px 7px;
-                                border-left: 8px solid @color-four;
-                            }
-                            &.active {
-                                padding: 8px 7px;
-                                border-left: 8px solid @color-four;
+                    }
+                    .submenu {
+                        margin-left: 0;
+                        margin-right: 0;
+                        background-color: @Submenu-background;
+                        li {
+                            a {
+                                padding-right: 12px;
+                                padding-left: 12px;
+                                border-bottom: 1px solid @inputBackground;
+                                color: @color-three;
+                                &:hover, &:focus {
+                                    background-color: @Submenu-hightlight;
+                                }
+                                &.active {
+                                    background-color: @Submenu-hightlight;
+                                }
                             }
                         }
                     }
                 }
-            }
-        }
-    }
-}
-.ktabbable {
-    .nav-tabs {
-        border-left: none;
-        margin-left: 0;
-        > li {
-            font-family: @serifFontFamily;
-            border-bottom: 4px solid transparent;
-            > a {
-                background-color: @inputBackground;
-                color: @color-two;
-                margin-bottom: 0;
-                border-radius: 0;
-                -webkit-border-radius: 0;
-                border: none;
-                margin-left: 0;
                 &:hover, &:focus {
-                    background-color: @Submenu-background;
-                    color: @color-three;
-                    border-radius: 0;
-                    -webkit-border-radius: 0;
-                    box-shadow: none;
-                    &:after {
-                        color: @color-two;
-                    }
-                }
-            }
-            > .dropdown-toggle {
-                .caret {
-                    border-top-color: white;
-                }
-                &:hover, &:focus {
-                    .caret {
-                        border-top-color: black;
-                    }
-                }
-            }
-            &.active {
-                > a {
-                    color: @color-five;
-                    background-color: @color-two;
-                    border-radius: 0;
-                    -webkit-border-radius: 0;
-                    box-shadow: none;
-                    border-right: none;
-                    border-left: none;
-                    &:hover, &:focus {
+                    border-bottom: 1px solid @inputBackground;
+                    &:last-child {
                         border-bottom: none;
-                        border-top: none;
                     }
                 }
             }
-            &.deeper {
-                > a {
-                    .caret {
-                        display: none;
+        }
+    }
+}
+.menu {
+    &.nav-pills {
+        &.nav {
+            &.nav-stacked {
+                > li {
+                    font-family: @serifFontFamily;
+                    background-color: @inputBackground;
+                    > a {
+                        color: @color-two;
+                        &:hover, &:focus {
+                            color: @color-two;
+                            background-color: @color-two;
+                            border-radius: 0;
+                            -wekit-border-radius: 0;
+                            color: @color-five;
+                        }
                     }
-                    &:after {
-                        content: '\f107';
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 15px;
-                        top: 10px;
+                    > .dropdown-toggle {
+                        .caret {
+                            border-top-color: white;
+                        }
+                        &:hover, &:focus {
+                            .caret {
+                                border-top-color: black;
+                            }
+                        }
                     }
-                    &:hover, &:focus {
-                        background-color: @Submenu-hightlight;
+                    &.active {
+                        > a {
+                            color: @color-five;
+                            border-radius: 0;
+                            -wekit-border-radius: 0;
+                            &:hover, &:focus {
+                                color: @color-five;
+                                background-color: @color-two;
+                            }
+                        }
+                    }
+                    &.deeper {
+                        > a {
+                            .caret {
+                                display: none;
+                            }
+                            &:after {
+                                content: '\f107';
+                                font-family: FontAwesome;
+                                position: absolute;
+                                right: 10px;
+                            }
+                        }
+                        .submenu {
+                            margin-left: 0;
+                            margin-right: 0;
+                            background-color: @Submenu-background;
+                            li {
+                                a {
+                                    padding-right: 12px;
+                                    padding-left: 12px;
+                                    color: @color-three;
+                                    border-bottom: 1px solid @inputBackground;
+                                    &:hover, &:focus {
+                                        background-color: @Submenu-hightlight;
+                                    }
+                                    &.active {
+                                        background-color: @Submenu-hightlight;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                .submenu {
-                    background-color: @Submenu-background;
-                    margin-left: 0;
-                    margin-right: 0;
-                    li {
-                        border-bottom: 1px solid @inputBackground;
-                        &:last-child {
-                            border-bottom: none;
+            }
+        }
+    }
+}
+.menu {
+    &.nav {
+        &.nav-list {
+            &.nav {
+                margin-top: 20px;
+                padding-left: 0;
+                padding-right: 0;
+                > li {
+                    font-family: @serifFontFamily;
+                    border-bottom: 1px solid @Submenu-background;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    > a {
+                        color: @color-two;
+                        margin-left: 0;
+                        padding: 8px 15px;
+                        margin-right: 0;
+                        &:hover, &:focus {
+                            color: @color-one;
+                            border-left: 8px solid @color-one;
+                            padding: 8px 7px;
                         }
-                        &:first-child {
-                            border-top: 1px solid @inputBackground;
+                    }
+                    > .dropdown-toggle {
+                        .caret {
+                            border-top-color: white;
                         }
-                        a {
-                            padding: 8px 15px;
-                            color: @color-three;
-                            &:hover, &:focus {
-                                background-color: @Submenu-hightlight;
+                        &:hover, &:focus {
+                            .caret {
+                                border-top-color: black;
                             }
-                            &.active {
-                                background-color: @Submenu-hightlight;
+                        }
+                    }
+                    &.active {
+                        > a {
+                            background-color: transparent;
+                            border-left: 8px solid @color-one;
+                            padding: 8px 7px;
+                            color: @color-one;
+                        }
+                    }
+                    &.deeper {
+                        > a {
+                            .caret {
+                                display: none;
+                            }
+                            &:after {
+                                content: '\f107';
+                                font-family: FontAwesome;
+                                position: absolute;
+                                right: 15px;
+                            }
+                        }
+                        .submenu {
+                            background-color: @Submenu-background;
+                            margin-left: 0;
+                            margin-right: 0;
+                            li {
+                                border-bottom: 1px solid @inputBackground;
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                                &:first-child {
+                                    border-top: 1px solid @inputBackground;
+                                }
+                                a {
+                                    padding: 8px 15px;
+                                    color: @color-three;
+                                    &:hover, &:focus {
+                                        padding: 8px 7px;
+                                        border-left: 8px solid @color-four;
+                                    }
+                                    &.active {
+                                        padding: 8px 7px;
+                                        border-left: 8px solid @color-four;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.menu {
+    &.nav-tabs {
+        &.nav {
+            border-left: none;
+            margin-left: 0;
+            > li {
+                font-family: @serifFontFamily;
+                border-bottom: 4px solid transparent;
+                > a {
+                    background-color: @inputBackground;
+                    color: @color-two;
+                    margin-bottom: 0;
+                    border-radius: 0;
+                    -webkit-border-radius: 0;
+                    border: none;
+                    margin-left: 0;
+                    &:hover, &:focus {
+                        background-color: @Submenu-background;
+                        color: @color-three;
+                        border-radius: 0;
+                        -webkit-border-radius: 0;
+                        box-shadow: none;
+                        &:after {
+                            color: @color-two;
+                        }
+                    }
+                }
+                > .dropdown-toggle {
+                    .caret {
+                        border-top-color: white;
+                    }
+                    &:hover, &:focus {
+                        .caret {
+                            border-top-color: black;
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        color: @color-five;
+                        background-color: @color-two;
+                        border-radius: 0;
+                        -webkit-border-radius: 0;
+                        box-shadow: none;
+                        border-right: none;
+                        border-left: none;
+                        &:hover, &:focus {
+                            border-bottom: none;
+                            border-top: none;
+                        }
+                    }
+                }
+                &.deeper {
+                    > a {
+                        .caret {
+                            display: none;
+                        }
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            position: absolute;
+                            right: 15px;
+                            top: 10px;
+                        }
+                        &:hover, &:focus {
+                            background-color: @Submenu-hightlight;
+                        }
+                    }
+                    .submenu {
+                        background-color: @Submenu-background;
+                        margin-left: 0;
+                        margin-right: 0;
+                        li {
+                            border-bottom: 1px solid @inputBackground;
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &:first-child {
+                                border-top: 1px solid @inputBackground;
+                            }
+                            a {
+                                padding: 8px 15px;
+                                color: @color-three;
+                                &:hover, &:focus {
+                                    background-color: @Submenu-hightlight;
+                                }
+                                &.active {
+                                    background-color: @Submenu-hightlight;
+                                }
                             }
                         }
                     }
@@ -2220,7 +2203,7 @@ div.intro {
                 }
             }
             .items-divider {
-               margin: 0% 1.2%;
+                margin: 0% 1.2%;
                 width: 1px;
                 height: 1px;
                 float: left;
