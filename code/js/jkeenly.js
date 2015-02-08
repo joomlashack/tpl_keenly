@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
             $menuParent = jQuery(this).children();
             jQuery($menuParent).each(function() {
                 if (jQuery(this).is('a')) {
+                    jQuery(this).bind('click', clickColapse);
                     $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);
                     $menuItemLinkItem = $menuItemElement.attr('href');
                     $menuItemElement.attr('id', '#' + $menuItemLinkItem);
@@ -49,6 +50,12 @@ jQuery(document).ready(function($) {
 
     function closeMenu() {
         jQuery('.total-menu-wrapper').slideUp();
+    }
+
+    // Responsive view collapse items.
+
+    function clickColapse(event) {
+        
     }
 
     // Selected item detects the menu that is open close it and open the corresponding item.
