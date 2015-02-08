@@ -844,7 +844,7 @@
                 .wrapper-submenu-items {
                     padding-left: 0;
                     margin-top: 60px;
-                    margin-bottom: 40px;
+                    margin-bottom: 0px;
                     width: 100%;
                     display: block;
                     .submenu {
@@ -854,10 +854,6 @@
                                 color: @color-five;
                             }
                         }
-                    }
-                    .total-menu-inner {
-                        position: relative;
-                        bottom: auto;
                     }
                     .moduletable {
                         h3 {
@@ -931,6 +927,14 @@
                                 }
                             }
                         }
+                    }
+                }
+                .total-menu-inner {
+                    .moduletable {
+                        position: relative;
+                        bottom: auto;
+                        float: left;
+                        margin-bottom: 30px;
                     }
                 }
             }
