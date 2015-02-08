@@ -828,11 +828,6 @@
         margin-right: 0;
         margin-left: 0;
     }
-    .blog, .blog-featured {
-        .item-container {
-            .image-container {} .content-wrapper {} .image-container-right {} .content-wrapper-left {}
-        }
-    }
 }
 @media (max-width: 767px) {
     .total-menu-wrapper {
@@ -872,6 +867,7 @@
                             &.nav-list {
                                 &.nav {
                                     > li {
+                                        margin-bottom: 20px;
                                         > a {
                                             font-size: @baseFontSize + 6;
                                             display: block;
@@ -879,7 +875,7 @@
                                             font-family: @serifFontFamily;
                                             color: @color-five;
                                             text-transform: uppercase;
-                                            margin-bottom: 15px;
+                                            padding: 0px 0px;
                                             &:hover, &:focus {
                                                 background-color: transparent;
                                                 color: @color-one;
@@ -895,20 +891,38 @@
                                                     content: '\f107';
                                                     font-family: FontAwesome;
                                                     margin-left: 10px;
+                                                    position: relative;
+                                                    right: auto;
                                                 }
                                             }
                                         }
                                         .submenu {
-                                            margin-bottom: 15px;
-                                            margin-top: 15px;
                                             margin-left: 0;
                                             margin-right: 0;
+                                            margin-top: 10px;
+                                            margin-bottom: 10px;
                                             background-color: @color-one;
-                                            li {
-                                                a {
+                                            > li {
+                                                margin-bottom: 0;
+                                                > a {
                                                     color: @color-five;
-                                                    padding: 10px 10px 10px 15px;
+                                                    padding: 15px 0px 15px 15px;
                                                     font-size: @baseFontSize + 2;
+                                                }
+                                                &.deeper {
+                                                    > a {
+                                                        padding: 15px 0px 0px 15px;
+                                                    }
+                                                    .submenu {
+                                                        margin-bottom: 0;
+                                                        > li {
+                                                            &:first-child {
+                                                                > a {
+                                                                    padding: 0px 0px 15px 15px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
