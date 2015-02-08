@@ -917,7 +917,6 @@
                     &:focus {
                         background-color: white;
                         > a {
-                           
                             color: @white;
                         }
                     }
@@ -2006,46 +2005,59 @@ body {
                 padding-left: 40px;
                 display: table-cell;
                 vertical-align: middle;
-                .submenu {
-                    > li {
-                        margin-bottom: 20px;
-                        a {
-                            color: @color-five;
-                            text-transform: uppercase;
-                            font-size: @baseFontSize + 2;
-                            font-family: @serifFontFamily;
-                            &:hover, &:focus {
-                                color: @color-two;
-                            }
-                            .caret {
-                                display: none;
-                            }
-                        }
-                        &.current {
-                            a {
-                                color: @color-two;
-                            }
-                        }
-                        &.dropdown {
-                            > a {
-                                .caret {
-                                    display: none;
-                                }
-                                &:after {
-                                    content: '\f107';
-                                    font-family: FontAwesome;
-                                    padding-left: 5px;
-                                    margin-left: 15px;
-                                }
-                                &:hover, &:focus {
-                                    &:after {
-                                        content: '\f106';
+                .menu {
+                    &.nav-list {
+                        &.nav {
+                            > li {
+                                border-bottom: none;
+                                &.deeper {
+                                    .submenu {
+                                        background-color: transparent;
+                                        > li {
+                                            margin-bottom: 20px;
+                                            a {
+                                                color: @color-five;
+                                                text-transform: uppercase;
+                                                font-size: @baseFontSize + 2;
+                                                font-family: @serifFontFamily;
+                                                &:hover, &:focus {
+                                                    color: @color-two;
+                                                    background-color: transparent;
+                                                }
+                                                .caret {
+                                                    display: none;
+                                                }
+                                            }
+                                            &.current {
+                                                a {
+                                                    color: @color-two;
+                                                }
+                                            }
+                                            &.dropdown {
+                                                > a {
+                                                    .caret {
+                                                        display: none;
+                                                    }
+                                                    &:after {
+                                                        content: '\f107';
+                                                        font-family: FontAwesome;
+                                                        padding-left: 5px;
+                                                        margin-left: 15px;
+                                                    }
+                                                    &:hover, &:focus {
+                                                        &:after {
+                                                            content: '\f106';
+                                                        }
+                                                    }
+                                                }
+                                                .submenu {
+                                                    margin-left: 15px;
+                                                    margin-top: 15px;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
-                            }
-                            .submenu {
-                                margin-left: 15px;
-                                margin-top: 15px;
                             }
                         }
                     }
