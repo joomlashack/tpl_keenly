@@ -460,20 +460,11 @@
     padding: 15px;
     border-radius: 0;
     -webkit-border-radius: 0;
-    box-shadow: none;
     border: none;
     h3 {
         margin-top: 0;
         margin-bottom: 0;
         text-shadow: none;
-        &:after {
-            content: ' ';
-            height: 2px;
-            width: 15%;
-            display: table;
-            margin-top: 10px;
-            background-color: @color-three;
-        }
     }
     &.nav-list {
         &.nav {
@@ -922,6 +913,9 @@
                                 }
                             }
                         }
+                    }
+                    &:focus {
+                        border-bottom: none;
                     }
                 }
             }
