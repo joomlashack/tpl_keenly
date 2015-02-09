@@ -73,4 +73,12 @@ jQuery(document).ready(function($) {
             jQuery('#' + $menuSubmenuItem).addClass('in');
         }
     }
+
+    jQuery('.caption').each(function () {
+            imgTitleCaption = jQuery(this).attr('alt');
+            imgCaption = jQuery(this).attr('title');
+            $currentImage = jQuery(this).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
+            jQuery(this).parent().append('<figcaption><h2>'+imgTitleCaption+'</h2><p>'+imgCaption+'</p></figcaption>');
+    });
+
 });
