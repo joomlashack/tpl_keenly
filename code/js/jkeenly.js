@@ -75,10 +75,13 @@ jQuery(document).ready(function($) {
     }
 
     jQuery('.caption').each(function () {
-            imgTitleCaption = jQuery(this).attr('alt');
-            imgCaption = jQuery(this).attr('title');
+            imgTitleCaption = jQuery(this).attr('title');
+            imgCaption = '';
+            if (jQuery(this).attr('alt')) {
+                imgCaption = '<p>'+jQuery(this).attr('alt')+'</p>'
+            }
             $currentImage = jQuery(this).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
-            jQuery(this).parent().append('<figcaption><h2>'+imgTitleCaption+'</h2><p>'+imgCaption+'</p></figcaption>');
+            jQuery(this).parent().append('<figcaption><h2>'+imgTitleCaption+'</h2>'+imgCaption+'</figcaption>');
     });
 
 });
