@@ -311,15 +311,15 @@ ul {
                 a {
                     padding: 7px;
                 }
-                 &:hover, &:focus {
+                &:hover, &:focus {
                     border-top: 1px solid @color-one;
                     margin-top: -1px;
                 }
                 &:first-child {
-                     &:hover, &:focus {
+                    &:hover, &:focus {
                         border-top: 1px solid transparent;
                         margin-top: -1px;
-                     }
+                    }
                 }
             }
         }
@@ -413,29 +413,6 @@ ul {
         }
     }
 }
-
-//Navs
-
-.nav {
-    li {
-        > a {
-            .image-title {
-                margin-left: 4px;
-                vertical-align: middle;
-            }
-        }
-    }
-}
-
-.wrapper-items {
-    > a {
-        .image-title {
-            margin-left: 4px;
-            vertical-align: middle;
-        }
-    }
-}
-
 .nav-tabs {
     border-bottom: 1px solid @color-four;
     dt {
@@ -2035,6 +2012,12 @@ body {
                             color: @color-one;
                         }
                     }
+                    img {
+                        margin-left: 4px;
+                        margin-right: 10px;
+                        vertical-align: inherit;
+                        height: 25px;
+                    }
                 }
             }
         }
@@ -2103,6 +2086,12 @@ body {
                                             }
                                         }
                                     }
+                                }
+                                img {
+                                    margin-left: 4px;
+                                    margin-right: 10px;
+                                    vertical-align: inherit;
+                                    height: 20px;
                                 }
                             }
                         }
@@ -2574,11 +2563,6 @@ dl {
     }
 }
 // Hover efects
-.img_caption {
-    p {
-        display: none;
-    }
-}
 .grid {
     position: relative;
 }
