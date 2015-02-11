@@ -2204,7 +2204,7 @@ body {
 div.intro {
     padding: 0;
 }
-.blog, .blog-featured {
+.blog, .blog-featured, .item-page {
     .items-leading {
         [class^='leading'] {
             border-bottom: 1px solid @color-four;
@@ -2244,6 +2244,11 @@ div.intro {
             .pull-left {
                 float: none;
                 margin: 0;
+            }
+            .item-image {
+                img {
+                    width: 100%;
+                }
             }
         }
         .content-wrapper {
@@ -2286,6 +2291,11 @@ div.intro {
             .pull-right {
                 float: none;
                 margin: 0;
+            }
+            .item-image {
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -2565,6 +2575,7 @@ dl {
 // Hover efects
 .grid {
     position: relative;
+    display: block;
 }
 /* Common style */
 
@@ -2618,9 +2629,7 @@ dl {
 .grid figure h2, .grid figure p {
     margin: 0;
     font-family: @serifFontFamily;
-    opacity: 0;
-    -moz-opacity: 0;
-    filter: alpha(opacity=0);
+    
 }
 .grid figure p {
     letter-spacing: 1px;
