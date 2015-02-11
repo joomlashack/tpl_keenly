@@ -129,7 +129,11 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
-				</field>  
+				</field>
+				<field name="disableHover" type="list" default="0" label="TPL_JS_KEENLY_IMAGES_HOVER_EFECT" description="TPL_JS_KEENLY_IMAGES_HOVER_EFECT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

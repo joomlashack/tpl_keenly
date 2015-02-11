@@ -20,6 +20,9 @@ $input = $app->input;
 
 $mountedImage = $this->params->get('mountedImage', '');
 
+$hoverActive = ($this->params->get('disableHover') == '1' ? true : false);
+
+
 // Sidebars count moundules if moudles = 0 mounted image will display as normal
 
 $sidebar1 = intval($this->countModules('sidebar1'));

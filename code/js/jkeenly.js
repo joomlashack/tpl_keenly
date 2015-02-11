@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
     // Responsive view collapse items.
 
     function clickColapse(event) {
-        
+
     }
 
     // Selected item detects the menu that is open close it and open the corresponding item.
@@ -74,14 +74,19 @@ jQuery(document).ready(function($) {
         }
     }
 
-    jQuery('.caption').each(function () {
-            imgTitleCaption = jQuery(this).attr('title');
-            imgCaption = '';
-            if (jQuery(this).attr('alt')) {
-                imgCaption = '<p>'+jQuery(this).attr('alt')+'</p>'
-            }
-            $currentImage = jQuery(this).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
-            jQuery(this).parent().append('<figcaption><h2>'+imgTitleCaption+'</h2>'+imgCaption+'</figcaption>');
-    });
+    if (typeof isHoverEvent !== 'undefined') {
+        console.log(isHoverEvent);
+        if (isHoverEvent) {
+            jQuery('.caption').each(function() {
+                imgTitleCaption = jQuery(this).attr('title');
+                imgCaption = '';
+                if (jQuery(this).attr('alt')) {
+                    imgCaption = '<p>' + jQuery(this).attr('alt') + '</p>'
+                }
+                $currentImage = jQuery(this).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
+                jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
+            });
+        }
+    }
 
 });

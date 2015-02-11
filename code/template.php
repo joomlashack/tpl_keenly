@@ -225,6 +225,12 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 	   </footer>
 	</div>
+	<?php var_dump($hoverActive); ?>
+	<?php if ($hoverActive): ?>
+		<script type="text/javascript">
+		isHoverEvent = true;
+		</script>
+	<?php endif; ?>	
 	<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_keenly/js/jkeenly.js'></script>
 </body>
 </html>
