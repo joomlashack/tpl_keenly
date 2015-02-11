@@ -21,6 +21,8 @@ $contentSpan = 'span' . (12 - $templateSpanValue);
 
 $float = json_decode($this->items['0']->images);
 
+$wrightRowValue = $template->params->get('bs_rowmode');
+
 if ($float->image_intro !== '') {
 
 	switch ($float->float_intro)
@@ -28,19 +30,25 @@ if ($float->image_intro !== '') {
 	  	case 'left':
 			$this->wrightLeadingItemElementsStructure = Array(
 			'div.item-container',
-				'div.'. $imageSpan,
-					'div.image-container',
-					"image",
+				'div.'. $wrightRowValue,
+					'div.'. $imageSpan,
+						'div.image-container',
+						"image",
+						'/div',
 					'/div',
-				'/div',
-				'div.' . $contentSpan,
-					'div.content-wrapper',
-					"title",
-					"icons",
-					"legendtop",
-					"article-info",
-					"content",
-					"legendbottom",
+					'div.divider-container',
+						'div.divider-vertical',
+						'/div',
+					'/div',
+					'div.' . $contentSpan,
+						'div.content-wrapper',
+						"title",
+						"icons",
+						"legendtop",
+						"article-info",
+						"content",
+						"legendbottom",
+						'/div',
 					'/div',
 				'/div',
 			'/div'
@@ -49,21 +57,27 @@ if ($float->image_intro !== '') {
 		case 'right':
 		$this->wrightLeadingItemElementsStructure = Array(
 			'div.item-container',
-				'div.' . $contentSpan,
-					'div.content-wrapper-left',
-					"title",
-					"icons",
-					"legendtop",
-					"article-info",
-					"content",
-					"legendbottom",
+				'div.'. $wrightRowValue,
+					'div.' . $contentSpan,
+						'div.content-wrapper-left',
+						"title",
+						"icons",
+						"legendtop",
+						"article-info",
+						"content",
+						"legendbottom",
+						'/div',
 					'/div',
-				'/div',
-				'div.'. $imageSpan,
-					'div.image-container-right',
-					"image",
+					'div.divider-container',
+						'div.divider-vertical',
+						'/div',
 					'/div',
-				'/div',
+					'div.'. $imageSpan,
+						'div.image-container-right',
+						"image",
+						'/div',
+					'/div',
+				'/div', 
 			'/div'
 			);
 		break;
