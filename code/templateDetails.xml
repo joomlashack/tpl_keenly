@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_keenly</name>
-	<creationDate>January 2015</creationDate>
+	<creationDate>February 2015</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2010-2015. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
     <description>TPL_JS_KEENLY_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -112,7 +112,7 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="keenly" label="TPL_JS_KEENLY_OPTIONS">
-				<field name="mountedImage" type="text" default="300" label="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE" description="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE_DESC" />				
+				<field name="mountedImage" type="text" default="300" label="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE" description="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE_DESC" />
 				<field name="categoryBlogSpecialLayout" type="list" default="false" label="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS" description="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS_DESC">
 					<option value="1">JYES</option>
                     <option value="0">JNO</option>
@@ -129,7 +129,7 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
-				</field>  
+				</field>
 			</fieldset>
 		</fields>
 	</config>
