@@ -89,9 +89,14 @@ jQuery(document).ready(function($) {
 
 });
 
-jQuery(window).load(function ($) {
-    if (typeof isHoverEvent !== 'undefined') {
-        if (isHoverEvent) {
+if (typeof isHoverEvent !== 'undefined') {
+    if (isHoverEvent) {
+
+        var JCaption=function(c){
+            return;
+        }
+
+        jQuery(window).load(function ($) {
             jQuery('img[class="caption "]').each(function() {
                 imgTitleCaption = jQuery(this).attr('title');
                 imgCaption = '';
@@ -102,8 +107,8 @@ jQuery(window).load(function ($) {
                 jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
                 jQuery('p[class="img_caption"]').remove();
             });
-        }
+        });
     }
-});
+}
 
 
