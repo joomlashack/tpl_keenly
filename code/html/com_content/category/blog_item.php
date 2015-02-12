@@ -17,7 +17,7 @@ require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.
 $template = $app->getTemplate(true);
 $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout', '0') == '1' ? true : false);
 
-$templateSpanValue = intval ($template->params->get('imageSpan', '2'));
+$templateSpanValue = $template->params->get('imageSpan', '2');
 $imageSpan = 'span' . $templateSpanValue;
 $contentSpan = 'span' . (12 - $templateSpanValue);
 
