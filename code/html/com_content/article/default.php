@@ -19,9 +19,9 @@ $this->wrightElementsStructure = Array("image","title","icons","article-info","l
 $template = $app->getTemplate(true);
 $wrightRowValue = $template->params->get('bs_rowmode');
 
-$templateSpanValue = intval ($template->params->get('imageSpan'));
+$templateSpanValue = intval ($template->params->get('imageSpan', '2'));
 $imageSpan = 'span' . $templateSpanValue;
-$contentSpan = 'span' . (12 - $templateSpanValue); 
+$contentSpan = 'span' . (12 - $templateSpanValue);
 
 if ($params->get('access-view'))
 {
