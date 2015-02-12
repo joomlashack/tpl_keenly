@@ -24,7 +24,7 @@ $this->wrightIntroItemElementsStructure = Array(
 $this->MoreItemsGridOrientation = Array('activeLayout' => true, 'moreitemsLayout' => 8, 'subcategoriesLayout' => 4);
 
 $template = $app->getTemplate(true);
-$specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
+$specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout', '0') == '1' ? true : false);
 
 if ($specialHomeLayout)
 {

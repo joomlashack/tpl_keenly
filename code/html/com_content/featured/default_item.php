@@ -15,7 +15,7 @@ $app = JFactory::getApplication();
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
 $template = $app->getTemplate(true);
-$specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
+$specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout', '0') == '1' ? true : false);
 
 $templateSpanValue = intval ($template->params->get('imageSpan', '2'));
 $imageSpan = 'span' . $templateSpanValue;

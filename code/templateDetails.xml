@@ -113,7 +113,7 @@
 			</fieldset>
 			<fieldset name="keenly" label="TPL_JS_KEENLY_OPTIONS">
 				<field name="mountedImage" type="text" default="300" label="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE" description="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE_DESC" />
-				<field name="categoryBlogSpecialLayout" type="list" default="false" label="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS" description="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS_DESC">
+				<field name="categoryBlogSpecialLayout" type="list" default="0" label="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS" description="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS_DESC">
 					<option value="1">JYES</option>
                     <option value="0">JNO</option>
 				</field>
