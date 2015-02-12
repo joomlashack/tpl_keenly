@@ -17,11 +17,22 @@ $app = JFactory::getApplication();
 $input = $app->input;
 
 // Monted image pixel parameter
-
 $mountedImage = $this->params->get('mountedImage', '');
 
 $hoverActive = ($this->params->get('disableHover') == '1' ? true : false);
+$browser = JBrowser::getInstance();
 
+// Disables hovering effect for IE <= 8
+if ($browser->getBrowser() == 'msie' && $browser->getMajor() <= 8)
+{
+	$hoverActive = false;
+}
+
+if ($hoverActive)
+{
+	$doc = JFactory::getDocument();
+	unset($doc->_scripts[JURI::root(true) . '/media/system/js/caption.js']);
+}
 
 // Sidebars count moundules if moudles = 0 mounted image will display as normal
 

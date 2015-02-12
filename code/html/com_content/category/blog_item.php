@@ -17,6 +17,11 @@ require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.
 $template = $app->getTemplate(true);
 $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
 
+$templateSpanValue = intval ($template->params->get('imageSpan'));
+$imageSpan = 'span' . $templateSpanValue;
+$contentSpan = 'span' . (12 - $templateSpanValue); 
+
+
 $wrightRowValue = $template->params->get('bs_rowmode');
 
 if ($specialHomeLayout && $this->item->wrightType == 'leading')
@@ -29,7 +34,7 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 			$this->item->wrightElementsStructure = Array(
 				'div.item-container',
 					'div.'.$wrightRowValue,
-						'div.span9',
+						'div.'.$imageSpan,
 							'div.image-container',
 								'image',
 							'/div',
@@ -38,7 +43,7 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 						'div.divider-vertical',
 						'/div',
 						'/div',
-						'div.span3',
+						'div.'.$contentSpan,
 							'div.content-wrapper',
 								'title',
 								'icons',
@@ -55,7 +60,7 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 			$this->item->wrightElementsStructure = Array(
 				'div.item-container',
 					'div.'.$wrightRowValue,
-						'div.span3',
+						'div.'.$contentSpan,
 							'div.content-wrapper-left',
 								'title',
 								'icons',
@@ -67,7 +72,7 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
 							'div.divider-vertical',
 							'/div',
 						'/div',
-						'div.span9',
+						'div.'.$imageSpan,
 							'div.image-container-right',
 								'image',
 							'/div',

@@ -89,22 +89,28 @@ jQuery(document).ready(function($) {
 
 });
 
-jQuery(window).load(function ($) {
-    if (typeof isHoverEvent !== 'undefined') {
-        console.log(isHoverEvent);
-        if (isHoverEvent) {
-            jQuery("img[alt!='']").each(function() {
+if (typeof isHoverEvent !== 'undefined') {
+    if (isHoverEvent) {
+
+        var JCaption=function(c){
+            return;
+        }
+
+        jQuery(window).load(function ($) { 
+            $imgToHover = jQuery('img[class="caption "]');
+            $imgToHover.push(jQuery('#full-image-img'));
+            $imgToHover.each(function() {
                 imgTitleCaption = jQuery(this).attr('title');
                 imgCaption = '';
                 if (jQuery(this).attr('alt')) {
                     imgCaption = '<p>' + jQuery(this).attr('alt') + '</p>'
+                    $currentImage = jQuery(this).slice(-2).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
+                    jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
+                    jQuery('p[class="img_caption"]').remove();
                 }
-                $currentImage = jQuery(this).slice(-2).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
-                console.log(jQuery('.effect-bubba').children());
-                jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
             });
-        }
+        });
     }
-});
+}
 
 

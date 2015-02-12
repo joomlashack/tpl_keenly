@@ -2312,6 +2312,8 @@ div.intro {
     }
     .items-row {
         border-bottom: 1px solid @color-four;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
         .readmore {
             float: left;
             margin-top: 15px;
@@ -2584,6 +2586,7 @@ dl {
     }
 }
 // Hover efects
+
 .grid {
     position: relative;
     display: block;
@@ -2633,6 +2636,9 @@ dl {
 .grid figure h2 {
     word-spacing: -0.15em;
     font-weight: 300;
+    opacity: 0;
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 .grid figure h2 span {
     font-weight: 800;
@@ -2647,7 +2653,7 @@ dl {
     font-size: 68.5%;
 }
 figure.effect-bubba {
-    background: @color-one;
+    background: @color-two;
     margin: 0;
     max-width: 100%;
 }
@@ -2683,14 +2689,18 @@ figure.effect-bubba figcaption::after {
     transform: scale(1, 0);
 }
 figure.effect-bubba h2 {
-    padding-top: 30%;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
 }
 figure.effect-bubba p {
-    padding: 20px 2.5em;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
