@@ -19,6 +19,10 @@ $this->wrightElementsStructure = Array("image","title","icons","article-info","l
 $template = $app->getTemplate(true);
 $wrightRowValue = $template->params->get('bs_rowmode');
 
+$templateSpanValue = intval ($template->params->get('imageSpan'));
+$imageSpan = 'span' . $templateSpanValue;
+$contentSpan = 'span' . (12 - $templateSpanValue); 
+
 if ($params->get('access-view'))
 {
 	$imageExist = (isset($images->image_fulltext) && !empty($images->image_fulltext)) ? true : false;
@@ -33,7 +37,7 @@ if ($params->get('access-view'))
 			$this->wrightElementsStructure = Array(
 				'div.item-container',
 					'div.'.$wrightRowValue,
-						'div.span9',
+						'div.'.$imageSpan,
 							'div.image-container',
 								'image',
 							'/div',
@@ -42,7 +46,7 @@ if ($params->get('access-view'))
 						'div.divider-vertical',
 						'/div',
 						'/div',
-						'div.span3',
+						'div.'.$contentSpan,
 							'div.content-wrapper',
 								'title',
 								'icons',
@@ -58,7 +62,7 @@ if ($params->get('access-view'))
 			$this->wrightElementsStructure = Array(
 				'div.item-container',
 				'div.'.$wrightRowValue,
-					'div.span3',
+					'div.'.$contentSpan,
 						'div.content-wrapper-left',
 							'title',
 							'icons',
@@ -70,7 +74,7 @@ if ($params->get('access-view'))
 						'div.divider-vertical',
 						'/div',
 					'/div',
-					'div.span9',
+					'div.'.$imageSpan,
 						'div.image-container-right',
 							'image',
 						'/div',
