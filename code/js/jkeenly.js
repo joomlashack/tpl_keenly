@@ -78,17 +78,16 @@ jQuery(document).ready(function($) {
 
 jQuery(window).load(function ($) {
     if (typeof isHoverEvent !== 'undefined') {
-        console.log(isHoverEvent);
         if (isHoverEvent) {
-            jQuery("img[alt!='']").each(function() {
+            jQuery('img[class="caption "]').each(function() {
                 imgTitleCaption = jQuery(this).attr('title');
                 imgCaption = '';
                 if (jQuery(this).attr('alt')) {
                     imgCaption = '<p>' + jQuery(this).attr('alt') + '</p>'
                 }
                 $currentImage = jQuery(this).slice(-2).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
-                console.log(jQuery('.effect-bubba').children());
                 jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
+                jQuery('p[class="img_caption"]').remove();
             });
         }
     }
