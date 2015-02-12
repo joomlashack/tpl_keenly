@@ -87,6 +87,9 @@ jQuery(document).ready(function($) {
         absoluteSpace('.total-menu-inner');
     });
 
+    jQuery('.buy').hover(function (){
+        jQuery('body').toggleClass('bd-color-one');
+    });
 });
 
 if (typeof isHoverEvent !== 'undefined') {
@@ -96,7 +99,7 @@ if (typeof isHoverEvent !== 'undefined') {
             return;
         }
 
-        jQuery(window).load(function ($) { 
+        jQuery(window).load(function ($) {
             $imgToHover = jQuery('img[class="caption "]');
             $imgToHover.push(jQuery('#full-image-img'));
             $imgToHover.each(function() {
@@ -112,5 +115,6 @@ if (typeof isHoverEvent !== 'undefined') {
         });
     }
 }
+
 
 

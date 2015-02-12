@@ -2726,3 +2726,43 @@ figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+// Buy Position
+
+.buy {
+    background-color: @color-two;
+    color: @white;
+    padding: 20px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: @color-one;
+
+        .btn {
+            border-color: @color-one;
+        }
+    }
+
+    > div {
+        margin: 0;
+    }
+
+    a, .btn {
+        color: @white;
+    }
+
+    .btn {
+        &:hover, &:focus {
+            border-color: @color-one;
+        }
+    }
+}
+
+.bd-color-one {
+    border-color: @color-one;
+}
+
+body {
+    .transition(background-color ease-in .3s);
+}
+

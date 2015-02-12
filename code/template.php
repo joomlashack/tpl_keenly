@@ -56,14 +56,34 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 		</div>
 		</div>
-		<div class="total-menu-btn">
-		<a class="btn btn-navbar collapsed">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
+		<?php
+			endif;
+		?>
+		<?php
+			if ($this->countModules('buy'))
+				:
+		?>
+		<div class="buy pull-left">
+			<w:module type="none" name="buy" chrome="xhtml" />
 		</div>
-		<?php endif; ?>
+		<?php
+			endif;
+		?>
+		<?php
+			if ($this->countModules('total-menu'))
+				:
+		?>
+		<div class="total-menu-btn">
+			<a class="btn btn-navbar collapsed">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+		</div>
+		<div class="clear"></div>
+		<?php
+			endif;
+		?>
 		<!-- header -->
 		<header id="header">
 			<div class="<?php echo $wrightGridMode; ?> clearfix">
