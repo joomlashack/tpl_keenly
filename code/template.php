@@ -71,12 +71,12 @@ defined('_JEXEC') or die('Restricted access');
 			if ($this->countModules('total-menu'))
 				:
 		?>
-		<div class="total-menu-btn">
-		<a class="btn btn-navbar collapsed">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
+		<div class="total-menu-btn pull-right">
+			<a class="btn btn-navbar collapsed">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
 		</div>
 		<div class="clear"></div>
 		<?php
