@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     $totalMenu = jQuery('.wrapper-submenu-items').children('.moduletable').children('.menu').children();
     $hoveredParent = $();
-    // Rendering menu 
+    // Rendering menu
     jQuery($totalMenu).each(function() {
         if (jQuery(this).hasClass('parent')) {
             //Menu item submenu
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
         return false;
     }
 
-    // Action functions 
+    // Action functions
     function openMenu() {
         jQuery('.total-menu-wrapper').slideDown();
     }
@@ -74,6 +74,19 @@ jQuery(document).ready(function($) {
         }
     }
 
+    function absoluteSpace (el) {
+        var absoluteHeight = jQuery(el).children().height();
+        jQuery(el).height(absoluteHeight);
+    }
+
+    jQuery('.total-menu-btn').click(function (){
+        absoluteSpace('.total-menu-inner');
+    });
+
+    jQuery(window).resize(function(){
+        absoluteSpace('.total-menu-inner');
+    });
+
 });
 
 jQuery(window).load(function ($) {
@@ -92,4 +105,5 @@ jQuery(window).load(function ($) {
         }
     }
 });
+
 
