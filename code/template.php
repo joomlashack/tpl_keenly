@@ -43,15 +43,13 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="total-menu-container">
 			<div class="menu-close"><span><?php echo JText::sprintf('TPL_JS_KEENLY_CLOSE_MENU'); ?></span><i class="icon-remove"></i></div>
 			<div class="menu-items">
-				<div class="wrapper-items z3">
-					<w:module type="none" name="total-menu" chrome="xhtml" />
+				<div class="wrapper-items"></div>
+			</div>
+			<div class="submenu-items">
+				<div class="wrapper-submenu-items"><w:module type="none" name="total-menu" chrome="xhtml" />
 				</div>
-				<div class="submenu-items z2">
-					<div class="wrapper-submenu-items">
-					</div>
-				</div>
-				<div class="total-menu-inner z3">
-					<w:module type="none" name="total-menu-inner" chrome="xhtml" />
+				<div class="total-menu-inner">
+				<w:module type="none" name="total-menu-inner" chrome="xhtml" />
 				</div>
 			</div>
 		</div>
@@ -251,7 +249,7 @@ defined('_JEXEC') or die('Restricted access');
 		<script type="text/javascript">
 		isHoverEvent = true;
 		</script>
-	<?php endif; ?>
+	<?php endif; ?>	
 	<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_keenly/js/jkeenly.js'></script>
 </body>
 </html>
