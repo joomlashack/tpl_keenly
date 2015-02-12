@@ -225,7 +225,6 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 	   </footer>
 	</div>
-	<?php var_dump($hoverActive); ?>
 	<?php if ($hoverActive): ?>
 		<script type="text/javascript">
 		isHoverEvent = true;

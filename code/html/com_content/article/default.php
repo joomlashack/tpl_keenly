@@ -16,6 +16,8 @@ $params = $this->item->params;
 $images = json_decode($this->item->images);
 
 $this->wrightElementsStructure = Array("image","title","icons","article-info","legendtop","content","legendbottom");
+$template = $app->getTemplate(true);
+$wrightRowValue = $template->params->get('bs_rowmode');
 
 if ($params->get('access-view'))
 {
@@ -25,6 +27,59 @@ if ($params->get('access-view'))
 	if ($imageExist && $imageFloat == 'none')
 	{
 		$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
+	} else {
+		switch ($imageFloat) {
+		case 'left':
+			$this->wrightElementsStructure = Array(
+				'div.item-container',
+					'div.'.$wrightRowValue,
+						'div.span9',
+							'div.image-container',
+								'image',
+							'/div',
+						'/div',
+						'div.divider-container',
+						'div.divider-vertical',
+						'/div',
+						'/div',
+						'div.span3',
+							'div.content-wrapper',
+								'title',
+								'icons',
+								'article-info',
+								'content',
+							'/div',
+						'/div',
+					'/div',
+				'/div'
+			);
+		break;
+		case 'right':
+			$this->wrightElementsStructure = Array(
+				'div.item-container',
+				'div.'.$wrightRowValue,
+					'div.span3',
+						'div.content-wrapper-left',
+							'title',
+							'icons',
+							'article-info',
+							'content',
+						'/div',
+					'/div',
+					'div.divider-container',
+						'div.divider-vertical',
+						'/div',
+					'/div',
+					'div.span9',
+						'div.image-container-right',
+							'image',
+						'/div',
+					'/div',
+					'/div',
+				'/div'
+			);
+			break;
+		}
 	}
 }
 
