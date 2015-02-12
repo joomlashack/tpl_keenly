@@ -17,10 +17,16 @@ $app = JFactory::getApplication();
 $input = $app->input;
 
 // Monted image pixel parameter
-
 $mountedImage = $this->params->get('mountedImage', '');
 
 $hoverActive = ($this->params->get('disableHover') == '1' ? true : false);
+$browser = JBrowser::getInstance();
+
+// Disables hovering effect for IE <= 8
+if ($browser->getBrowser() == 'msie' && $browser->getMajor() <= 8)
+{
+	$hoverActive = false;
+}
 
 if ($hoverActive)
 {
