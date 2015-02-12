@@ -43,15 +43,13 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="total-menu-container">
 			<div class="menu-close"><span><?php echo JText::sprintf('TPL_JS_KEENLY_CLOSE_MENU'); ?></span><i class="icon-remove"></i></div>
 			<div class="menu-items">
-				<div class="wrapper-items z3">
-					<w:module type="none" name="total-menu" chrome="xhtml" />
+				<div class="wrapper-items"></div>
+			</div>
+			<div class="submenu-items">
+				<div class="wrapper-submenu-items"><w:module type="none" name="total-menu" chrome="xhtml" />
 				</div>
-				<div class="submenu-items z2">
-					<div class="wrapper-submenu-items">
-					</div>
-				</div>
-				<div class="total-menu-inner z3">
-					<w:module type="none" name="total-menu-inner" chrome="xhtml" />
+				<div class="total-menu-inner">
+				<w:module type="none" name="total-menu-inner" chrome="xhtml" />
 				</div>
 			</div>
 		</div>
@@ -74,11 +72,11 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<div class="total-menu-btn">
-			<a class="btn btn-navbar collapsed">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
+		<a class="btn btn-navbar collapsed">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
 		</div>
 		<div class="clear"></div>
 		<?php
