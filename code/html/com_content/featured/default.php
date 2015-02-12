@@ -12,107 +12,26 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
+$this->wrightIntroItemElementsStructure = Array(
+	'image',
+	'title',
+	'icons',
+	'article-info',
+	'content'
+);
+
+// Wright v.3: Layout options for the moreitmes and subcaterogies modules, (active, div span class 1,2,3 etc for the (1) moreitems and the (2)subcategories on a row oriented layout).
+$this->MoreItemsGridOrientation = Array('activeLayout' => true, 'moreitemsLayout' => 8, 'subcategoriesLayout' => 4);
 
 $template = $app->getTemplate(true);
-$templateSpanValue = intval ($template->params->get('imageSpan'));
+$specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout') == '1' ? true : false);
 
-$imageSpan = 'span' . $templateSpanValue;
-$contentSpan = 'span' . (12 - $templateSpanValue); 
-
-$float = json_decode($this->items['0']->images);
-
-$wrightRowValue = $template->params->get('bs_rowmode');
-
-if ($float->image_intro !== '') {
-
-	switch ($float->float_intro)
-	  {
-	  	case 'left':
-			$this->wrightLeadingItemElementsStructure = Array(
-			'div.item-container',
-				'div.'. $wrightRowValue,
-					'div.'. $imageSpan,
-						'div.image-container',
-						"image",
-						'/div',
-					'/div',
-					'div.divider-container',
-						'div.divider-vertical',
-						'/div',
-					'/div',
-					'div.' . $contentSpan,
-						'div.content-wrapper',
-						"title",
-						"icons",
-						"legendtop",
-						"article-info",
-						"content",
-						"legendbottom",
-						'/div',
-					'/div',
-				'/div',
-			'/div'
-			);
-			break;
-		case 'right':
-		$this->wrightLeadingItemElementsStructure = Array(
-			'div.item-container',
-				'div.'. $wrightRowValue,
-					'div.' . $contentSpan,
-						'div.content-wrapper-left',
-						"title",
-						"icons",
-						"legendtop",
-						"article-info",
-						"content",
-						"legendbottom",
-						'/div',
-					'/div',
-					'div.divider-container',
-						'div.divider-vertical',
-						'/div',
-					'/div',
-					'div.'. $imageSpan,
-						'div.image-container-right',
-						"image",
-						'/div',
-					'/div',
-				'/div', 
-			'/div'
-			);
-		break;
-		default:
-		$this->wrightLeadingItemElementsStructure = Array(
-		"image",
-		"title",
-		"icons",
-		"legendtop",
-		"article-info",
-		"content",
-		"legendbottom");
-	}
-} else {
-
-$this->wrightLeadingItemElementsStructure = Array(
-	"image",
-	"title",
-	"icons",
-	"legendtop",
-	"article-info",
-	"content",
-	"legendbottom");
-
+if ($specialHomeLayout)
+{
+	$this->wrightIntroRowsClass = 'extra-border';
+	$this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
+	$this->layoutSpanorder = Array(3,6,3);
 }
-
-$this->wrightElementsStructure = Array(
-	"image",
-	"title",
-	"icons",
-	"legendtop",
-	"content",
-	"article-info",
-	"legendbottom"
-);
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 include Overrider::getOverride('com_content.featured');
