@@ -96,16 +96,18 @@ if (typeof isHoverEvent !== 'undefined') {
             return;
         }
 
-        jQuery(window).load(function ($) {
-            jQuery('img[class="caption "]').each(function() {
+        jQuery(window).load(function ($) { 
+            $imgToHover = jQuery('img[class="caption "]');
+            $imgToHover.push(jQuery('#full-image-img'));
+            $imgToHover.each(function() {
                 imgTitleCaption = jQuery(this).attr('title');
                 imgCaption = '';
                 if (jQuery(this).attr('alt')) {
                     imgCaption = '<p>' + jQuery(this).attr('alt') + '</p>'
+                    $currentImage = jQuery(this).slice(-2).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
+                    jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
+                    jQuery('p[class="img_caption"]').remove();
                 }
-                $currentImage = jQuery(this).slice(-2).wrap('<div class="grid"><figure class="effect-bubba"></figure></div>');
-                jQuery(this).parent().append('<figcaption><h2>' + imgTitleCaption + '</h2>' + imgCaption + '</figcaption>');
-                jQuery('p[class="img_caption"]').remove();
             });
         });
     }
