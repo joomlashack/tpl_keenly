@@ -90,6 +90,10 @@ jQuery(document).ready(function($) {
     jQuery('.buy').hover(function (){
         jQuery('body').toggleClass('bd-color-one');
     });
+
+    jQuery('.wrapper-items .dropdown-toggle').hover(function (){
+        jQuery('.total-menu-inner').toggleClass('opacity');
+    });
 });
 
 if (typeof isHoverEvent !== 'undefined') {

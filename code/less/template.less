@@ -2581,7 +2581,13 @@ dl {
 .grid {
     position: relative;
     display: block;
+    .box-sizing(border-box);
+
+    * {
+        .box-sizing(border-box);
+    }
 }
+
 /* Common style */
 
 .grid figure {
@@ -2746,5 +2752,9 @@ figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
 
 body {
     .transition(background-color ease-in .3s);
+}
+
+.opacity {
+    .opacity(30);
 }
 
