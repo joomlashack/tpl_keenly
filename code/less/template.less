@@ -1963,175 +1963,169 @@ body {
         width: 100%;
         height: 100%;
         display: block;
+        position: fixed;
+
         .menu-items {
             background-color: @color-two;
-            width: 50%;
             height: 100%;
-            float: left;
-            position: relative;
-            display: table;
+
             .wrapper-items {
-                padding-left: 40px;
-                display: table-cell;
-                vertical-align: middle;
-                a {
-                    color: @color-five;
-                    width: 100%;
-                    float: right;
-                    font-size: @baseFontSize + 16;
-                    margin-bottom: 40px;
-                    text-align: left;
-                    font-family: @serifFontFamily;
-                    text-transform: uppercase;
-                    font-weight: lighter;
-                    line-height: 30px;
-                    &.dropdown-toggle {
-                        &:after {
-                            font-family: FontAwesome;
-                            padding-left: 5px;
-                            content: '\f105';
-                            color: @color-five;
-                            margin-left: 15px;
-                        }
-                    }
-                    .caret {
-                        display: none;
-                    }
-                    [class^='icon-'] {
-                        margin-right: 30px;
-                    }
-                    &:hover {
-                        color: @color-one;
-                        &:after {
-                            color: @color-one;
-                        }
-                    }
-                    &.active {
-                        color: @color-one;
-                        &:after {
-                            color: @color-one;
-                        }
-                    }
-                    img {
-                        margin-left: 4px;
-                        margin-right: 10px;
-                        vertical-align: inherit;
-                        height: 25px;
-                    }
-                }
-            }
-        }
-        .submenu-items {
-            background-color: @color-one;
-            width: 50%;
-            height: 100%;
-            float: right;
-            position: relative;
-            display: table;
-            .wrapper-submenu-items {
-                padding-left: 40px;
-                vertical-align: middle;
-                .menu {
+                padding-top: 10%;
+                position: relative;
+
+                .nav {
                     &.nav-list {
-                        &.nav {
-                            > li {
-                                border-bottom: none;
-                                &.deeper {
-                                    .submenu {
-                                        background-color: transparent;
-                                        > li {
-                                            margin-bottom: 20px;
-                                            border-bottom: none;
-                                            a {
-                                                color: @color-five;
-                                                text-transform: uppercase;
-                                                font-size: @baseFontSize + 2;
-                                                font-family: @serifFontFamily;
-                                                border-bottom: none;
-                                                &:hover, &:focus {
-                                                    color: @color-two;
-                                                    background-color: transparent;
-                                                }
-                                                .caret {
-                                                    display: none;
-                                                }
-                                            }
-                                            &.current {
-                                                a {
-                                                    color: @color-two;
-                                                }
-                                            }
-                                            &.dropdown {
-                                                > a {
-                                                    .caret {
-                                                        display: none;
-                                                    }
-                                                    &:after {
-                                                        content: '\f107';
-                                                        font-family: FontAwesome;
-                                                        padding-left: 5px;
-                                                        margin-left: 15px;
-                                                    }
-                                                    &:hover, &:focus {
-                                                        &:after {
-                                                            content: '\f106';
-                                                        }
-                                                    }
-                                                }
-                                                .submenu {
-                                                    margin-left: 15px;
-                                                    margin-top: 15px;
-                                                }
-                                            }
-                                        }
+                        > li {
+                            .box-sizing(border-box);
+                            border-bottom: none;
+                            padding-left: 40px;
+                            width: 50%;
+                            margin-bottom: 20px;
+
+                            > a {
+                                color: @color-five;
+                                width: 100%;
+                                font-size: @baseFontSize + 16;
+                                font-family: @serifFontFamily;
+                                text-transform: uppercase;
+                                text-shadow: none;
+                                line-height: 30px;
+
+                                &.dropdown-toggle {
+                                    &:after {
+                                        font-family: FontAwesome;
+                                        padding-left: 5px;
+                                        content: '\f105';
+                                        color: @color-five;
+                                        margin-left: 15px;
+                                    }
+                                }
+                                .caret {
+                                    display: none;
+                                }
+                                [class^='icon-'] {
+                                    margin-right: 30px;
+                                }
+                                &:hover {
+                                    color: @color-one;
+                                    &:after {
+                                        color: @color-one;
+                                    }
+                                }
+                                &.active {
+                                    color: @color-one;
+                                    &:after {
+                                        color: @color-one;
                                     }
                                 }
                                 img {
                                     margin-left: 4px;
                                     margin-right: 10px;
                                     vertical-align: inherit;
-                                    height: 20px;
+                                    height: 25px;
                                 }
                             }
-                        }
-                    }
-                }
-            }
-            .total-menu-inner {
-                .moduletable {
-                    bottom: 0;
-                    color: @color-five;
-                    display: block;
-                    font-family: @serifFontFamily;
-                    font-size: @baseFontSize + 2;
-                    left: 0;
-                    margin: 0 auto;
-                    position: absolute;
-                    right: 0;
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-                .btn {
-                    border-color: @color-five;
-                    color: @color-five;
-                }
-            }
-            .moduletable {
-                width: 100%;
-                display: table;
-                h3 {
-                    display: none;
-                }
-                .menu {
-                    &.nav-list {
-                        > li {
-                            > a {
-                                display: none;
+
+                            &:hover {
+                                > .submenu {
+                                    visibility: visible;
+                                }
+                            }
+
+                            .submenu {
+                                background-color: transparent;
+                                left: 100%;
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                visibility: hidden;
+
+                                > li {
+                                    margin-bottom: 20px;
+                                    border-bottom: none;
+                                    a {
+                                        border-bottom: none;
+                                        color: @color-five;
+                                        font-family: @serifFontFamily;
+                                        font-size: @baseFontSize;
+                                        font-weight: 100;
+                                        padding-left: 35%;
+                                        text-transform: uppercase;
+
+                                        &:hover, &:focus {
+                                            color: @color-two;
+                                            background-color: transparent;
+                                        }
+                                        .caret {
+                                            display: none;
+                                        }
+                                    }
+                                    &.current {
+                                        a {
+                                            color: @color-two;
+                                        }
+                                    }
+                                    &.dropdown {
+                                        > a {
+                                            .caret {
+                                                display: none;
+                                            }
+                                            &:after {
+                                                content: '\f107';
+                                                font-family: FontAwesome;
+                                                padding-left: 5px;
+                                                margin-left: 15px;
+                                            }
+                                            &:hover, &:focus {
+                                                &:after {
+                                                    content: '\f106';
+                                                }
+                                            }
+                                        }
+                                        .submenu {
+                                            margin-left: 15px;
+                                            margin-top: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                            img {
+                                margin-left: 4px;
+                                margin-right: 10px;
+                                vertical-align: inherit;
+                                height: 20px;
                             }
                         }
                     }
                 }
             }
+        }
+        .wrapper-submenu-items {
+            padding-left: 40px;
+            vertical-align: middle;
+        }
+        .total-menu-inner {
+            .moduletable {
+                color: @color-five;
+                font-family: @serifFontFamily;
+                font-size: @baseFontSize + 2;
+                text-transform: uppercase;
+            }
+            .btn {
+                border-color: @color-five;
+                color: @color-five;
+            }
+        }
+        .moduletable {
+            width: 100%;
+        }
+        .submenu-items {
+            background-color: @color-one;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
         }
     }
 }
@@ -2157,6 +2151,24 @@ body {
         }
     }
 }
+
+.total-menu-inner {
+    float: right;
+    width: 50%;
+    position: relative;
+    > * {
+        padding-left: 35%;
+    }
+}
+
+.z2 {
+    z-index: 2;
+}
+
+.z3 {
+    z-index: 3;
+}
+
 #featured {
     margin-bottom: 30px;
     border-bottom: 6px solid @color-four;
@@ -2628,7 +2640,7 @@ dl {
 .grid figure h2, .grid figure p {
     margin: 0;
     font-family: @serifFontFamily;
-    
+
 }
 .grid figure p {
     letter-spacing: 1px;
