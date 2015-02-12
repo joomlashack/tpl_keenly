@@ -22,6 +22,11 @@ $mountedImage = $this->params->get('mountedImage', '');
 
 $hoverActive = ($this->params->get('disableHover') == '1' ? true : false);
 
+if ($hoverActive)
+{
+	$doc = JFactory::getDocument();
+	unset($doc->_scripts[JURI::root(true) . '/media/system/js/caption.js']);
+}
 
 // Sidebars count moundules if moudles = 0 mounted image will display as normal
 
