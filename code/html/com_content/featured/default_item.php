@@ -161,4 +161,4 @@ else
 	}
 }
 
-include Overrider::getOverride('com_content.category', 'blog_item');
+include Overrider::getOverride('com_content.featured', 'default_item');
