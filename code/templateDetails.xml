@@ -117,7 +117,7 @@
 					<option value="1">JYES</option>
                     <option value="0">JNO</option>
 				</field>
-				<field name="imageSpan" type="list" default="6" label="TPL_JS_KEENLY_FIELD_IMAGE_SPAN" description="TPL_JS_KEENLY_FIELD_IMAGE_SPAN_DESC">
+				<field name="imageSpan" type="list" default="2" label="TPL_JS_KEENLY_FIELD_IMAGE_SPAN" description="TPL_JS_KEENLY_FIELD_IMAGE_SPAN_DESC">
 					<option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
