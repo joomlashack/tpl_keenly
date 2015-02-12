@@ -2,35 +2,35 @@ jQuery(document).ready(function($) {
     $totalMenu = jQuery('.wrapper-submenu-items').children('.moduletable').children('.menu').children();
     $hoveredParent = $();
     // Rendering menu
-    jQuery($totalMenu).each(function() {
-        if (jQuery(this).hasClass('parent')) {
-            //Menu item submenu
-            $menuParent = jQuery(this).children();
-            jQuery($menuParent).each(function() {
-                if (jQuery(this).is('a')) {
-                    jQuery(this).bind('click', clickColapse);
-                    $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);
-                    $menuItemLinkItem = $menuItemElement.attr('href');
-                    $menuItemElement.attr('id', '#' + $menuItemLinkItem);
-                    $menuItemElement.attr('href', '#');
-                    if (checkingClass(jQuery(this).parent(), 'active')) {
-                        $menuItemElement.addClass('active');
-                        $menuItemElement.addClass('current-active');
-                    }
-                } else {
-                    if (jQuery(this).hasClass('in')) {
-                        jQuery(this).addClass('active-menu');
-                    }
-                }
-            });
-        } else {
-            $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);;
-            if (checkingClass(jQuery(this), 'active')) {
-                $linkItemMenu.addClass('active');
-                $linkItemMenu.addClass('current-active');
-            }
-        }
-    });
+    // jQuery($totalMenu).each(function() {
+    //     if (jQuery(this).hasClass('parent')) {
+    //         //Menu item submenu
+    //         $menuParent = jQuery(this).children();
+    //         jQuery($menuParent).each(function() {
+    //             if (jQuery(this).is('a')) {
+    //                 jQuery(this).bind('click', clickColapse);
+    //                 $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);
+    //                 $menuItemLinkItem = $menuItemElement.attr('href');
+    //                 $menuItemElement.attr('id', '#' + $menuItemLinkItem);
+    //                 $menuItemElement.attr('href', '#');
+    //                 if (checkingClass(jQuery(this).parent(), 'active')) {
+    //                     $menuItemElement.addClass('active');
+    //                     $menuItemElement.addClass('current-active');
+    //                 }
+    //             } else {
+    //                 if (jQuery(this).hasClass('in')) {
+    //                     jQuery(this).addClass('active-menu');
+    //                 }
+    //             }
+    //         });
+    //     } else {
+    //         $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);;
+    //         if (checkingClass(jQuery(this), 'active')) {
+    //             $linkItemMenu.addClass('active');
+    //             $linkItemMenu.addClass('current-active');
+    //         }
+    //     }
+    // });
 
     // Bing open and close functions
     jQuery('.menu-close').bind('click', closeMenu);
