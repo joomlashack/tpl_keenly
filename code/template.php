@@ -58,11 +58,11 @@ defined('_JEXEC') or die('Restricted access');
 			endif;
 		?>
 		<?php
-			if ($this->countModules('buy'))
+			if ($this->countModules('label'))
 				:
 		?>
-		<div class="buy pull-left">
-			<w:module type="none" name="buy" chrome="xhtml" />
+		<div class="label pull-left">
+			<w:module type="none" name="label" chrome="xhtml" />
 		</div>
 		<?php
 			endif;

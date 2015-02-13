@@ -45,6 +45,7 @@
 		<position>top</position>
 		<position>total-menu</position>
 		<position>total-menu-inner</position>
+		<position>label</position>
 		<position>menu</position>
 		<position>featured</position>
 		<position>grid-top</position>
