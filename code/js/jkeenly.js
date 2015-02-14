@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
             jQuery($menuParent).each(function() {
                 if (jQuery(this).is('a')) {
                     jQuery(this).bind('click', clickColapse);
-                    $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);
+                    $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuHover);
                     $menuItemLinkItem = $menuItemElement.attr('href');
                     $menuItemElement.attr('id', '#' + $menuItemLinkItem);
                     $menuItemElement.attr('href', '#');
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
                 }
             });
         } else {
-            $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuClickEvent);;
+            $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuHover);
             if (checkingClass(jQuery(this), 'active')) {
                 $linkItemMenu.addClass('active');
                 $linkItemMenu.addClass('current-active');
@@ -59,11 +59,12 @@ jQuery(document).ready(function($) {
     }
 
     // Selected item detects the menu that is open close it and open the corresponding item.
-    function itemMenuClickEvent(event) {
+    function itemMenuHover(event) {
         if (!checkingClass(jQuery(this), 'active')) {
             jQuery(this).addClass('active');
             $hoveredParent.removeClass('active');
             $hoveredParent = jQuery(this);
+            jQuery('.total-menu-inner').fadeIn(0.5);
         }
         jQuery('.active-menu').removeClass('in');
         jQuery('.active-menu').removeClass('active-menu');
@@ -71,39 +72,43 @@ jQuery(document).ready(function($) {
             $menuSubmenuItem = jQuery(this).attr('id').replace(/#/g, '');
             jQuery('#' + $menuSubmenuItem).addClass('active-menu');
             jQuery('#' + $menuSubmenuItem).addClass('in');
+            jQuery('.total-menu-inner').fadeOut(0.5);
         }
     }
 
-    function absoluteSpace (el) {
-        var absoluteHeight = jQuery(el).children().height();
-        jQuery(el).height(absoluteHeight);
+    function absoluteSpace() {
+        absoluteHeight = jQuery('.total-menu-inner').children().height();
+        jQuery('.total-menu-inner').height(absoluteHeight);
     }
 
-    jQuery('.total-menu-btn').click(function (){
-        absoluteSpace('.total-menu-inner');
+    $bindElements = [jQuery('.total-menu-btn'), jQuery(window)];
+
+    $bindElements.each(function() {
+        console.log(jQuery(this));
     });
 
-    jQuery(window).resize(function(){
-        absoluteSpace('.total-menu-inner');
+    jQuery('.total-menu-btn').click(function() {
+        absoluteSpace();
     });
 
-    jQuery('.buy').hover(function (){
+    jQuery(window).resize(function() {
+        absoluteSpace();
+    });
+
+    jQuery('.buy').hover(function() {
         jQuery('body').toggleClass('bd-color-one');
     });
 
-    jQuery('.wrapper-items .dropdown-toggle').hover(function (){
-        jQuery('.total-menu-inner').toggleClass('opacity');
-    });
 });
 
 if (typeof isHoverEvent !== 'undefined') {
     if (isHoverEvent) {
 
-        var JCaption=function(c){
+        var JCaption = function(c) {
             return;
         }
 
-        jQuery(window).load(function ($) {
+        jQuery(window).load(function($) {
             $imgToHover = jQuery('img[class="caption "]');
             $imgToHover.push(jQuery('#full-image-img'));
             $imgToHover.each(function() {
