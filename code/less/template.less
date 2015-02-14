@@ -147,15 +147,8 @@
                 margin-left: 15px;
                 > a {
                     padding: 10px 0px;
-                    .caret {
+                    .caret{
                         display: none;
-                    }
-                    &:after {
-                        font-family: FontAwesome;
-                        padding-left: 5px;
-                        padding-right: 5px;
-                        content: '\f107';
-                        color: @color-two;
                     }
                 }
                 > .dropdow-menu {
@@ -2246,6 +2239,7 @@ div.intro {
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
+
                 img {
                     width: 100%;
                 }
@@ -2589,14 +2583,17 @@ dl {
     }
 }
 // Hover efects
+
 .grid {
     position: relative;
     display: block;
     .box-sizing(border-box);
+
     * {
         .box-sizing(border-box);
     }
 }
+
 /* Common style */
 
 .grid figure {
@@ -2643,8 +2640,8 @@ dl {
     word-spacing: -0.15em;
     font-weight: 300;
     opacity: 0;
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
-    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 .grid figure h2 span {
     font-weight: 800;
@@ -2652,6 +2649,7 @@ dl {
 .grid figure h2, .grid figure p {
     margin: 0;
     font-family: @serifFontFamily;
+
 }
 .grid figure p {
     letter-spacing: 1px;
@@ -2661,6 +2659,7 @@ figure.effect-bubba {
     background: @color-two;
     margin: 0;
     width: 100%;
+
 }
 figure.effect-bubba img {
     opacity: 1;
@@ -2722,36 +2721,47 @@ figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
 // Buy Position
+
 .label {
     background-color: @color-two;
     color: @color-five;
     padding: 15px 20px;
     text-transform: uppercase;
+
     &:hover {
         background-color: @color-one;
+
         .btn {
             border-color: @color-four;
         }
     }
+
     > div {
         margin: 0;
     }
+
     a, .btn {
         color: @color-five;
     }
+
     .btn {
         &:hover, &:focus {
             border-color: @color-one;
         }
     }
 }
+
 .bd-color-one {
     border-color: @color-one;
 }
+
 body {
     .transition(background-color ease-in .3s);
 }
+
 .opacity {
     .opacity(30);
 }
+
