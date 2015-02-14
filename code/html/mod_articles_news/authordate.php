@@ -17,6 +17,7 @@ $wrightDisplayAuthor = true;
 $wrightDisplayPublishedDate = true;
 $wrightEnableIntroText = false;
 $wrightUsePageHeader = false;
+$wrightItemContainer = true;
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 include Overrider::getOverride('mod_articles_news');
