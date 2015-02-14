@@ -2747,25 +2747,27 @@ figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
 }
 // Buy Position
 .label {
-    background-color: @color-two;
-    color: @color-five;
-    padding: 15px 20px;
-    text-transform: uppercase;
-    &:hover {
-        background-color: @color-one;
-        .btn {
-            border-color: @color-four;
-        }
-    }
-    > div {
-        margin: 0;
-    }
-    a, .btn {
+    &.pull-left {
+        background-color: @color-two;
         color: @color-five;
-    }
-    .btn {
-        &:hover, &:focus {
-            border-color: @color-one;
+        padding: 15px 20px;
+        text-transform: uppercase;
+        &:hover {
+            background-color: @color-one;
+            .btn {
+                border-color: @color-four;
+            }
+        }
+        > div {
+            margin: 0;
+        }
+        a, .btn {
+            color: @color-five;
+        }
+        .btn {
+            &:hover, &:focus {
+                border-color: @color-one;
+            }
         }
     }
 }
