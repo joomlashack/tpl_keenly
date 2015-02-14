@@ -33,6 +33,7 @@
             .search-query {
                 border-radius: 0;
                 -webkit-border-radius: 0;
+                width: 140px;
             }
         }
         .brand {
@@ -147,8 +148,22 @@
                 margin-left: 15px;
                 > a {
                     padding: 10px 0px;
-                    .caret{
+                    .caret {
                         display: none;
+                    }
+                    &.dropdown-toggle {
+                        &:after {
+                            font-family: FontAwesome;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            content: '\f107';
+                            color: @color-two;
+                        }
+                    }
+                    &.separator {
+                        .caret {
+                            display: none;
+                        }
                     }
                 }
                 > .dropdow-menu {
@@ -167,6 +182,14 @@
                         position: absolute;
                         bottom: -6px;
                         background-color: @color-two;
+                    }
+                    > a {
+                        color: @color-two;
+                        &.dropdown-toggle {
+                            &:after {
+                                content: '\f106';
+                            }
+                        }
                     }
                 }
                 &:last-child {
@@ -283,6 +306,9 @@
                         &:hover, &:focus {
                             text-shadow: none;
                         }
+                        &:after {
+                            color: @color-five;
+                        }
                     }
                     > .dropdown-menu {
                         margin-top: 0px;
@@ -301,6 +327,11 @@
                     }
                     &:after {
                         display: none;
+                    }
+                    &:hover, &:focus {
+                        > a {
+                            color: @color-five;
+                        }
                     }
                 }
             }
@@ -2239,7 +2270,6 @@ div.intro {
             [class^='img-intro-'] {
                 margin: 0px;
                 float: none;
-
                 img {
                     width: 100%;
                 }
@@ -2584,17 +2614,14 @@ dl {
     }
 }
 // Hover efects
-
 .grid {
     position: relative;
     display: block;
     .box-sizing(border-box);
-
     * {
         .box-sizing(border-box);
     }
 }
-
 /* Common style */
 
 .grid figure {
@@ -2641,8 +2668,6 @@ dl {
     word-spacing: -0.15em;
     font-weight: 300;
     opacity: 0;
-    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
-    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 .grid figure h2 span {
     font-weight: 800;
@@ -2650,7 +2675,6 @@ dl {
 .grid figure h2, .grid figure p {
     margin: 0;
     font-family: @serifFontFamily;
-
 }
 .grid figure p {
     letter-spacing: 1px;
@@ -2660,7 +2684,6 @@ figure.effect-bubba {
     background: @color-two;
     margin: 0;
     width: 100%;
-
 }
 figure.effect-bubba img {
     opacity: 1;
@@ -2722,47 +2745,36 @@ figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-
 // Buy Position
-
 .label {
     background-color: @color-two;
     color: @color-five;
     padding: 15px 20px;
     text-transform: uppercase;
-
     &:hover {
         background-color: @color-one;
-
         .btn {
             border-color: @color-four;
         }
     }
-
     > div {
         margin: 0;
     }
-
     a, .btn {
         color: @color-five;
     }
-
     .btn {
         &:hover, &:focus {
             border-color: @color-one;
         }
     }
 }
-
 .bd-color-one {
     border-color: @color-one;
 }
-
 body {
     .transition(background-color ease-in .3s);
 }
-
 .opacity {
     .opacity(30);
 }
-
