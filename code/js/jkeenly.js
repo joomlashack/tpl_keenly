@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
     $totalMenu = jQuery('.wrapper-submenu-items').children('.moduletable').children('.menu').children();
     $hoveredParent = $();
+    colapsedMenu = '';
     // Rendering menu
     jQuery($totalMenu).each(function() {
         if (jQuery(this).hasClass('parent')) {
@@ -46,6 +47,8 @@ jQuery(document).ready(function($) {
     // Action functions
     function openMenu() {
         jQuery('.total-menu-wrapper').slideDown();
+        innerModulePosition();
+        absoluteSpace();
     }
 
     function closeMenu() {
@@ -54,8 +57,8 @@ jQuery(document).ready(function($) {
 
     // Responsive view collapse items.
 
-    function clickColapse(event) {
-
+    function clickColapse() {
+        colapsedMenu = jQuery(this).attr('href');
     }
 
     // Selected item detects the menu that is open close it and open the corresponding item.
@@ -64,7 +67,9 @@ jQuery(document).ready(function($) {
             jQuery(this).addClass('active');
             $hoveredParent.removeClass('active');
             $hoveredParent = jQuery(this);
-            jQuery('.total-menu-inner').fadeIn(0.5);
+            jQuery('.total-menu-inner').children('.moduletable').css({
+                opacity: 1
+            });
         }
         jQuery('.active-menu').removeClass('in');
         jQuery('.active-menu').removeClass('active-menu');
@@ -72,7 +77,9 @@ jQuery(document).ready(function($) {
             $menuSubmenuItem = jQuery(this).attr('id').replace(/#/g, '');
             jQuery('#' + $menuSubmenuItem).addClass('active-menu');
             jQuery('#' + $menuSubmenuItem).addClass('in');
-            jQuery('.total-menu-inner').fadeOut(0.5);
+            jQuery('.total-menu-inner').children('.moduletable').css({
+                opacity: 0.2
+            });
         }
     }
 
@@ -81,19 +88,28 @@ jQuery(document).ready(function($) {
         jQuery('.total-menu-inner').height(absoluteHeight);
     }
 
-    $bindElements = [jQuery('.total-menu-btn'), jQuery(window)];
-
-    $bindElements.each(function() {
-        console.log(jQuery(this));
-    });
-
-    jQuery('.total-menu-btn').click(function() {
-        absoluteSpace();
-    });
-
     jQuery(window).resize(function() {
         absoluteSpace();
+        innerModulePosition();
     });
+
+
+    function innerModulePosition() {
+        if (jQuery(window).width() > 768) {
+            containerWidth = jQuery('.submenu-items').width();
+            moduleWidth = jQuery('.total-menu-inner').children('.moduletable').width();
+            marginLeftRight = (containerWidth - moduleWidth) / 2;
+            jQuery('.total-menu-inner').children('.moduletable').attr('style', 'margin-left:' + marginLeftRight + 'px;margin-right:' + marginLeftRight + 'px;');
+        } else {
+            jQuery('.total-menu-inner').children('.moduletable').removeAttr('style');
+            jQuery('.in').each(function() {
+                console.log(colapsedMenu);
+                if (jQuery(this).attr('id') != colapsedMenu) {
+                    jQuery(this).removeClass('in');
+                }
+            });
+        }
+    }
 
     jQuery('.buy').hover(function() {
         jQuery('body').toggleClass('bd-color-one');
