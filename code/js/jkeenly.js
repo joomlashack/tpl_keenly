@@ -103,7 +103,6 @@ jQuery(document).ready(function($) {
         } else {
             jQuery('.total-menu-inner').children('.moduletable').removeAttr('style');
             jQuery('.in').each(function() {
-                console.log(colapsedMenu);
                 if (jQuery(this).attr('id') != colapsedMenu) {
                     jQuery(this).removeClass('in');
                 }
