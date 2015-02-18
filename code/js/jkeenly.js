@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
         }
     }
 
-    jQuery('.buy').hover(function() {
+    jQuery('.label').hover(function() {
         jQuery('body').toggleClass('bd-color-one');
     });
 
