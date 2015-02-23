@@ -61,7 +61,7 @@ defined('_JEXEC') or die('Restricted access');
 			if ($this->countModules('label'))
 				:
 		?>
-		<div class="label pull-left">
+		<div class="label label-position pull-left">
 			<w:module type="none" name="label" chrome="xhtml" />
 		</div>
 		<?php

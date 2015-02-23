@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
         }
     }
 
-    jQuery('.label').hover(function() {
+    jQuery('.label-position').hover(function() {
         jQuery('body').toggleClass('bd-color-one');
     });
 
