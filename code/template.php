@@ -18,9 +18,9 @@ defined('_JEXEC') or die('Restricted access');
 <doctype>
 <html>
 <head>
-<w:head />
-<link href='http://fonts.googleapis.com/css?family=Karma:300,400,600' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<w:head />
+	<link href='http://fonts.googleapis.com/css?family=Karma:300,400,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="<?php echo $wrightBodyClass ?>">
 	<div class="frame"></div>
@@ -46,10 +46,11 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="wrapper-items"></div>
 			</div>
 			<div class="submenu-items">
-				<div class="wrapper-submenu-items"><w:module type="none" name="total-menu" chrome="xhtml" />
+				<div class="wrapper-submenu-items">
+					<w:module type="none" name="total-menu" chrome="xhtml" />
 				</div>
 				<div class="total-menu-inner">
-				<w:module type="none" name="total-menu-inner" chrome="xhtml" />
+					<w:module type="none" name="total-menu-inner" chrome="xhtml" />
 				</div>
 			</div>
 		</div>
