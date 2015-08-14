@@ -2,33 +2,28 @@ jQuery(document).ready(function($) {
     $totalMenu = jQuery('.wrapper-submenu-items').children('.moduletable').children('.menu').children();
     $hoveredParent = $();
     colapsedMenu = '';
+
     // Rendering menu
+
     jQuery($totalMenu).each(function() {
+
+
         if (jQuery(this).hasClass('parent')) {
             //Menu item submenu
             $menuParent = jQuery(this).children();
-            jQuery($menuParent).each(function() {
-                if (jQuery(this).is('a')) {
-                    jQuery(this).bind('click', clickColapse);
-                    $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuHover);
-                    $menuItemLinkItem = $menuItemElement.attr('href');
-                    $menuItemElement.attr('id', '#' + $menuItemLinkItem);
-                    $menuItemElement.attr('href', '#');
-                    if (checkingClass(jQuery(this).parent(), 'active')) {
-                        $menuItemElement.addClass('active');
-                        $menuItemElement.addClass('current-active');
-                    }
-                } else {
-                    if (jQuery(this).hasClass('in')) {
-                        jQuery(this).addClass('active-menu');
-                    }
-                }
-            });
+
+            jQuery(this).bind('click', clickColapse);
+            $menuItemElement = jQuery(this).clone().appendTo('.wrapper-items .menu').bind('mouseenter', itemMenuHover);
+            $menuItemLinkItem = $menuItemElement.attr('href');
+            $menuItemElement.attr('id', $menuItemLinkItem);
+            if (checkingClass(jQuery(this).parent(), 'active')) {
+                $menuItemElement.addClass('active');
+            }
+
         } else {
-            $linkItemMenu = jQuery(this).children('a').clone().appendTo('.wrapper-items').bind('mouseenter', itemMenuHover);
+            $linkItemMenu = jQuery(this).clone().appendTo('.wrapper-items .menu').bind('mouseenter', itemMenuHover);
             if (checkingClass(jQuery(this), 'active')) {
                 $linkItemMenu.addClass('active');
-                $linkItemMenu.addClass('current-active');
             }
         }
     });
@@ -63,22 +58,18 @@ jQuery(document).ready(function($) {
 
     // Selected item detects the menu that is open close it and open the corresponding item.
     function itemMenuHover(event) {
-        if (!checkingClass(jQuery(this), 'active')) {
-            jQuery(this).addClass('active');
-            $hoveredParent.removeClass('active');
-            $hoveredParent = jQuery(this);
-            jQuery('.total-menu-inner').children('.moduletable').css({
-                opacity: 1
-            });
-        }
-        jQuery('.active-menu').removeClass('in');
-        jQuery('.active-menu').removeClass('active-menu');
-        if (jQuery(this).attr('id')) {
-            $menuSubmenuItem = jQuery(this).attr('id').replace(/#/g, '');
-            jQuery('#' + $menuSubmenuItem).addClass('active-menu');
-            jQuery('#' + $menuSubmenuItem).addClass('in');
+        $menuSubmenuItem = jQuery(this).attr('class').replace(/active|deeper|parent|dropdown|current/g, '');
+        jQuery('.menu-items .menu > li').removeClass('show-submenu');
+        jQuery('.submenu-items .menu > li').removeClass('show-submenu');
+        jQuery('.' + $menuSubmenuItem).addClass('show-submenu');
+
+        if (checkingClass(jQuery(this), 'parent')) {
             jQuery('.total-menu-inner').children('.moduletable').css({
                 opacity: 0.2
+            });
+        } else {
+            jQuery('.total-menu-inner').children('.moduletable').css({
+                opacity: 1
             });
         }
     }
