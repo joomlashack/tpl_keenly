@@ -81,10 +81,10 @@ defined('_JEXEC') or die('Restricted access');
 				<span class="icon-bar"></span>
 			</a>
 		</div>
-		<div class="clear"></div>
 		<?php
 			endif;
 		?>
+		<div class="clear"></div>
 		<!-- header -->
 		<header id="header">
 			<div class="<?php echo $wrightGridMode; ?> clearfix">
