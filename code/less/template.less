@@ -1,6 +1,5 @@
 // Navbar normal Navbar and Inverse
 .navbar-inner {
-    background-color: transparent;
     background-image: none;
     box-shadow: none;
     text-shadow: none;
@@ -27,7 +26,6 @@
     .navbar-inner {
         border-bottom: 6px solid @color-four;
         border-top: 1px solid @color-four;
-        background-color: @bodyBackground;
         box-shadow: none;
         .navbar-search {
             .search-query {
@@ -980,6 +978,8 @@ ul {
         }
     }
 }
+
+
 // No border on nav-tabs after loginform
 .control-group + .nav {
     &.nav-tabs {
@@ -2800,12 +2800,27 @@ figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
         }
     }
 }
+
+.bg-color-one {
+    background-color:  @color-one !important;
+}
+
 .bd-color-one {
     border-color: @color-one;
 }
+
 body {
     .transition(background-color ease-in .3s);
 }
+
 .opacity {
     .opacity(30);
+}
+
+.wrapper-toolbar {
+    margin-top: -20px;
+
+    .navbar .navbar-inner {
+        background-image: none;
+    }
 }

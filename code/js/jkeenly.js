@@ -103,6 +103,7 @@ jQuery(document).ready(function($) {
 
     jQuery('.label-position').hover(function() {
         jQuery('body').toggleClass('bd-color-one');
+        jQuery('.wrapper-toolbar .navbar-inner').toggleClass('bg-color-one');
     });
 
 });
