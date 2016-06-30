@@ -117,7 +117,6 @@
             }
         }
         .navbar-inner {
-            background-color: @color-five;
             .nav-collapse {
                 .dropdown-menu {
                     background-color: @color-two;
@@ -177,6 +176,7 @@
         }
     }
 }
+
 @media (max-width: 979px) and (min-width: 768px) {
     #menu {
         .navbar {
@@ -260,7 +260,6 @@
             }
         }
         .navbar-inner {
-            background-color: @color-five;
             .nav {
                 li {
                     &.active {
@@ -377,6 +376,15 @@
         margin-right: 0;
         margin-left: 0;
     }
+
+    .blog, .blog-featured, .item-page {
+        .item-container {
+            .divider-container {
+                margin-left: 10px;
+            }
+        }
+    }
+
 }
 @media (max-width: 979px) {
     #menu {
@@ -850,6 +858,15 @@
                     margin-bottom: 0px;
                     width: 100%;
                     display: block;
+
+                    .menu.nav  {
+                        > li.deeper {
+                            .submenu {
+                                display: block;
+                            }
+                        }
+                    }
+
                     .submenu {
                         >li {
                             margin-bottom: 0;
@@ -863,63 +880,60 @@
                             display: none;
                         }
                         .menu {
-                            &.nav-list {
-                                &.nav {
-                                    > li {
-                                        margin-bottom: 20px;
+                            &.nav {
+                                > li {
+                                    margin-bottom: 20px;
+                                    > a {
+                                        font-size: @baseFontSize + 6;
+                                        display: block;
+                                        text-shadow: none;
+                                        font-family: @serifFontFamily;
+                                        color: @color-five;
+                                        text-transform: uppercase;
+                                        padding: 0px 0px;
+                                        &:hover, &:focus {
+                                            background-color: transparent;
+                                            color: @color-one;
+                                        }
+                                    }
+                                    &.deeper {
                                         > a {
-                                            font-size: @baseFontSize + 6;
-                                            display: block;
-                                            text-shadow: none;
-                                            font-family: @serifFontFamily;
-                                            color: @color-five;
-                                            text-transform: uppercase;
-                                            padding: 0px 0px;
-                                            &:hover, &:focus {
-                                                background-color: transparent;
-                                                color: @color-one;
+                                            margin-bottom: 0;
+                                            .caret {
+                                                display: none;
+                                            }
+                                            &:after {
+                                                content: '\f107';
+                                                font-family: FontAwesome;
+                                                margin-left: 10px;
+                                                position: relative;
+                                                right: auto;
                                             }
                                         }
-                                        &.deeper {
+                                    }
+                                    .submenu {
+                                        margin-left: 0;
+                                        margin-right: 0;
+                                        margin-top: 10px;
+                                        margin-bottom: 10px;
+                                        background-color: @color-one;
+                                        > li {
                                             margin-bottom: 0;
                                             > a {
-                                                margin-bottom: 0;
-                                                .caret {
-                                                    display: none;
-                                                }
-                                                &:after {
-                                                    content: '\f107';
-                                                    font-family: FontAwesome;
-                                                    margin-left: 10px;
-                                                    position: relative;
-                                                    right: auto;
-                                                }
+                                                color: @color-five;
+                                                padding: 15px 0px 15px 15px;
+                                                font-size: @baseFontSize + 2;
                                             }
-                                        }
-                                        .submenu {
-                                            margin-left: 0;
-                                            margin-right: 0;
-                                            margin-top: 10px;
-                                            margin-bottom: 10px;
-                                            background-color: @color-one;
-                                            > li {
-                                                margin-bottom: 0;
+                                            &.deeper {
                                                 > a {
-                                                    color: @color-five;
-                                                    padding: 15px 0px 15px 15px;
-                                                    font-size: @baseFontSize + 2;
+                                                    padding: 15px 0px 0px 15px;
                                                 }
-                                                &.deeper {
-                                                    > a {
-                                                        padding: 15px 0px 0px 15px;
-                                                    }
-                                                    .submenu {
-                                                        margin-bottom: 0;
-                                                        > li {
-                                                            &:first-child {
-                                                                > a {
-                                                                    padding: 0px 0px 15px 15px;
-                                                                }
+                                                .submenu {
+                                                    margin-bottom: 0;
+                                                    > li {
+                                                        &:first-child {
+                                                            > a {
+                                                                padding: 0px 0px 15px 15px;
                                                             }
                                                         }
                                                     }
@@ -1433,6 +1447,14 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .blog, .blog-featured, .item-page {
+        .item-container {
+            .divider-container {
+                display: none;
             }
         }
     }

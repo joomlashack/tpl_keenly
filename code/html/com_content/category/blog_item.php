@@ -27,59 +27,66 @@ $wrightRowValue = $template->params->get('bs_rowmode');
 if ($specialHomeLayout && $this->item->wrightType == 'leading')
 {
 	$float = getIntroImageFloat($this->item);
+	$itemImages = json_decode($this->item->images);
 
 	switch ($float)
 	{
 		case 'left':
-			$this->item->wrightElementsStructure = Array(
-				'div.item-container',
-					'div.'.$wrightRowValue,
-						'div.'.$imageSpan,
-							'div.image-container',
-								'image',
+
+			if ($itemImages->image_intro !== '') {
+				$this->item->wrightElementsStructure = Array(
+					'div.item-container',
+						'div.'.$wrightRowValue,
+							'div.'.$imageSpan,
+								'div.image-container',
+									'image',
+								'/div',
+							'/div',
+							'div.divider-container',
+							'div.divider-vertical',
+							'/div',
+							'/div',
+							'div.'.$contentSpan,
+								'div.content-wrapper',
+									'title',
+									'icons',
+									'article-info',
+									'content',
+								'/div',
 							'/div',
 						'/div',
-						'div.divider-container',
-						'div.divider-vertical',
-						'/div',
-						'/div',
-						'div.'.$contentSpan,
-							'div.content-wrapper',
-								'title',
-								'icons',
-								'article-info',
-								'content',
-							'/div',
-						'/div',
-					'/div',
-				'/div'
-			);
+					'/div'
+				);
+			}
 			break;
 
 		case 'right':
-			$this->item->wrightElementsStructure = Array(
-				'div.item-container',
-					'div.'.$wrightRowValue,
-						'div.'.$contentSpan,
-							'div.content-wrapper-left',
-								'title',
-								'icons',
-								'article-info',
-								'content',
+
+			if ($itemImages->image_intro !== '') {
+				$this->item->wrightElementsStructure = Array(
+					'div.item-container',
+						'div.'.$wrightRowValue,
+							'div.'.$contentSpan,
+								'div.content-wrapper-left',
+									'title',
+									'icons',
+									'article-info',
+									'content',
+								'/div',
+							'/div',
+							'div.divider-container',
+								'div.divider-vertical',
+								'/div',
+							'/div',
+							'div.'.$imageSpan,
+								'div.image-container-right',
+									'image',
+								'/div',
 							'/div',
 						'/div',
-						'div.divider-container',
-							'div.divider-vertical',
-							'/div',
-						'/div',
-						'div.'.$imageSpan,
-							'div.image-container-right',
-								'image',
-							'/div',
-						'/div',
-					'/div',
-				'/div'
-			);
+					'/div'
+				);
+			}
 			break;
 
 		default:
