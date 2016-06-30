@@ -19,8 +19,8 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 <head>
 	<w:head />
-	<link href='http://fonts.googleapis.com/css?family=Karma:300,400,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Karma:300,400,600' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="<?php echo $wrightBodyClass ?>">
 	<div class="frame"></div>
