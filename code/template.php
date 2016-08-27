@@ -49,10 +49,10 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <div class="submenu-items">
                     <div class="wrapper-submenu-items">
-                        <w:module type="none" name="total-menu" chrome="xhtml" />
+                        <w:module type="none" name="total-menu" />
                     </div>
                     <div class="total-menu-inner">
-                        <w:module type="none" name="total-menu-inner" chrome="xhtml" />
+                        <w:module type="none" name="total-menu-inner" />
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<div class="label label-position pull-left">
-			<w:module type="none" name="label" chrome="xhtml" />
+			<w:module type="none" name="label" />
 		</div>
 		<?php
 			endif;
@@ -107,7 +107,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<div id="featured">
-			<w:module type="none" name="featured" chrome="xhtml" />
+			<w:module type="none" name="featured" />
 		</div>
 		<?php
 			endif;
@@ -146,7 +146,7 @@ defined('_JEXEC') or die('Restricted access');
 		<div id="main-content" class="<?php echo $wrightGridMode; ?> <?php if ($wrightSingleArticleDisplay && $showMountedImage): ?>full-image-position <?php echo $mainContentClass; endif; ?>">
 			<!-- sidebar1 -->
 			<aside id="sidebar1">
-				<w:module name="sidebar1" chrome="xhtml" />
+				<w:module name="sidebar1" />
 			</aside>
 			<!-- main -->
 			<section id="main" <?php if ($wrightSingleArticleDisplay && $showMountedImage): ?>style="margin-top: -<?php echo $mountedImage ?>px;"<?php endif; ?>>
@@ -155,7 +155,7 @@ defined('_JEXEC') or die('Restricted access');
 				?>
 				<!-- above-content -->
 				<div id="above-content">
-					<w:module type="none" name="above-content" chrome="xhtml" />
+					<w:module type="none" name="above-content" />
 				</div>
 				<?php
 					endif;
@@ -178,7 +178,7 @@ defined('_JEXEC') or die('Restricted access');
 				?>
 				<!-- below-content -->
 				<div id="below-content">
-					<w:module type="none" name="below-content" chrome="xhtml" />
+					<w:module type="none" name="below-content" />
 				</div>
 				<?php
 					endif;
@@ -186,7 +186,7 @@ defined('_JEXEC') or die('Restricted access');
 			</section>
 			<!-- sidebar2 -->
 			<aside id="sidebar2">
-				<w:module name="sidebar2" chrome="xhtml" />
+				<w:module name="sidebar2" />
 			</aside>
 		</div>
 		<?php
@@ -213,7 +213,7 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 
 	</div>
-
+	<w:module name="debug" chrome="none" />
 	<!-- footer -->
 	<div class="wrapper-footer">
 	   <footer id="footer" <?php
