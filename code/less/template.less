@@ -2014,31 +2014,33 @@ body {
                 position: static;
 
                 .submenu {
-                    background-color: transparent !important;
+                    background-color: @color-one !important;
                     .box-sizing(border-box);
                     left: 100%;
                     position: absolute;
                     overflow: hidden;
                     top: 0;
-                    .transition(width .35s ease);
+                    .transition(width .3s ease);
                     width: 0;
+                    z-index: 1;
 
                     > li {
                         margin-bottom: 20px;
-                        padding: 0 30%;
 
                         > a {
-                            color: @color-five;
-                            text-transform: uppercase;
-                            font-size: @baseFontSize + 2;
-                            font-family: @serifFontFamily;
                             border-bottom: none;
+                            color: @color-five;
+                            font-family: @serifFontFamily;
+                            font-size: @baseFontSize + 2;
+                            padding: 0 30%;
+                            text-transform: uppercase;
                             white-space: nowrap;
 
                             &:hover, &:focus {
                                 color: @color-two;
                                 background-color: transparent;
                             }
+
                             .caret {
                                 display: none;
                             }
@@ -2118,8 +2120,8 @@ body {
     }
 
     .total-menu-inner {
-        bottom: 120px;
         .box-sizing(border-box);
+        bottom: 0;
         color: @color-five;
         font-family: @serifFontFamily;
         font-size: @baseFontSize + 2;
@@ -2129,14 +2131,9 @@ body {
         text-align: center;
         text-transform: uppercase;
         width: 50%;
-        bottom: 0;
 
         > div {
             display: inline-block;
-        }
-
-        &:hover {
-            opacity: 1 !important;
         }
 
         .btn {
