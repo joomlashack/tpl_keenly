@@ -40,22 +40,15 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<div class="total-menu-wrapper">
-            <div class="total-menu-container">
-                <div class="menu-close"><span><?php echo JText::sprintf('TPL_JS_KEENLY_CLOSE_MENU'); ?></span><i class="icon-remove"></i></div>
-                <div class="menu-items">
-                    <div class="wrapper-items">
-                        <ul class="menu unstyled"></ul>
-                    </div>
-                </div>
-                <div class="submenu-items">
-                    <div class="wrapper-submenu-items">
-                        <w:module type="none" name="total-menu" />
-                    </div>
-                    <div class="total-menu-inner">
-                        <w:module type="none" name="total-menu-inner" />
-                    </div>
-                </div>
-            </div>
+			<div class="menu-close">
+				<span><?php echo JText::sprintf('TPL_JS_KEENLY_CLOSE_MENU'); ?></span><i class="icon-remove"></i>
+			</div>
+			<div class="total-menu">
+				<w:module type="none" name="total-menu" />
+			</div>
+			<div class="total-menu-inner">
+				<w:module type="none" name="total-menu-inner" />
+			</div>
 		</div>
 		<?php
 			endif;
