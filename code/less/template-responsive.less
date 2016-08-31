@@ -842,122 +842,44 @@
 }
 @media (max-width: 767px) {
     .total-menu-wrapper {
-        position: absolute;
-        height: auto;
-        .total-menu-container {
-            .menu-items {
-                display: none;
-            }
-            .submenu-items {
-                width: 100%;
-                background-color: @color-two;
-                display: inherit;
-                .wrapper-submenu-items {
-                    padding-left: 0;
-                    margin-top: 60px;
-                    margin-bottom: 0px;
-                    width: 100%;
-                    display: block;
-
-                    .menu.nav  {
-                        > li.deeper {
-                            .submenu {
-                                display: block;
-                            }
-                        }
+        .total-menu {
+            .menu {
+                > li {
+                    > a {
+                        font-size: @baseFontSize - 3;
+                        line-height: @baseLineHeight - 2;
                     }
 
-                    .submenu {
-                        >li {
-                            margin-bottom: 0;
-                            a {
-                                color: @color-five;
-                            }
-                        }
-                    }
-                    .moduletable {
-                        h3 {
-                            display: none;
-                        }
-                        .menu {
-                            &.nav {
-                                > li {
-                                    margin-bottom: 20px;
-                                    > a {
-                                        font-size: @baseFontSize + 6;
-                                        display: block;
-                                        text-shadow: none;
-                                        font-family: @serifFontFamily;
-                                        color: @color-five;
-                                        text-transform: uppercase;
-                                        padding: 0px 0px;
-                                        &:hover, &:focus {
-                                            background-color: transparent;
-                                            color: @color-one;
-                                        }
-                                    }
-                                    &.deeper {
-                                        > a {
-                                            margin-bottom: 0;
-                                            .caret {
-                                                display: none;
-                                            }
-                                            &:after {
-                                                content: '\f107';
-                                                font-family: FontAwesome;
-                                                margin-left: 10px;
-                                                position: relative;
-                                                right: auto;
-                                            }
-                                        }
-                                    }
-                                    .submenu {
-                                        margin-left: 0;
-                                        margin-right: 0;
-                                        margin-top: 10px;
-                                        margin-bottom: 10px;
-                                        background-color: @color-one;
-                                        > li {
-                                            margin-bottom: 0;
-                                            > a {
-                                                color: @color-five;
-                                                padding: 15px 0px 15px 15px;
-                                                font-size: @baseFontSize + 2;
-                                            }
-                                            &.deeper {
-                                                > a {
-                                                    padding: 15px 0px 0px 15px;
-                                                }
-                                                .submenu {
-                                                    margin-bottom: 0;
-                                                    > li {
-                                                        &:first-child {
-                                                            > a {
-                                                                padding: 0px 0px 15px 15px;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
+                    &.parent {
+                        .submenu {
+                            li {
+                                a {
+                                    font-size: @baseFontSize - 5;
+                                    line-height: @baseLineHeight - 4;
                                 }
                             }
                         }
                     }
                 }
-                .total-menu-inner {
-                    display: inline;
-                    .moduletable {
-                        position: relative;
-                        bottom: 0;
-                        margin-bottom: 40px;
-                        margin-top: 30px;
-                    }
+
+                img {
+                    height: auto;
+                    margin-left: 0;
+                    margin-right: 4px;
+                    max-width: 10px;
                 }
             }
         }
+
+        .total-menu-inner {
+            font-size: @baseFontSize - 3;
+
+            .btn-large {
+                font-size: @baseFontSize - 3;
+            }
+        }
     }
+
     #header {
         #top {
             margin-top: 20px;
