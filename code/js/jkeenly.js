@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-
     // Bing open and close Total positions
 
     jQuery('.menu-close').bind('click', closeMenu);
@@ -14,18 +13,21 @@ jQuery(document).ready(function($) {
         jQuery('.total-menu-wrapper').slideUp();
     }
 
-    // Collapse Total menu
+    // Alignment total menu first level
 
-    jQuery('.total-menu .menu > .parent > a').bind('click', function (e) {
-        e.preventDefault();
+    var tmenu = jQuery('.total-menu .menu');
+    var tmenuHeight, windowHeight, tmpadding;
 
-        if (jQuery('.submenu.in')) {
-            jQuery('.submenu.in').removeClass('in');
+    function alignTotalMenu() {
+        tmenuHeight = tmenu.height();
+        windowHeight = jQuery(window).height();
+
+        if (windowHeight > tmenuHeight) {
+            tmpadding = (windowHeight - tmenuHeight) / 2;
+            tmenu.css('padding-top', tmpadding);
         }
 
-        jQuery(this).parent().children('.submenu').toggleClass('in');
-
-    });
+    }
 
     // Label Position
 
@@ -33,7 +35,6 @@ jQuery(document).ready(function($) {
         jQuery('body').toggleClass('bd-color-one');
         jQuery('.wrapper-toolbar .navbar-inner').toggleClass('bg-color-one');
     });
-
 });
 
 if (typeof isHoverEvent !== 'undefined') {

@@ -1963,7 +1963,7 @@ body {
 }
 // Total menus
 .total-menu-wrapper {
-    background-color: @color-two;
+    background-color: @color-one;
     display: none;
     float: left;
     height: 100%;
@@ -2000,6 +2000,10 @@ body {
     }
 
     .menu {
+        background-color: @color-two;
+        .box-sizing(border-box);
+        margin: 0;
+        padding: 0 20px;
         position: relative;
         width: 50%;
 
@@ -2018,14 +2022,10 @@ body {
                     .transition(width .35s ease);
                     width: 0;
 
-                    &.in {
-                        width: 100%;
-                    }
-
                     > li {
                         margin-bottom: 20px;
                         border-bottom: none;
-                        a {
+                        > a {
                             color: @color-five;
                             text-transform: uppercase;
                             font-size: @baseFontSize + 2;
@@ -2070,21 +2070,25 @@ body {
                         }
                     }
                 }
+
+                &:hover {
+                    > .submenu {
+                        width: 100%;
+                    }
+                }
             }
 
-            a {
+            > a {
                 color: @color-five;
                 font-family: @serifFontFamily;
                 font-size: @baseFontSize + 16;
-                font-weight: lighter;
-                line-height: 30px;
-                padding-bottom: 40px;
+                line-height: 50px;
                 text-transform: uppercase;
 
                 &.dropdown-toggle {
                     &:after {
                         color: @color-five;
-                        content: '\f054';
+                        content: '\f105';
                         font-family: FontAwesome;
                         margin-left: 15px;
                     }
@@ -2098,7 +2102,7 @@ body {
                     margin-right: 30px;
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     color: @color-one;
                 }
             }
