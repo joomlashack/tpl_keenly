@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 
     // Alignment submenu
 
-    jQuery('.total-menu .menu > .parent').bind('hover', function () {
+    jQuery('.total-menu .menu > .parent').mouseover(function () {
         alignElement(jQuery(this).children('.submenu'));
     });
 
