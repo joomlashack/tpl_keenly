@@ -7,24 +7,33 @@ jQuery(document).ready(function($) {
 
     function openMenu() {
         jQuery('.total-menu-wrapper').slideDown();
+        alignElement(jQuery('.total-menu .menu'));
     }
 
     function closeMenu() {
         jQuery('.total-menu-wrapper').slideUp();
     }
 
-    // Alignment total menu first level
+    // Alignment submenu
 
-    var tmenu = jQuery('.total-menu .menu');
-    var tmenuHeight, windowHeight, tmpadding;
+    jQuery('.total-menu .menu > .parent').bind('hover', function () {
+        alignElement(jQuery(this).children('.submenu'));
+    });
 
-    function alignTotalMenu() {
-        tmenuHeight = tmenu.height();
+    // Alignment Element
+
+    var elementHeight, windowHeight, elementPadding;
+
+    function alignElement(element) {
+        elementHeight = element.height();
         windowHeight = jQuery(window).height();
 
-        if (windowHeight > tmenuHeight) {
-            tmpadding = (windowHeight - tmenuHeight) / 2;
-            tmenu.css('padding-top', tmpadding);
+        if (windowHeight > elementHeight) {
+            elementPadding = (windowHeight - elementHeight) / 2;
+            element.css({
+                'padding-bottom' : elementPadding,
+                'padding-top' : elementPadding
+            });
         }
 
     }

@@ -2015,7 +2015,11 @@ body {
 
                 .submenu {
                     background-color: transparent !important;
+                    .box-sizing(border-box);
                     left: 100%;
+                    height: 0;
+                    padding-left: 30%;
+                    padding-right: 30%;
                     position: absolute;
                     overflow: hidden;
                     top: 0;
@@ -2073,6 +2077,7 @@ body {
 
                 &:hover {
                     > .submenu {
+                        height: auto;
                         width: 100%;
                     }
                 }
@@ -2087,7 +2092,6 @@ body {
 
                 &.dropdown-toggle {
                     &:after {
-                        color: @color-five;
                         content: '\f105';
                         font-family: FontAwesome;
                         margin-left: 15px;
@@ -2101,16 +2105,6 @@ body {
                 [class^='icon-'] {
                     margin-right: 30px;
                 }
-
-                &:hover, &:focus {
-                    color: @color-one;
-                }
-            }
-
-            &.active {
-                a {
-                    color: @color-one;
-                }
             }
 
             img {
@@ -2122,24 +2116,32 @@ body {
         }
     }
 
-    .total-menu-inner {
-        .moduletable {
-            .box-sizing(border-box);
-            bottom: 120px;
-            color: @color-five;
-            font-family: @serifFontFamily;
-            font-size: @baseFontSize + 2;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            display: table;
-            position: absolute;
-            text-transform: uppercase;
+    .total-menu > div {
+        margin-bottom: 0;
+    }
 
-            &:hover {
-                opacity: 1 !important;
-            }
+    .total-menu-inner {
+        bottom: 120px;
+        .box-sizing(border-box);
+        color: @color-five;
+        font-family: @serifFontFamily;
+        font-size: @baseFontSize + 2;
+        padding: 10px 20px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 50%;
+        bottom: 0;
+
+        > div {
+            display: inline-block;
         }
+
+        &:hover {
+            opacity: 1 !important;
+        }
+
         .btn {
             border-color: @color-five;
             color: @color-five;
