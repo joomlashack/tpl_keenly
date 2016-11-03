@@ -24,6 +24,11 @@ $contentSpan = 'span' . (12 - $templateSpanValue);
 
 $wrightRowValue = $template->params->get('bs_rowmode');
 
+if (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'))
+{
+	$wrightRowValue = 'row-fluid';
+}
+
 if ($specialHomeLayout && $this->item->wrightType == 'leading')
 {
 	$float = getIntroImageFloat($this->item);
