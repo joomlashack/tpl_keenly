@@ -19,6 +19,11 @@ $this->wrightElementsStructure = Array("image","title","icons","article-info","l
 $template = $app->getTemplate(true);
 $wrightRowValue = $template->params->get('bs_rowmode');
 
+if (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'))
+{
+	$wrightRowValue = 'row-fluid';
+}
+
 $templateSpanValue = intval ($template->params->get('imageSpan', '2'));
 $imageSpan = 'span' . $templateSpanValue;
 $contentSpan = 'span' . (12 - $templateSpanValue);
