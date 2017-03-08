@@ -60,41 +60,20 @@ if ($params->get('access-view'))
 	} else {
 		switch ($imageFloat) {
 		case 'left':
-			$this->wrightElementsStructure = Array(
-				'div.item-container',
-					'div.'.$wrightRowValue,
-						'div.'.$imageSpan,
-							'div.image-container',
-								'image',
-							'/div',
-						'/div',
-						'div.divider-container',
-						'div.divider-vertical',
-						'/div',
-						'/div',
-						'div.'.$contentSpan,
-							'div.content-wrapper',
-                                'title',
-                                'icons',
-                                'article-info',
-                                'legendtop',
-                                'content',
-                                'legendbottom',
-                                'article-info-below',
-                                'article-info-split',
-                                'bottom',
-							'/div',
-						'/div',
-					'/div',
-				'/div'
-			);
-		break;
-		case 'right':
-			$this->wrightElementsStructure = Array(
-				'div.item-container',
-				'div.'.$wrightRowValue,
-					'div.'.$contentSpan,
-						'div.content-wrapper-left',
+            $this->wrightElementsStructure = Array(
+            'div.item-container',
+                'div.'.$wrightRowValue,
+                    'div.'.$imageSpan,
+                        'div.image-container',
+                            'image',
+                        '/div',
+                    '/div',
+                    'div.divider-container',
+                    'div.divider-vertical',
+                    '/div',
+                    '/div',
+                    'div.'.$contentSpan,
+                        'div.content-wrapper',
                             'title',
                             'icons',
                             'article-info',
@@ -104,20 +83,41 @@ if ($params->get('access-view'))
                             'article-info-below',
                             'article-info-split',
                             'bottom',
-						'/div',
-					'/div',
-					'div.divider-container',
-						'div.divider-vertical',
-						'/div',
-					'/div',
-					'div.'.$imageSpan,
-						'div.image-container-right',
-							'image',
-						'/div',
-					'/div',
-					'/div',
-				'/div'
-			);
+                        '/div',
+                    '/div',
+                '/div',
+            '/div'
+            );
+		break;
+		case 'right':
+            $this->wrightElementsStructure = Array(
+                'div.item-container',
+                'div.'.$wrightRowValue,
+                    'div.'.$contentSpan,
+                        'div.content-wrapper-left',
+                            'title',
+                            'icons',
+                            'article-info',
+                            'legendtop',
+                            'content',
+                            'legendbottom',
+                            'article-info-below',
+                            'article-info-split',
+                            'bottom',
+                        '/div',
+                    '/div',
+                    'div.divider-container',
+                        'div.divider-vertical',
+                        '/div',
+                    '/div',
+                    'div.'.$imageSpan,
+                        'div.image-container-right',
+                            'image',
+                        '/div',
+                    '/div',
+                    '/div',
+                '/div'
+            );
 			break;
 		}
 	}

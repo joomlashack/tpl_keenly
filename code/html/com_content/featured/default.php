@@ -14,11 +14,11 @@ $app = JFactory::getApplication();
 $this->wrightIntroRowsClass = 'row-fluid';
 
 $this->wrightIntroItemElementsStructure = Array(
-	'image',
-	'title',
-	'icons',
-	'article-info',
-	'legendtop',
+    'image',
+    'title',
+    'icons',
+    'article-info',
+    'legendtop',
     'content',
     'legendbottom',
     'article-info-below',
