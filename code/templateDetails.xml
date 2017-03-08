@@ -113,7 +113,7 @@
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
-				<field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
+                <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
 			</fieldset>
@@ -121,7 +121,7 @@
 				<field name="mountedImage" type="text" default="300" label="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE" description="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE_DESC" />
 				<field name="categoryBlogSpecialLayout" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS" description="TPL_JS_KEENLY_FIELD_CATEGORY_BLOG_SPECIAL_CLASS_DESC">
 					<option value="1">JYES</option>
-          <option value="0">JNO</option>
+                    <option value="0">JNO</option>
 				</field>
 				<field name="imageSpan" type="list" default="2" label="TPL_JS_KEENLY_FIELD_IMAGE_SPAN" description="TPL_JS_KEENLY_FIELD_IMAGE_SPAN_DESC">
 					<option value="1">1</option>
