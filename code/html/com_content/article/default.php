@@ -46,7 +46,7 @@ if ($params->get('access-view'))
 
 	if ($imageExist && $imageFloat == 'none')
 	{
-		$this->wrightElementsStructure = Array(
+        $this->wrightElementsStructure = Array(
             "title",
             "icons",
             "article-info",
