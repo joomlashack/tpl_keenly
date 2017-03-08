@@ -15,7 +15,18 @@ $app = JFactory::getApplication();
 $params = $this->item->params;
 $images = json_decode($this->item->images);
 
-$this->wrightElementsStructure = Array("image","title","icons","article-info","legendtop","content","legendbottom");
+$this->wrightElementsStructure = Array(
+    "image",
+    "title",
+    "icons",
+    "article-info",
+    "legendtop",
+    "content",
+    "legendbottom",
+    "article-info-below",
+    "article-info-split",
+    "bottom"
+);
 $template = $app->getTemplate(true);
 $wrightRowValue = $template->params->get('bs_rowmode');
 
@@ -35,7 +46,17 @@ if ($params->get('access-view'))
 
 	if ($imageExist && $imageFloat == 'none')
 	{
-		$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
+		$this->wrightElementsStructure = Array(
+            "title",
+            "icons",
+            "article-info",
+            "legendtop",
+            "content",
+            "legendbottom",
+            "article-info-below",
+            "article-info-split",
+            "bottom"
+        );
 	} else {
 		switch ($imageFloat) {
 		case 'left':
@@ -53,10 +74,15 @@ if ($params->get('access-view'))
 						'/div',
 						'div.'.$contentSpan,
 							'div.content-wrapper',
-								'title',
-								'icons',
-								'article-info',
-								'content',
+                                'title',
+                                'icons',
+                                'article-info',
+                                'legendtop',
+                                'content',
+                                'legendbottom',
+                                'article-info-below',
+                                'article-info-split',
+                                'bottom',
 							'/div',
 						'/div',
 					'/div',
@@ -69,10 +95,15 @@ if ($params->get('access-view'))
 				'div.'.$wrightRowValue,
 					'div.'.$contentSpan,
 						'div.content-wrapper-left',
-							'title',
-							'icons',
-							'article-info',
-							'content',
+                            'title',
+                            'icons',
+                            'article-info',
+                            'legendtop',
+                            'content',
+                            'legendbottom',
+                            'article-info-below',
+                            'article-info-split',
+                            'bottom',
 						'/div',
 					'/div',
 					'div.divider-container',

@@ -18,7 +18,11 @@ $this->wrightIntroItemElementsStructure = Array(
 	'title',
 	'icons',
 	'article-info',
-	'content'
+	'legendtop',
+    'content',
+    'legendbottom',
+    'article-info-below',
+    'article-info-split'
 );
 
 // Wright v.3: Layout options for the moreitmes and subcaterogies modules, (active, div span class 1,2,3 etc for the (1) moreitems and the (2)subcategories on a row oriented layout).
