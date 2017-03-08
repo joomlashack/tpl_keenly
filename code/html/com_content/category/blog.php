@@ -14,11 +14,15 @@ $app = JFactory::getApplication();
 $this->wrightIntroRowsClass = 'row-fluid';
 
 $this->wrightIntroItemElementsStructure = Array(
-	'image',
-	'title',
-	'icons',
-	'article-info',
-	'content'
+    'image',
+    'title',
+    'icons',
+    'article-info',
+    'legendtop',
+    'content',
+    'legendbottom',
+    'article-info-below',
+    'article-info-split'
 );
 
 // Wright v.3: Layout options for the moreitmes and subcaterogies modules, (active, div span class 1,2,3 etc for the (1) moreitems and the (2)subcategories on a row oriented layout).
@@ -29,9 +33,9 @@ $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout', '0') =
 
 if ($specialHomeLayout)
 {
-	$this->wrightIntroRowsClass = 'row-fluid extra-border';
-	$this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
-	$this->layoutSpanorder = Array(3,6,3);
+    $this->wrightIntroRowsClass = 'row-fluid extra-border';
+    $this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
+    $this->layoutSpanorder = Array(3,6,3);
 }
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
