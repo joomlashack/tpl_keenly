@@ -33,9 +33,9 @@ $specialHomeLayout = ($template->params->get('categoryBlogSpecialLayout', '0') =
 
 if ($specialHomeLayout)
 {
-	$this->wrightIntroRowsClass = 'row-fluid extra-border';
-	$this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
-	$this->layoutSpanorder = Array(3,6,3);
+    $this->wrightIntroRowsClass = 'row-fluid extra-border';
+    $this->specialItroItemsLayout = Array('activeLayout' => true, 'layoutitemscolums' => 3);
+    $this->layoutSpanorder = Array(3,6,3);
 }
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';

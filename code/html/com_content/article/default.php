@@ -32,7 +32,7 @@ $wrightRowValue = $template->params->get('bs_rowmode');
 
 if (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'))
 {
-	$wrightRowValue = 'row-fluid';
+    $wrightRowValue = 'row-fluid';
 }
 
 $templateSpanValue = intval ($template->params->get('imageSpan', '2'));
@@ -41,11 +41,11 @@ $contentSpan = 'span' . (12 - $templateSpanValue);
 
 if ($params->get('access-view'))
 {
-	$imageExist = (isset($images->image_fulltext) && !empty($images->image_fulltext)) ? true : false;
-	$imageFloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext;
+    $imageExist = (isset($images->image_fulltext) && !empty($images->image_fulltext)) ? true : false;
+    $imageFloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext;
 
-	if ($imageExist && $imageFloat == 'none')
-	{
+    if ($imageExist && $imageFloat == 'none')
+    {
         $this->wrightElementsStructure = Array(
             "title",
             "icons",
@@ -57,9 +57,9 @@ if ($params->get('access-view'))
             "article-info-split",
             "bottom"
         );
-	} else {
-		switch ($imageFloat) {
-		case 'left':
+    } else {
+        switch ($imageFloat) {
+        case 'left':
             $this->wrightElementsStructure = Array(
             'div.item-container',
                 'div.'.$wrightRowValue,
@@ -88,8 +88,8 @@ if ($params->get('access-view'))
                 '/div',
             '/div'
             );
-		break;
-		case 'right':
+        break;
+        case 'right':
             $this->wrightElementsStructure = Array(
                 'div.item-container',
                 'div.'.$wrightRowValue,
@@ -118,9 +118,9 @@ if ($params->get('access-view'))
                     '/div',
                 '/div'
             );
-			break;
-		}
-	}
+            break;
+        }
+    }
 }
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';

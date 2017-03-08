@@ -26,16 +26,16 @@ $wrightRowValue = $template->params->get('bs_rowmode');
 
 if (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'))
 {
-	$wrightRowValue = 'row-fluid';
+    $wrightRowValue = 'row-fluid';
 }
 
 if ($specialHomeLayout && $this->item->wrightType == 'leading')
 {
-	$float = getIntroImageFloat($this->item);
+    $float = getIntroImageFloat($this->item);
 
-	switch ($float)
-	{
-		case 'left':
+    switch ($float)
+    {
+        case 'left':
             $this->item->wrightElementsStructure = Array(
                 'div.item-container',
                     'div.'.$wrightRowValue,
@@ -63,9 +63,9 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
                     '/div',
                 '/div'
             );
-			break;
+            break;
 
-		case 'right':
+        case 'right':
             $this->item->wrightElementsStructure = Array(
                 'div.item-container',
                     'div.'.$wrightRowValue,
@@ -93,25 +93,25 @@ if ($specialHomeLayout && $this->item->wrightType == 'leading')
                     '/div',
                 '/div'
             );
-			break;
+            break;
 
-		default:
-			$this->item->wrightElementsStructure = Array();
-	}
+        default:
+            $this->item->wrightElementsStructure = Array();
+    }
 }
 else
 {
-	if ($this->item->wrightType == 'leading')
-	{
-		$itemImages = json_decode($this->item->images);
+    if ($this->item->wrightType == 'leading')
+    {
+        $itemImages = json_decode($this->item->images);
 
-		if ($itemImages->image_intro !== '')
-		{
-			$float = getIntroImageFloat($this->item);
+        if ($itemImages->image_intro !== '')
+        {
+            $float = getIntroImageFloat($this->item);
 
-			switch ($float)
-			{
-				case 'left':
+            switch ($float)
+            {
+                case 'left':
                     $this->item->wrightElementsStructure = Array(
                         'div.item-container',
                         'div.'.$wrightRowValue,
@@ -139,9 +139,9 @@ else
                             '/div',
                         '/div'
                     );
-					break;
+                    break;
 
-				case 'right':
+                case 'right':
                     $this->item->wrightElementsStructure = Array(
                         'div.item-container',
                         'div.'.$wrightRowValue,
@@ -169,17 +169,17 @@ else
                             '/div',
                         '/div'
                     );
-					break;
+                    break;
 
-				default:
-					$this->item->wrightElementsStructure = Array();
-			}
-		}
-		else
-		{
-			$this->item->wrightElementsStructure = Array();
-		}
-	}
+                default:
+                    $this->item->wrightElementsStructure = Array();
+            }
+        }
+        else
+        {
+            $this->item->wrightElementsStructure = Array();
+        }
+    }
 }
 
 include Overrider::getOverride('com_content.featured', 'default_item');
