@@ -129,7 +129,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($wrightSingleArticleDisplay): ?>
             <div class="row-fluid">
 	            <div class="full-image span12 <?php if (!$showMountedImage): ?>full-image-margin<?php endif; ?>">
-	                <img id="full-image-img" src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
+	                <img id="full-image-img" src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" title="<?php echo $wrightSingleArticleTitle ?>" />
 	            </div>
             </div>
         <?php endif; ?>

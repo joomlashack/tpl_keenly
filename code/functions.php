@@ -92,10 +92,11 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 			}
 		}
 
-		if ($wrightSingleArticleDisplay)
-		{
-			$wrightSingleArticleImage = $imagesArray->image_fulltext;
-			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
-		}
+        if ($wrightSingleArticleDisplay)
+        {
+            $wrightSingleArticleImage = $imagesArray->image_fulltext;
+            $wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
+            $wrightSingleArticleTitle = $imagesArray->image_fulltext_caption;
+        }
 	}
 }
