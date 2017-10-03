@@ -119,11 +119,6 @@
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
-                            
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_keenly" />
             </fieldset>
             <fieldset name="keenly" label="TPL_JS_KEENLY_OPTIONS">
                 <field name="mountedImage" type="text" default="300" label="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE" description="TPL_JS_KEENLY_FIELD_MOUNTED_IMAGE_DESC" />
@@ -148,6 +143,12 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+            </fieldset>
+            <fieldset name="footer" addfieldpath="/templates/js_keenly/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_keenly" />
             </fieldset>
         </fields>
     </config>
