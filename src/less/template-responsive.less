@@ -177,6 +177,183 @@
     }
 }
 
+@media (min-width: 980px) {
+
+	.navbar {
+
+		.navbar-inner {
+
+			.nav,
+			&.nav {
+
+				li {
+					position: relative;
+
+					&.deeper {
+
+						> a {
+
+							.caret {
+								display: none;
+							}
+
+							&:after {
+								font-family: FontAwesome;
+								padding-left: 5px;
+								padding-right: 5px;
+								content: '\f107';
+								color: @color-two;
+							}
+						}
+
+						&:hover,
+						&:focus {
+
+							> a {
+
+								&:after {
+									font-family: FontAwesome;
+									padding-left: 5px;
+									padding-right: 5px;
+									content: '\f106';
+								}
+							}
+						}
+						&.dropdown-submenu {
+
+							a {
+
+								&:after {
+									margin-top: 0px;
+									float: none;
+									display: inline;
+								}
+							}
+						}
+					}
+
+					&.active {
+
+						> a {
+
+							&:hover, &:focus {
+
+							}
+						}
+
+						&:after {
+							content: '';
+							height: 6px;
+							width: 100%;
+							position: absolute;
+							bottom: -6px;
+							background-color: @color-two;
+						}
+					}
+
+					&.dropdown {
+
+						li {
+							&.deeper {
+
+								.caret {
+									display: none;
+								}
+
+								> a {
+
+									&:after {
+										font-family: FontAwesome;
+										padding-left: 5px;
+										content: '\f105';
+									}
+								}
+
+								.dropdown-menu {
+
+									&:before {
+										display: none;
+									}
+
+									&:after {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+
+				}
+				> li {
+
+					> a {
+
+						.caret {
+							display: none;
+						}
+						&.dropdown-toggle {
+
+							&:after {
+								font-family: FontAwesome;
+								padding-left: 5px;
+								padding-right: 5px;
+								content: '\f107';
+							}
+						}
+
+						&.separator {
+
+							.caret {
+								display: none;
+							}
+						}
+					}
+					> .dropdow-menu {
+
+						&:before {
+							display: none;
+						}
+
+						&:after {
+							display: none;
+						}
+					}
+
+					&:hover,
+					&:focus {
+
+						&:after {
+							content: '';
+							height: 6px;
+							width: 100%;
+							position: absolute;
+							bottom: -6px;
+						}
+
+						> a {
+
+							&.dropdown-toggle {
+
+								&:after {
+									content: '\f106';
+								}
+							}
+						}
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 979px) and (min-width: 768px) {
     #menu {
         .navbar {
@@ -451,43 +628,50 @@
         }
     }
     .navbar {
+
         .btn-navbar {
             background-image: none;
             background-color: transparent;
             border-width: 0px;
             box-shadow: none;
+
             .icon-bar {
                 background-color: @color-three;
                 height: 3px;
                 width: 24px;
                 box-shadow: none;
             }
-            &:hover, &:focus {
+            &:hover,
+			&:focus {
+
                 .icon-bar {
                     background-color: @color-one;
                 }
             }
         }
+
         .navbar-inner {
+
             .nav + .navbar-search {
                 margin-left: 0px;
             }
+
             .nav {
+
                 li {
-                    &.deeper {
-                        &:hover, &:focus {
-                            > a {
-                                &:after {
-                                    content: '\f107';
-                                }
-                            }
-                        }
-                    }
+					margin-left: 0;
+					margin-right: 0;
+
                     &.dropdown {
+
                         li {
+
                             &.deeper {
-                                &:hover, &:focus {
+
+                                &:hover,
+								&:focus {
                                     background-color: transparent;
+
                                     > a {
                                         color: @color-two;
                                     }
@@ -496,39 +680,54 @@
                         }
                     }
                     &.active {
+
                         > a {
                             background-color: transparent;
                             color: @color-two;
                         }
+
                         &:after {
                             display: none;
                         }
                     }
-                    &:hover, &:focus {
+
+                    &:hover,
+					&:focus {
+
                         &:after {
                             display: none;
                         }
                     }
                 }
                 > li {
+
                     &.deeper {
+
                         .dropdown-menu {
                             background-color: transparent;
+
                             > li {
                                 > a {
                                     border-bottom: none;
-                                    &:hover, &:focus {
+
+                                    &:hover,
+									&:focus {
                                         background-color: transparent;
                                         color: @color-two;
                                     }
                                 }
-                                &:hover, &:focus {
+
+                                &:hover,
+								&:focus {
                                     background-color: transparent;
                                     border-top: none;
                                     margin-top: 0;
                                 }
+
                                 &:first-child {
-                                    &:hover, &:focus {
+
+                                    &:hover,
+									&:focus {
                                         border-top: none;
                                         margin-top: 0;
                                     }
@@ -542,20 +741,26 @@
                                         margin-top: 0;
                                     }
                                 }
+
                                 &.deeper {
+
                                     > a {
                                         &:after {
                                             color: @color-two;
                                             content: '\f107';
                                         }
-                                        &:hover, &:focus {
+
+                                        &:hover,
+										&:focus {
                                             background-color: transparent;
                                             &:after {
                                                 color: @color-two;
                                             }
                                         }
                                     }
-                                    &:hover, &:focus {
+                                    &:hover,
+									&:focus {
+
                                         > a {
                                             background-color: transparent;
                                         }
@@ -570,14 +775,19 @@
                 .dropdown-menu {
                     background-color: @color-two;
                     margin-bottom: 20px;
+
                     a {
-                        &:hover, &:focus {
+                        &:hover,
+						&:focus {
                             background-color: @color-one;
                         }
+
                         border-radius: 0;
                         -webkit-border-radius: 0;
                     }
+
                     li + li {
+
                         a {
                             margin-bottom: 0;
                         }
@@ -586,21 +796,27 @@
             }
         }
     }
+
     .navbar {
         &.navbar-inverse {
+
             .btn-navbar {
                 background-image: none;
                 background-color: transparent;
                 border-width: 0px;
                 margin-right: 10px;
                 box-shadow: none;
+
                 .icon-bar {
                     background-color: @color-five;
                     height: 3px;
                     width: 24px;
                     box-shadow: none;
                 }
-                &:hover, &:focus {
+
+                &:hover,
+				&:focus {
+
                     .icon-bar {
                         background-color: @color-one;
                     }
@@ -771,9 +987,11 @@
             }
         }
     }
+
     .full-image {
         margin-bottom: 20px;
     }
+
     #main-content {
         &.full-image-position {
             #main {
