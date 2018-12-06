@@ -13,15 +13,17 @@
 }
 
 .navbar {
+
 	.nav {
+
 		> li {
+
 			> .dropdown-menu {
 				margin-top: 6px;
 				box-shadow: none;
+
+				&:after,
 				&:before {
-					display: none;
-				}
-				&:after {
 					display: none;
 				}
 			}
@@ -31,7 +33,9 @@
 		border-bottom: 6px solid @color-four;
 		border-top: 1px solid @color-four;
 		box-shadow: none;
+
 		.navbar-search {
+
 			.search-query {
 				border-radius: 0;
 				-webkit-border-radius: 0;
@@ -44,7 +48,8 @@
 		.nav + .navbar-search {
 			margin-left: 25px;
 		}
-		.nav, &.nav {
+		.nav,
+		&.nav {
 			font-family: @serifFontFamily;
 			text-transform: uppercase;
 			text-decoration: none;
@@ -53,61 +58,51 @@
 			li {
 
 				&.deeper {
+
 					> a {
 						text-shadow: none;
-						.caret {
 
-						}
-						&:after {
-
-						}
 					}
-					&:hover, &:focus {
+					&:hover,
+					&:focus {
+
 						> a {
 							color: @color-two;
 							text-shadow: none;
-							&:after {
 
+							&:after {
 								color: @color-two;
-							}
-						}
-					}
-					&.dropdown-submenu {
-						a {
-							&:after {
-
 							}
 						}
 					}
 				}
 				&.active {
+
 					> a {
 						-webkit-box-shadow: none;
 						box-shadow: none;
 						text-shadow: none;
+
 						&:hover, &:focus {
 							background-image: none;
 						}
 					}
-					&:after {
-
-					}
 				}
 				&.dropdown {
+
 					li {
 						&.deeper {
-							.caret {
 
-							}
 							&:hover, &:focus {
 								background-color: @color-one;
+
 								> a {
 									color: @color-five;
 								}
 							}
 							> a {
-								&:after {
 
+								&:after {
 									color: @color-five;
 								}
 							}
@@ -115,12 +110,6 @@
 								border-radius: 0;
 								-webkit-border-radius: 0;
 								box-shadow: none;
-								&:before {
-
-								}
-								&:after {
-
-								}
 							}
 						}
 					}
@@ -133,50 +122,26 @@
 			> li {
 				margin-right: 15px;
 				margin-left: 15px;
+
 				> a {
 					padding: 10px 0px;
-					.caret {
 
-					}
 					&.dropdown-toggle {
-						&:after {
 
+						&:after {
 							color: @color-two;
 						}
 					}
-					&.separator {
-						.caret {
-
-						}
-					}
 				}
-				> .dropdow-menu {
-					&:before {
+				&:hover,
+				&:focus {
 
-					}
 					&:after {
-
-					}
-				}
-				&:hover, &:focus {
-					&:after {
-
 						background-color: @color-two;
 					}
 					> a {
 						color: @color-two;
-						&.dropdown-toggle {
-							&:after {
-
-							}
-						}
 					}
-				}
-				&:last-child {
-
-				}
-				&:first-child {
-
 				}
 			}
 		}
