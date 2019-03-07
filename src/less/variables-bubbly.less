@@ -1,7 +1,7 @@
 //
 // Variables
 // --------------------------------------------------
-@color-one: #006A75;
+@color-one: darken(saturate(spin(@color-two, -15.4953), 65.3543), 27.2549);
 @color-two: #548DAC;
 @color-three: #363636;
 @color-four: #A9A998;
@@ -26,6 +26,18 @@
 // -------------------------
 @dropdownSubmenuLinkArrow : false;
 @navbarInverseDropdownSubmenuLinkArrow : false;
+
+// In order to avoid lessphp compiler to break
+// the lines below are needed when @dropdownSubmenuLinkArrow is set as "false".
+//
+// Remove the lines below if @dropdownSubmenuLinkArrow changes to "true"
+// https://github.com/leafo/lessphp/issues/481
+// -------------------------
+.dropdownSubmenuLinkArrow(){}
+.dropdownSubmenuLinkArrowHover(){}
+.dropdownSubmenuLinkArrowActive{}
+.navbarInverseDropdownSubmenuLinkArrowHover(){}
+.navbarInverseDropdownSubmenuLinkArrowActive(){}
 
 // Gradient options of dropdown links
 // You can use true/false for add gradient
