@@ -18,11 +18,8 @@ $document = JFactory::getDocument();
 // Set your variables overrides for variables-something.less.
 // These variables overrides are defined on templateDetails.xml below 'style' field
 $lessCustomizationVars = array (
-    '@color_one'    => $document->params->get('color_one', '#006A75'),
-    '@color_two'    => $document->params->get('color_two', '#548DAC'),
-    '@color_three'  => $document->params->get('color_three', '#363636'),
-    '@color_four'   => $document->params->get('color_four', '#A9A998'),
-    '@color_five'   => $document->params->get('color_five', '#FAFAF5')
+    '@color-two'    => $document->params->get('color_two', '#548DAC'),
+    '@color-four'   => $document->params->get('color_four', '#A9A998')
 );
 
 // Run the compiler - 'bubbly' is the default style
