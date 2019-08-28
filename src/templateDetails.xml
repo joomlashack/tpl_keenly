@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.0" type="template" method="upgrade" client="site">
+<extension version="3.9" type="template" method="upgrade" client="site">
     <name>js_keenly</name>
-    <creationDate>March 07 2019</creationDate>
+    <creationDate>August 28 2019</creationDate>
     <author>Joomlashack</author>
     <authorEmail>support@joomlashack.com</authorEmail>
     <authorUrl>https://www.joomlashack.com</authorUrl>
     <copyright>Copyright Joomlashack 2005-2019. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>1.4.5</version>
+    <version>1.4.6</version>
     <description>TPL_JS_KEENLY_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -26,6 +26,7 @@
         <filename>functions.php</filename>
         <filename>wrighttemplate.php</filename>
         <filename>index.php</filename>
+        <filename>shackslides.json</filename>
         <filename>template.php</filename>
         <filename>templateDetails.xml</filename>
         <filename>template_thumbnail.png</filename>
