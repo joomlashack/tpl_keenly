@@ -2551,6 +2551,25 @@ dl {
                     color: @color-one;
                 }
             }
+
+          div.joomlashack {
+            background: @grayDarker;
+            padding: 7px 10px;
+            .border-radius(20px);
+            font-size: 11px;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            color: @white;
+            text-align: center;
+            margin: 0 auto 20px;
+            max-width: 200px;
+
+            a,
+            a:hover,
+            a:focus,
+            a:active {
+              color: @white;
+            }
+          }
         }
     }
 }
@@ -2762,15 +2781,4 @@ body {
 .pull-none.item-image {
     .clearfix();
     margin-bottom: 18px;
-}
-
-div.joomlashack {
-
-  a {
-    color: #363636;
-  }
-
-  img {
-    filter: drop-shadow(0px 0px 2px #000 );
-  }
 }
